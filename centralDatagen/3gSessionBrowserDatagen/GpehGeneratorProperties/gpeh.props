@@ -1,0 +1,96 @@
+#
+# Created on 27 Sep 2012
+#
+# @author: epstvxj
+#
+
+###########################################################
+#  GPEH 
+###########################################################
+[gpeh]
+
+[basic]
+
+# chose which encoder to encode GPEH files
+# either W13A_CN1 or W11B_CF2
+encoder_version=W13A_CN1
+
+#
+# Start and end time range of files in the master repository
+# Time range should be within 24 hour
+#
+lookup_timerange_start = 201205161600
+lookup_timerange_end = 201205171600
+
+# gpeh master file repository
+input_directory = /ossrc/GPEH_MASTER_REPOSITORY
+
+# number of rncs to produce
+number_of_rncs = 20
+
+# rop time period
+rop_time_period = 15
+
+mz_property_file_directory = /opt/ericsson/3g-session-browser-datagen/etc/
+mz_property_filename = configurationGPEH.properties
+
+mzsh            = /eniq/home/dcuser/mz2/mz/bin/launchmzsh.sh 
+mz_account      = mzadmin/central1
+workgroup_name  = GPEH_3G_SESSION.WG01_GPEH_Enrichment
+workflow_name_prefix = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_
+
+[workflows]
+#RNC01 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_1
+#RNC02 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_2
+#RNC03 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_3
+#RNC04 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_4
+#RNC05 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_5
+#RNC06 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_6
+#RNC07 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_7
+#RNC08 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_8
+RNC09 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_9
+#RNC10 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_10
+#RNC11 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_11
+#RNC12 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_12
+#RNC13 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_13
+#RNC14 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_14
+#RNC15 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_15
+#RNC16 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_16
+#RNC17 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_17
+#RNC18 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_18
+#RNC19 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_19
+#RNC20 = GPEH_3G_SESSION.WF01_GPEH_Enrichment.workflow_20
+
+#
+# MediationZone will take input files from the following directory
+#
+[mz_input_directory]
+MZ_INPUT  = /eniq/home/dcuser/data-archive/SmarTone/mz/input/
+
+#
+# MediationZone will produce RNC rop files in the following directories
+# [CURRENTLY NOT USED], the output directories are hardcoded in the code and
+# configuration.properties file
+#
+[mz_output_directory]
+#RNC01 = /ossrc/RNC/GPEH/SubNetwork=RNC01/MeContext=RNC01
+#RNC02 = /ossrc/RNC/GPEH/SubNetwork=RNC02/MeContext=RNC02
+#RNC03 = /ossrc/RNC/GPEH/SubNetwork=RNC03/MeContext=RNC03
+#RNC04 = /ossrc/RNC/GPEH/SubNetwork=RNC04/MeContext=RNC04
+#RNC05 = /ossrc/RNC/GPEH/SubNetwork=RNC05/MeContext=RNC05
+#RNC06 = /ossrc/RNC/GPEH/SubNetwork=RNC06/MeContext=RNC06
+#RNC07 = /ossrc/RNC/GPEH/SubNetwork=RNC07/MeContext=RNC07
+#RNC08 = /ossrc/RNC/GPEH/SubNetwork=RNC08/MeContext=RNC08
+RNC09 = /ossrc/RNC/GPEH/SubNetwork=RNC09/MeContext=RNC09
+#RNC10 = /ossrc/RNC/GPEH/SubNetwork=RNC10/MeContext=RNC10
+#RNC11 = /ossrc/RNC/GPEH/SubNetwork=RNC11/MeContext=RNC11
+#RNC12 = /ossrc/RNC/GPEH/SubNetwork=RNC12/MeContext=RNC12
+#RNC13 = /ossrc/RNC/GPEH/SubNetwork=RNC13/MeContext=RNC13
+#RNC14 = /ossrc/RNC/GPEH/SubNetwork=RNC14/MeContext=RNC14
+#RNC15 = /ossrc/RNC/GPEH/SubNetwork=RNC15/MeContext=RNC15
+#RNC16 = /ossrc/RNC/GPEH/SubNetwork=RNC16/MeContext=RNC16
+#RNC17 = /ossrc/RNC/GPEH/SubNetwork=RNC17/MeContext=RNC17
+#RNC18 = /ossrc/RNC/GPEH/SubNetwork=RNC18/MeContext=RNC18
+#RNC19 = /ossrc/RNC/GPEH/SubNetwork=RNC19/MeContext=RNC19
+#RNC20 = /ossrc/RNC/GPEH/SubNetwork=RNC20/MeContext=RNC20
+

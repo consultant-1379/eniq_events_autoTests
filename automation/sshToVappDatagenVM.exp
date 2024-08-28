@@ -1,0 +1,60 @@
+#!/usr/local/bin/expect
+set timeout -1
+spawn su root -c "ssh datagen" 
+expect {
+	"assword: " {
+	send "shroot\n"
+	expect {
+		"Are you sure you want to continue connecting (yes/no)?" {
+			send "yes\n"
+			expect {
+			"assword: " {
+			send "shroot\n"
+			expect {
+			"# " {
+			send "cd /ede/ede-6.0.7-Release/ede-6.0.7-Release/bin\n"
+			expect { 
+			"# " {
+			send "./tshellVapp.sh stream\n"
+			expect {
+			"> " { }
+			"$ " { }
+			"\} #: " { }
+			"\} # " { }
+			}
+			}
+			}
+			}
+			}
+			}
+			}
+	}
+	"assword: " {
+	send "shroot\n"
+	expect {
+		"> " { }
+		"$ " { }
+		"\} #: " { }
+		"\} # " { }
+		"# " {
+		send "cd /ede/ede-6.0.7-Release/ede-6.0.7-Release/bin\n"
+		expect {
+			"# " {
+				send "./tshellVapp.sh stream\n"
+				expect {
+					"> " { }
+					"$ " { }
+					"\} #: " { }
+					"\} # " { }
+					
+				}
+			}
+			
+		}
+		}
+		}
+	}
+	}
+}
+}
+

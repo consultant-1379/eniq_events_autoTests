@@ -1,0 +1,9 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+CONCURRENTSTART
+LOADTOPOLOGY force,2G,3G,MSS,LTE,4G,WCDMA_NEW
+
+INIT_SELENIUM localhost 

@@ -1,0 +1,22 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 14,20
+
+DGSOURCE remote
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+STARTDATAGEN_LTE waitifstarting 150
+LTE_CREATE_GROUPS
+!--- 'STOP_SELENIUM' will quit all selenium hub and RC connections. IT IS NOT A TEST. It is essentially a selenium refresh.
+!--- ONLY USE THIS IF SELENIUM TESTS WONT RUN as it can interfere with other running selenium tests. Should usually be commented (#)
+#STOP_SELENIUM
+
+INIT_SELENIUM localhost
+
+TEST_LIST -DTEST_SUITE=ltehfa -DTESTS=IMSISummaryERABdrilldown_5_7,IMSIgroupSummaryEventsViewDrillDown_5_8,eNodeBCauseCodeDrillDown_7_15,eCellCauseCodeDrillDown_7_17,terminalEventAnalysis_7_1,terminalGroupEventAnalysis_7_2
+
+RUN_SELENIUM LteHfaTestGroup,selenium_events_tests.jar,localhost

@@ -1,0 +1,17 @@
+<suite name="KPI Notification Test Suite" preserve-order="true">
+	<test name="Topology Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.topology.TopologyLoadingTests"/>
+		</classes>
+	</test>
+	<test name="Data Loading Test Cases" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.KpiDataloadingTests"/>
+		</classes>
+	</test>
+	<test name="UI Test Cases" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.ui.KpiNotificationTests"/>
+		</classes>
+	</test>
+</suite>

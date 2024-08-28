@@ -1,0 +1,7 @@
+testid,username,password,port,contextroot,host
+aboutBoxIsClosedByClickingOnXIcon,admin,admin,8181,/EniqEventsUI/,glassfish
+aboutInOptionsMenuForAllTabs,admin,admin,8181,/EniqEventsUI/,glassfish
+allInstalledFeaturesOnServerListedInAboutBox,admin,admin,8181,/EniqEventsUI/,glassfish
+ensureBrandingIsPresentInAboutBox,admin,admin,8181,/EniqEventsUI/,glassfish
+optionsMenuPresentForAllTabs,admin,admin,8181,/EniqEventsUI/,glassfish
+verticalScrollBarPresentInAboutBox,admin,admin,8181,/EniqEventsUI/,glassfish

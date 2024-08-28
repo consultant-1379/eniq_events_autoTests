@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupmgt>
+<group name="GPEH_Auto_IMSI2" type="IMSI">
+
+<group-element>
+<key name="IMSI" value="460010000000016"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000017"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000018"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000019"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000020"/>
+</group-element>
+
+
+<group-element>
+<key name="IMSI" value="460010000000010"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000011"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000012"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000013"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000014"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="460010000000015"/>
+</group-element>
+
+</group>
+</groupmgt>

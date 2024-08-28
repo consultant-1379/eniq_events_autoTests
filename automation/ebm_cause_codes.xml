@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!-- generatedAt="2012-5-02 11:00:00" product="ebm_cause_codes" -->
+<eventspecification xsi:noNamespaceSchemaLocation="./1_LMI-09:1899.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<general>
+		<docno>3/1551-CRA 250 58</docno>
+		<revision>H</revision>
+		<date>2012-05-02</date>
+		<author>EAB/FBA/TN Stefan XC Nilsson</author>
+		<ffv>4</ffv>
+		<fiv>17</fiv>
+		<revisionhistory>
+			<revisionhistoryelem>
+				<revision>A</revision>
+				<comment>2009-11-30, SGSN-MME 2010A.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+                                <revision>B</revision>
+				<comment>2010-05-25, SGSN-MME 2010B. ffv/fiv
+values aligned with ebm.xml.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+                                <revision>B1</revision>
+                                <comment>2010-06-03, SGSN-MME 2010B. TR fix for 2010B.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>C</revision>
+				<comment>TBD SGSN-MME 2010B FP</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>D</revision>
+				<comment>2010-12-22, SGSN-MME 2011A. Cause
+codes for new featues added. .Also review of S1 cause codes and added
+undocumented legacy SGSN (sub) causes codes.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>D1</revision>
+				<comment>2011-01-20, SGSN-MME 2011A update. SCC 438
+fixed plus bearer sub causes moved to own enum BEARER_CAUSE.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>E</revision>
+				<comment>2011-04-19, SGSN-MME 2011A
+FP01. Legacy descriptions improved and new features for S4-SGSN mainly.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>F1</revision>
+				<comment>2011-05-16, SGSN-MME 2011B. Legacy descriptions improved and new features for S4-SGSN mainly.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>F2</revision>
+				<comment>2011-07-29, Update for SGSN-MME 2011B. .</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>G</revision>
+				<comment>2011-11-03, Update for SGSN-MME 2012A.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>G1</revision>
+				<comment>2011-12-19, Minor update for SGSN-MME 2012A.</comment>
+			</revisionhistoryelem>
+			<revisionhistoryelem>
+				<revision>H</revision>
+				<comment>2012-05-02, Update for SGSN-MME 13A.</comment>
+			</revisionhistoryelem>
+		</revisionhistory>
+		<Capabilities>
+			<JobPersistence>RESTART</JobPersistence>
+			<EventCapabilities>
+				<Compression>NONE</Compression>
+			</EventCapabilities>
+		</Capabilities>
+	</general>
+	<parametertypes>
+		<parametertype>
+			<name>GTP_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="INVALID_MESSAGE_FORMAT" value="193">This cause code indicates that the equipment sending this cause code received a message with an invalid format.</enum>
+				<enum internal="MS_IS_NOT_GPRS_RESPONDING" value="196">This cause code indicates that MS does not respond to the request from the network</enum>
+				<enum internal="MS_REFUSES" value="197">This cause code indicates that MS refuses the request due to a BCM violation or error unspecified in RIL3.</enum>
+				<enum internal="NO_RESOURCES_AVAILABLE" value="199">This cause code is used by the MS or network to indicate that a PDP context activation request, secondary PDP context activation request, PDP context modification request, or MBMS context activation request cannot be accepted due to insufficient resources.</enum>
+				<enum internal="SERVICE_NOT_SUPPORTED" value="200">This cause code indicates that SGSN does not support network requested bearer control.</enum>
+				<enum internal="MANDATORY_IE_INCORRECT" value="201">This cause code indicates that the equipment sending this cause code received a message with incorrect mandatory IE.</enum>
+				<enum internal="MANDATORY_IE_MISSING" value="202">This cause code indicates that the equipment sending this cause code received a message with missing mandatory IE.</enum>
+				<enum internal="OPTIONAL_IE_INCORRECT" value="203">This cause code indicates that the equipment sending this cause code received a message with incorrect optional IE.</enum>
+				<enum internal="SYSTEM_FAILURE" value="204">"System failure" is a generic permanent error condition reported in the reject response message.</enum>
+				<enum internal="CONTEXT_NOT_FOUND" value="210">This cause code indicates that the linked PDPcontext does not exist or was deactivated in the receiving SGSN.</enum>
+				<enum internal="BEARER_CONTROL_MODE_VIOLATION" value="227">This cause code indicates that a request is violating the current Bearer Control Mode.
+</enum>
+			</enumeration>
+		</parametertype>
+		<parametertype>
+			<name>GTPV2_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "L_CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="REQUEST_ACCEPTED" value="16">This cause is sent when the request is accepted.</enum>
+				<enum internal="REQUEST_ACCEPTED_PARTIALLY" value="17">This cause is sent when the request is partially accepted.</enum>
+				<enum internal="REQUEST_REJECTED" value="94">This cause is sent when the request is rejected.</enum>
+				<enum internal="UE_NOT_RESPONDING" value="87">This cause is sent when the UE does not respond.</enum>
+				<enum internal="CONTEXT_NOT_FOUND" value="64">This cause is sent when the context is not found.</enum>
+				<enum internal="INVALID_MESSAGE_FORMAT" value="65">This cause is sent when the message format is invalid.</enum>
+				<enum internal="INVALID_LENGTH" value="67">This cause is sent when the length of the message is invalid.</enum>
+				<enum internal="MANDATORY_IE_INCORRECT" value="69">This cause is sent when the mandatory IE is incorrect.</enum>
+				<enum internal="MANDATORY_IE_MISSING" value="70">This cause is sent when the mandatory IE is missing.</enum>
+				<enum internal="RESERVED" value="71">A rejection response cause code value with the meaning "Reserved".</enum>
+				<enum internal="SYSTEM_FAILURE" value="72">This cause code is used by the system to indicate that the requested service was rejected due to an error situation in the system.</enum>
+				<enum internal="NO_RESOURCES_AVAILABLE" value="73">This cause is sent when there are no resources available.</enum>
+				<enum internal="UNEXPECTED_REPEATED_IE" value="79">This cause is sent when the IE is unexpectedly repeated.</enum>
+				<enum internal="UNABLE_TO_PAGE_UE" value="90">This cause is sent when the UE does not respond.</enum>
+				<enum internal="UNABLE_TO_PAGE_UE_DUE_TO_SUSPENSION" value="102">This cause is sent when the UE is in suspended status.</enum>
+				<enum internal="SERVICE_NOT_SUPPORTED" value="68">This cause is in a Create Bearer Response, if the feature 'Dedicated bearer' is off in LTE or the feature 'Network-Requested Secondary PDP Context' is off in WCDMA.</enum>
+				<enum internal="RELOCATION_FAILURE" value="81">This cause code is included in the #EBM# event L_Handover generated when an S1-Based Inter-#MME# Handover fails.</enum>
+				<enum internal="INVALID_PEER" value="109">This cause code is sent when the sending node considers the other peer to be invalid for the specific procedure.</enum>
+				<enum internal="INVALID_REPLY_FROM_REMOTE_PEER" value="107">This cause code is sent by the #SGW# when it considers a reply from #PGW# to be invalid.</enum>
+				<enum internal="TEMPORARILY_REJECTED_DUE_TO_HANDOVER_PROCEDURE_IN_PROGRESS" value="110">This cause code is sent when an #SGW#-initiated procedure is rejected due to a Handover being in progress.</enum>
+				<enum internal="CONDITIONAL_IE_MISSING" value="103">This cause indicates that the equipment sending this cause has received a message with conditional IE missing.</enum>
+				<enum internal="UE_REFUSES" value="88">This cause code indicates that the UE refuses the request.</enum>
+			</enumeration>
+		</parametertype>
+		<parametertype>
+			<name>NAS_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "L_CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="EPS_SERVICES_AND_NON-EPS_SERVICES_NOT_ALLOWED" value="8">This cause is sent to the UE when it is not allowed to operate either EPS or non-EPS services.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="EPS_SERVICES_NOT_ALLOWED_IN_THIS_PLMN" value="14">This cause is sent to the #UE# which requests #EPS# service in a #PLMN# where the #UE#, by subscription or due to operator determined barring, is not allowed to operate.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="ESM_FAILURE" value="19">This cause is sent to the UE when there is a failure in the EPS session management message contained in the EPS mobility management message.</enum>
+				<enum internal="CONGESTION" value="22">This cause is sent to the #UE# because of congestion in the network (that is for example no channel, facility busy or congested).</enum>
+				<enum internal="INSUFFICIENT_RESOURCES" value="26">This cause is sent to the network in S1 mode if the separation bit in the AMF field of Authentication Token (AUTN) is set to 0 in the AUTHENTICATION REQUEST message</enum>
+				<enum internal="UNKNOWN_OR_MISSING_APN" value="27">This cause is used by the network to indicate that the requested service was rejected by the external PDN, due to that the APN was not included although required or if the APN could not be resolved.</enum>
+				<enum internal="USER_AUTHENTICATION_FAILED" value="29">This cause is used by the network to indicate that the requested service was rejected by the external PDN due to a failed user authentication.</enum>
+				<enum internal="ACTIVATION_REJECTED_BY_SGW_OR_PGW" value="30">This cause is used by the network to indicate that the requested service or operation or the request for a resource was rejected by the #SGW# or #PGW#.</enum>
+				<enum internal="SERVICE_OPTION_NOT_SUPPORTED" value="32">This cause is used by the network when the UE requests a service which is not supported by the PLMN.</enum>
+				<enum internal="REQUESTED_SERVICE_OPTION_NOT_SUBSCRIBED" value="33">This cause is sent when the UE requests a service option for which it has no subscription.</enum>
+				<enum internal="ESM_NETWORK_FAILURE" value="38">This cause is used by the network to indicate that the requested service was rejected due to an error situation in the network.
+It may be sent when in case of PGW initiated Delete Bearer Request with cause "Reactivation requested", for the not last PDN connection, if it is configured in Deactivate EPS Bearer Context Request to UE, this cause code is included</enum>
+				<enum internal="PDN_TYPE_IPV4_ONLY_ALLOWED" value="50">This cause is used by the network to indicate that only PDN type IPv4 is allowed for the requested PDN connectivity.</enum>
+				<enum internal="PDN_TYPE_IPV6_ONLY_ALLOWED" value="51">This cause is used by the network to indicate that only PDN type IPv6 is allowed for the requested PDN connectivity.</enum>
+				<enum internal="INVALID_PTI_VALUE" value="81">This cause is used by the network or UE to indicate that the PTI provided to it is unassigned or reserved.</enum>
+				<enum internal="NETWORK_FAILURE" value="17">This cause is sent to the #UE# if the network cannot service a #UE# generated request because of network failures.</enum>
+				<enum internal="UE_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK" value="9">This cause is sent to the UE when the network cannot derive the identity of the UE from the GUTI, S-TMSI, or P-TMSI and RAI. This can occur when there is no matching identity or context in the network or if there is a failure to validate the identity of the UE due to integrity check failure of the received message.</enum>
+				<enum internal="IMPLICITLY_DETACHED" value="10">This cause code is sent to the UE if the network has implicitly detached the UE, some time after the mobile reachable timer has expired, or if the EMM context data related to the subscription does not exist in the MME due to an MME restart.</enum>
+				<enum internal="NOCAUSECODE" value="0">Cause code 0 is used at success/ignore/abort events and indicates that no cause code are sent externally from the SGSN-MME.</enum>
+				<enum internal="PTI_ALREADY_IN_USE" value="35">This cause is used by the network to indicate that the PTI included by the UE is already in use by another active UE-requested procedure for this UE.</enum>
+				<enum internal="MULTIPLE_PDN_CONNECTIONS_FOR_A_GIVEN_APN_NOT_ALLOWED" value="55">This cause is used by the network to indicate that the PDN Connectivity procedure was rejected due to that multiple PDN connections for a given APN are not allowed.</enum>
+				<enum internal="REQUEST_REJECTED_-_UNSPECIFIED" value="31">This cause is used by the network to indicate that the requested service, operation or the request for a resource was rejected due to unspecified reasons.</enum>
+				<enum internal="PDN_CONNECTION_DOES_NOT_EXIST" value="54">This cause is used by the network at handover from a non-3GPP access network to indicate that the MME does not have any information about the requested PDN connection.</enum>
+				<enum internal="SEMANTICALLY_INCORRECT_MESSAGE" value="95">This cause is used to report receipt of a message with semantically incorrect contents.</enum>
+				<enum internal="INVALID_MANDATORY_INFORMATION" value="96">This cause indicates that the equipment sending this cause has received a message with a non-semantical mandatory IE error.</enum>
+				<enum internal="MESSAGE_TYPE_NON-EXISTENT_OR_NOT_IMPLEMENTED" value="97">This cause indicates that the equipment sending this cause has received a message with a message type it does not recognize either because this is a message not defined, or defined but not implemented by the equipment sending this cause.</enum>
+				<enum internal="MESSAGE_TYPE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE" value="98">This cause indicates that the equipment sending this cause has received a message not compatible with the protocol state.</enum>
+				<enum internal="INFORMATION_ELEMENT_NON-EXISTENT_OR_NOT_IMPLEMENTED" value="99">This cause indicates that the equipment sending this cause has received a message which includes information elements not recognized. This can be because the IE identifier is not defined or it is defined but not implemented by the equipment sending the cause. However, the information element is not required to be present in the message in order for the equipment sending the cause to process the message.</enum>
+				<enum internal="CONDITIONAL_IE_ERROR" value="100">This cause indicates that the equipment sending this cause has received a message with conditional IE errors.</enum>
+				<enum internal="MESSAGE_NOT_COMPATIBLE_WITH_PROTOCOL_STATE" value="101">This cause indicates that a message has been received which is incompatible with the protocol state.</enum>
+				<enum internal="PROTOCOL_ERROR_-_UNSPECIFIED" value="111">This cause is used to report a protocol error event only when no other cause in the protocol error class applies.</enum>
+				<enum internal="INVALID_EPS_BEARER_IDENTITY" value="43">This cause is used by the network or the UE to indicate that the EPS bearer identity value provided to it is not a valid value for the received message or the EPS bearer context identified by the linked EPS bearer identity IE in the request is not active.</enum>
+				<enum internal="LAST_PDN_DISCONNECTION_NOT_ALLOWED" value="49">This cause is used by the network to indicate that the UE requested PDN disconnection procedure on the last remaining PDN connection is not allowed.</enum>
+				<enum internal="ESM_INFORMATION_NOT_RECEIVED" value="53">This ESM cause is sent by the network to inform the UE that that the cause of the Attach Reject is that an ESM Information Response is missing.
+</enum>
+				<enum internal="PLMN_NOT_ALLOWED" value="11">This cause is sent to the #UE# if it requests access in a #PLMN# where the #UE#, by subscription or due to operator determined barring, is not allowed to operate.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="EPS_SERVICES_NOT_ALLOWED" value="7">This cause code is sent to the #UE# when there is no #EPS# subscription in the #HSS# for this #IMSI# or when the #RAT# is not allowed for the #IMSI# according to subscription data in #HSS#.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="ROAMING_NOT_ALLOWED_IN_THIS_TRACKING_AREA" value="13">This cause is sent to the #UE# if it requests access in a Tracking Area where the #UE#, by subscription or due to operator determined barring, is not allowed to operate.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="NO_SUITABLE_CELLS_IN_TRACKING_AREA" value="15">This cause is sent to the #UE# if it requests access in a Tracking Area where the #UE#, by subscription or due to operator determined barring, is not allowed to operate.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="CS_DOMAIN_NOT_AVAILABLE" value="18">This EMM cause is sent to the #UE# if the #MME# cannot service a #UE# generated request because of no availability of #CS# domain.</enum>
+				<enum internal="MSC_TEMPORARILY_NOT_REACHABLE" value="16">This cause is sent to the #UE# if it requests a combined EPS/IMSI attach or a combined TA/LA update and the #MSC# is temporarily not reachable from the #MME# over the SGs interface.</enum>
+				<enum internal="IMSI_UNKNOWN_IN_HSS" value="2">This cause code is sent to the #UE# if it requests access in a network where the #IMSI# of the #UE# is unknown in the #HSS#.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="ILLEGAL_UE" value="3">This cause code is sent to the #UE#, in the Attach or #TAU# Accept message, if received from the #MSC/VLR# in a Location Update procedure.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="ILLEGAL_ME" value="6">This cause code is sent to the #UE# if it requests access to a network where the #ME# is considered illegal.
+It is also sent if the #UE# has not included #IMEISV# in the Security Mode Complete message.
+it is also sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+				<enum internal="UE_SECURITY_CAPABILITIES_MISMATCH" value="23">This cause is sent if the UE detects that the UE security capabilities does not match the one sent back by the network.</enum>
+				<enum internal="TRACKING_AREA_NOT_ALLOWED" value="12">This cause is sent to the #UE# if it requests access in a Tracking Area 
+where the #UE#, due to Roaming Restrictions, is not allowed to operate.
+Self-activation device support enables users to subscribe and activate services by themselves using pre-distributed and not-fully provisioned UICC and eHRPD/LTE network.
+This cause code may be configured and sent to UE in Detach Request message in case that HSS initiated Cancel Location request with cancel type "Subscription withdrawal" or PGW initiated Delete Bearer Request to remove the last PDN connection with cause "PDN reconnection to this APN disallowed".</enum>
+				<enum internal="IMEI_NOT_ACCEPTED" value="5">This cause is sent to the MS if the network does not accept emergency call establishment using an IMEI or not accept attach procedure for emergency services using an IMEI.</enum>
+				<enum internal="MAC_FAILURE" value="20">The USIM detects that the Media Access Control (MAC) in the Authentication Request message is not fresh.</enum>
+				<enum internal="SYNCH_FAILURE" value="21">The USIM detects that the Sequence Number (SQN) in the Authentication Request message is out of range.</enum>
+				<enum internal="SECURITY_MODE_REJECTED,_UNSPECIFIED" value="24">The Security Mode command is rejected by the UE. </enum>
+				<enum internal="UNKNOWN_PDN_ADDRESS_OR_PDN_TYPE" value="28">The SGW responds with unknown PDN address or PDN type.</enum>
+				<enum internal="REGULAR_DEACTIVATION" value="36">Indicates a regular UE- or network-initiated release of EPS bearer resources.
+It may be sent when in case of PGW initiated Delete Bearer Request with cause "Reactivation requested", for the not last PDN connection, if it is configured in Deactivate EPS Bearer Context Request to UE, this cause code is included</enum>
+				<enum internal="SEMANTIC_ERROR_IN_THE_TFT_OPERATION" value="41">The requested service was rejected due to a semantic error in the Traffic Flow Template (TFT) operation included in the request.</enum>
+				<enum internal="SYNTACTICAL_ERROR_IN_THE_TFT_OPERATION" value="42">The requested service was rejected due to a syntactical error in the TFT operation included in the request.</enum>
+				<enum internal="SYNTACTICAL_ERROR_IN_PACKET_FILTER(S)" value="45">The requested service was rejected due to one or more syntactical errors in packet filters of the TFT included in the request.</enum>
+				<enum internal="SINGLE_ADDRESS_BEARERS_ONLY_ALLOWED" value="52">The requested PDN connectivity is accepted with the restriction that only single IP version bearers are allowed.</enum>
+				<enum internal="REACTIVATION_REQUIRED" value="39">PGW initiated Delete Bearer Request with cause "Reactivation requested", not last PDN connection, in Deactivate EPS Bearer Context Request from MME to UE, this cause code is included</enum>
+				<enum internal="NOT_AUTHORIZED_FOR_THIS_CSG" value="25">it may be sent in Detach Request message if it is configured in the case of HSS Cancel Location Request with "Subscrition withdrawal" or PGW initiated disconnection of the last PDN connection with cause "PDN reconnection to this APN disallowed"</enum>
+			</enumeration>
+		</parametertype>
+		<parametertype>
+			<name>RIL3_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="ILLEGAL_ME" value="6">This cause is sent to the MS if the ME used is not acceptable to the network, e.g. blacklisted. When used by an MM procedure, this cause does not affect operation of the GPRS service.</enum>
+				<enum internal="ROAMING_NOT_ALLOWED_IN_THIS_LOCATION_AREA" value="13">This cause is sent to an MS which requests location updating in a location area of a PLMN which by subscription offers roaming to that MS but not  in that Location Area.</enum>
+				<enum internal="LOCATION_AREA_NOT_ALLOWED" value="12">This cause is sent to the MS  MS if it requests location updating in a location area where the PLMN determines that the MS, by subscription, is not allowed to operate.  
+The MS is not triggered to search for another allowed location area on the same PLMN.</enum>
+				<enum internal="PLMN_NOT_ALLOWED" value="11">This cause is sent to the MS if it requests location updating in a PLMN where the MS, by subscription or due to operator determined barring is not allowed to operate.</enum>
+				<enum internal="NO_SUITABLE_CELLS_IN_LOCATION_AREA" value="15">This cause is sent to the MS in the following situations:
+*The MS requests location updating in a location area where the MS, by subscription, is not allowed to operate and should instead find another allowed location area in the same PLMN.;*The SGSN is configured with Roaming Restrictions.;</enum>
+				<enum internal="MSC_TEMPORARILY_NOT_REACHABLE" value="16">This cause is sent to the MS if it requests a combined GPRS attach or RAU in a PLMN where the MSC is temporarily not reachable via the GPRS part of the network.</enum>
+				<enum internal="NETWORK_FAILURE" value="17">This cause is sent to the MS in the following situations:
+*The MSC cannot service an MS-generated request because of PLMN failures, for example, problems in MAP or Diameter.;*The HLR/HSS does not respond to the SGSN messages or the SGSN cannot send messages to the HLR/HSS.;*The HLR/HSS sends an empty response to the SGSN during the authentication.;</enum>
+				<enum internal="MAC_FAILURE" value="20">This cause is sent to the network if the USIM detects that the MAC in the AUTHENTICATION REQUEST or AUTHENTICATION_AND_CIPHERING REQUEST message is not fresh (see 3GPP TS 33.102 [5a]).</enum>
+				<enum internal="CONGESTION" value="22">"This cause is sent if the service request cannot be auctioned because of congestion (e.g. No channel, facility busy/congested etc).
+Note: When the CS part has failed but the GPRS part is OK (reject from MSC), accept is sent to the MS with CC to indicate that the CS-attach has failed."</enum>
+				<enum internal="GSM_AUTHENTICATION_UNACCEPTABLE" value="23">This cause is sent to the network in Iu mode if a USIM is inserted in the MS and there is no Authentication Parameter AUTN IE present in the AUTHENTICATION REQUEST or AUTHENTICATION_AND_CIPHERING REQUEST message.</enum>
+				<enum internal="INVALID_MANDATORY_INFORMATION" value="96">This cause indicates that the equipment sending this cause has received a message with a non-semantical mandatory IE error.</enum>
+				<enum internal="PROTOCOL_ERROR_UNSPECIFIED" value="111">This cause is used to report a protocol error event only when no other cause in the protocol error class applies.</enum>
+				<enum internal="GPRS_SERVICE_NOT_ALLOWED" value="7">This cause is sent to the MS when it is not allowed to operate GPRS services.</enum>
+				<enum internal="GPRS_SERVICE_AND_NON-GPRS_SERVICE_NOT_ALLOWED" value="8">This cause is sent to the MS when it is not allowed to operate either GPRS or non-GPRS services.</enum>
+				<enum internal="MS_IDENTITY_CANNOT_BE_DERIVED_BY_THE_NETWORK" value="9">This cause is sent to the MS when the network cannot derive the MS's identity from the P-TMSI in case of inter-SGSN routing area update</enum>
+				<enum internal="IMPLICITLY_DETACHED" value="10">This cause is sent to the MS either if the network has implicitly detached the MS, e.g. some while after the Mobile reachable timer has expired, or if the GMM context data related to the subscription dose not exist in the SGSN e.g. because of a SGSN restart.</enum>
+				<enum internal="GPRS_SERVICES_NOT_ALLOWED_IN_THIS_PLMN" value="14">This cause is sent to the MS which requests GPRS service in a PLMN which does not offer roaming for GPRS services to that MS</enum>
+				<enum internal="INSUFFICIENT_RESOURCES" value="26">This cause code is used by the MS or by the network to indicate that a PDP context activation request, secondary PDP context activation request, PDP context modification request, or MBMS context activation request cannot be accepted due to insufficient resources.</enum>
+				<enum internal="UNKNOWN_OR_MISSING_ACCESS_POINT_NAME" value="27">This cause code is used by the network to indicate that the requested service is rejected by the external packet data network if the APN is not included although required, or if the APN cannot be resolved.</enum>
+				<enum internal="UNKNOWN_PDP_ADDRESS_OR_PDP_TYPE" value="28">This cause code is used by the network to indicate that the requested service was rejected by the external packet data network because the access point name was not included although required or if the access point name could not be resolved.</enum>
+				<enum internal="USER_AUTHENTICATION_FAILED" value="29">This cause code is used by the network to indicate that the requested service was rejected by the external packet data network due to a failed user authentication.</enum>
+				<enum internal="ACTIVATION_REJECTED_BY_GGSN_SERVING_GW_OR_PDN_GW" value="30">This cause code is used by the network to indicate that the requested service was rejected by the GGSN, Serving GW or PDN GW.</enum>
+				<enum internal="ACTIVATION_REJECTED_UNSPECIFIED" value="31">This cause code is used by the network to indicate that the requested service was rejected due to unspecified reasons.</enum>
+				<enum internal="SERVICE_OPTION_NOT_SUPPORTED" value="32">This cause code is used by the network when the MS requests a service which is not supported by the PLMN.</enum>
+				<enum internal="REQUESTED_SERVICE_OPTION_NOT_SUBSCRIBED" value="33">This cause is sent when the MS requests a service option for which it has no subscription.</enum>
+				<enum internal="REGULAR_DEACTIVATION" value="36">This cause code is used to indicate a regular MS or network initiated PDP context deactivation or a regular network initiated MBMS context deactivation.</enum>
+				<enum internal="SM_NETWORK_FAILURE" value="38">This cause code is used by the network to indicate that the PDP context deactivation or the MBMS context deactivation is caused by an error situation in the network.</enum>
+				<enum internal="REACTIVATION_REQUIRED" value="39">This cause code is used by SGSN to indicate that a context reactivation is needed</enum>
+				<enum internal="FEATURE_NOT_SUPPORTED" value="40">This cause code indicates that the equipment sending this cause code does not support the requested feature.</enum>
+				<enum internal="SEMANTIC_ERROR_IN_THE_TFT_OPERATION" value="41">This cause code is used by the network or the MS to indicate that there is a semantic error in the TFT operation included in a secondary PDP context activation request or an MS-initiated PDP context modification or a network requested secondary PDP context activation.</enum>
+				<enum internal="SYNTACTICAL_ERROR_IN_THE_TFT_OPERATION" value="42">This cause code is used by the network or the MS to indicate that there is a syntactical error int he TFT operation included i n a secondary Pep context activation request or an MS-initiated Pep context modification or a network requested secondary PDP context activation.</enum>
+				<enum internal="UNKNOWN_PDP_CONTEXT" value="43">This cause code is used by the network or the MS to indicate that the PDP context identified by the Linked TI IE in the secondary PDP context activation request or a network requested secondary PDP context activation is not active.</enum>
+				<enum internal="SEMANTIC_ERRORS_IN_PACKET_FILTERS" value="44">This cause code is used by the network or the MS to indicate that there is one or more semantic errors in packet filter(s) of the TFT included in a secondary PDP context activation request or an MS-initiated PDP context modification or a network requested secondary PDP context activation.</enum>
+				<enum internal="SYNTACTICAL_ERROR_IN_PACKET_FILTERS" value="45">This cause code is used by the network or the MS to indicate that there is one or more syntactical errors in packet filter(s) of the TFT included in a secondary PDP context activation request or an MS-initiated PDP context modification or a network requested secondary PDP context activation.</enum>
+				<enum internal="PDP_CONTEXT_WITHOUT_TFT_ALREADY_ACTIVATED" value="46">This cause code is used by the network or the MS to indicate that it has already activated a PDP context without TFT.</enum>
+				<enum internal="ACTIVATION_REJECTED_BEARER_CONTROL_MODE_VIOLATION" value="48">This cause code is used by the network or the MS to indicate that there is BCM violation between MS and the network.</enum>
+				<enum internal="INVALID_TRANSACTION_IDENTIFIER_VALUE" value="81">This cause indicates that the equipment sending this cause has received a message with a transaction identifier which is not currently in use on the MS-network interface.</enum>
+				<enum internal="SEMANTICALLY_INCORRECT_MESSAGE" value="95">This cause is used to report receipt of a message with semantically incorrect contents.</enum>
+				<enum internal="MESSAGE_TYPE_NON-EXISTENT_OR_NOT_IMPLEMENTED" value="97">This cause code indicates that the equipment sending this cause code has received a message with message type non-existent or not implemented.</enum>
+				<enum internal="MESSAGE_TYPE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE" value="98">This cause code indicates that the equipment sending this cause code has received a message with type not compatible with the protocol state.</enum>
+				<enum internal="INFORMATION_ELEMENT_NON-EXISTENT_OR_NOT_IMPLEMENTED" value="99">This cause code indicates that the equipment sending this cause code has received a message with information element non-existent or not implemented.</enum>
+				<enum internal="CONDITIONAL_IE_ERROR" value="100">This cause indicates that the equipment sending this cause has received a message with conditional IE errors.</enum>
+				<enum internal="MESSAGE_NOT_COMPATIBLE_WITH_THE_PROTOCOL_STATE" value="101">This cause code indicates that the equipment sending this cause code has received a message not compatible with the protocol state.</enum>
+				<enum internal="NOCAUSECODE" value="0">Cause code 0 is used at success/ignore/abort events and indicates that no cause code are sent externally from the SGSN-MME. Reject events never use Cause code 0  except for events that represents procedures where SM Status messages have been sent.</enum>
+				<enum internal="IMSI_UNKNOWN_IN_HLR" value="2">This cause is sent to the MS if the MS is not known (registered) in the HLR. This cause code does not affect
+operation of the GPRS service, although is may be used by a GMM procedure.</enum>
+				<enum internal="PDP_TYPE_IPV4_ONLY_ALLOWED" value="50">This cause code is sent to the MS if the requested PDN connectivity is accepted with the restriction that only PDP type IPv4 is allowed.</enum>
+				<enum internal="PDP_TYPE_IPV6_ONLY_ALLOWED" value="51">This cause code is sent to the MS if the requested PDN connectivity is accepted with the restriction that only PDP type IPv6 is allowed.</enum>
+				<enum internal="SINGLE_ADDRESS_BEARERS_ONLY_ALLOWED" value="52">This cause code is sent to the MS if the requested PDN connectivity is accepted with the restriction that only single IP version bearers are allowed.</enum>
+				<enum internal="APN_RESTRICTION_VALUE_INCOMPATIBLE_WITH_ACTIVE_PDP_CONTEXT" value="112">This cause exists in Activate PDP Context Reject, if S4-SGSN receives Create Session Response with cause #104 APN Restriction type Incompatible with currently active PDN connection.</enum>
+				<enum internal="ILLEGAL_MS" value="3">This cause is sent to the MS when the network refuses service to the MS either because an identity of the MS is not acceptable to the network or because the MS does not pass the authentication check, i.e. the SRES received from the MS is different from that generated by the network. When used by an MM procedure, except the authentication procedure, this cause does not affect operation of the GPRS service.</enum>
+				<enum internal="SYNCH_FAILURE" value="21">This cause is sent to the network if the USIM detects that the SQN in the AUTHENTICATION REQUEST or AUTHENTICATION_AND_CIPHERING REQUEST message is out of range (see 3GPP TS 33.102 [5a]).</enum>
+				<enum internal="LLC_OR_SNDCP_FAILURE_(A/GB_MODE_ONLY)" value="25">This cause code is used by the MS indicate that a PDP context is deactivated because of a LLC or SNDCP failure (e.g. if the SM receives a SNSM-STATUS.request message with cause "DM received " or " invalid XID response ", see 3GPP TS 44.065 [78])</enum>
+				<enum internal="SERVICE_OPTION_TEMPORARILY_OUT_OF_ORDER" value="34">This cause is sent when the MSC cannot service the request because of temporary outage of one or more functions required for supporting the service.</enum>
+				<enum internal="QOS_NOT_ACCEPTED" value="37">This cause code is used by the MS if the new QoS cannot be accepted that were indicated by the network in the PDP Context Modification procedure.</enum>
+			</enumeration>
+		</parametertype>
+		<parametertype>
+			<name>RIL3_CAUSE2_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="NO_PDP_CONTEXT_ACTIVATED" value="40">This cause is sent to the MS if the MS requests an establishment of the radio access bearers for all active PDP contexts by sending a SERVICE REQUEST message indicating "data" to the network, but the SGSN does not have any active PDP context(s).</enum>
+			</enumeration>
+		</parametertype>
+		<parametertype>
+			<name>S1AP_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Reason for failure" information. In order to get the protocol from where the Cause Code in an event originates, the parameter "L_CAUSE_PROT_TYPE" value should be analyzed.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="RADIO_NETWORK__HO_FAILURE_IN_TARGET_EPC_ENB_OR_TARGET_SYSTEM" value="307">This cause is sent when the MME detects a handover related failure in the target SGW, PGW, eNodeB, or system.</enum>
+				<enum internal="UNSPECIFIED_-_RADIO_NETWORK_LAYER_CAUSE" value="0">Unspecified</enum>
+				<enum internal="SUCCESSFUL-HANDOVER" value="2">The successful-handover cause code is a Radio Network Layer cause for the S1AP protocol.</enum>
+				<enum internal="RELEASE-DUE-TO-EUTRAN-GENERATED-REASON" value="3">This cause is sent when the PDN connection is released due to LTE generated reasons.</enum>
+				<enum internal="HO-FAILURE-IN-TARGET-EPC-ENB-OR-TARGET-SYSTEM" value="6">This cause is sent when the #MME# detects a Handover related failure in the target #SGW#, #PGW#, eNodeB, or system.</enum>
+				<enum internal="HO-TARGET-NOT-ALLOWED" value="7">The ho-target-not-allowed cause code is a Radio Network Layer cause for the S1AP protocol indicating that the target cell is not allowed for the UE in question.</enum>
+				<enum internal="UNKNOWN-TARGETID" value="11">In case of intra MME S1-based handover, this cause code is sent when the target eNodeB is unknown to the MME.
+In case of inter MME S1-based Handover, this cause code is sent when the source MME cannot find the target MME.</enum>
+				<enum internal="UNKNOWN-MME-UE-S1AP-ID" value="13">This cause is sent when the S1AP identity is unknown in the UE or MME.</enum>
+				<enum internal="UNKNOWN-ENB-UE-S1AP-ID" value="14">This cause is sent when the S1AP identity is unknown in the UE or eNodeB.</enum>
+				<enum internal="UNKNOWN-PAIR-UE-S1AP-ID" value="15">The unknown-pair-ue-s1ap-id cause code is a Radio Network Layer cause for the S1AP protocol that is sent when the action failed because both UE S1AP IDs are unknown, or are known but do not define a single UE context.</enum>
+				<enum internal="RADIO-CONNECTION-WITH-UE-LOST" value="21">This cause is sent when the radio connection with the UE is lost.</enum>
+				<enum internal="CS_FALLBACK_TRIGGERED" value="23">The cause occurs due to a CS fallback that has been triggered.</enum>
+				<enum internal="RADIO-RESOURCES-NOT-AVAILABLE" value="25">This cause us sent when there are no radio resources available.</enum>
+				<enum internal="FAILURE-IN-RADIO-INTERFACE-PROCEDURE" value="26">This cause is sent when there is a failure in the radio interface procedure.</enum>
+				<enum internal="INVALID-QOS-COMBINATION" value="27">This cause is sent when the QoS combination is not valid.</enum>
+				<enum internal="INTERACTION-WITH-OTHER-PROCEDURE" value="29">This cause is sent when there is interaction between different procedures.</enum>
+				<enum internal="UNKNOWN-E-RAB-ID" value="30">This cause is sent when the RAB identity is unknown.</enum>
+				<enum internal="MULTIPLE-E-RAB-ID-INSTANCES" value="31">This cause is sent when there are multiple RAB identity instances.</enum>
+				<enum internal="TRANSPORT-RESOURCE-UNAVAILABLE" value="128">This cause is sent when there is no transport resource available.</enum>
+				<enum internal="UNSPECIFIED_-_TRANSPORT_LAYER_CAUSE" value="129">This cause is sent when unspecified transport layer problems occur.</enum>
+				<enum internal="MESSAGE-NOT-COMPATIBLE-WITH-RECEIVER-STATE" value="387">This cause is sent when the message is not compatible with the state of the receiver.</enum>
+				<enum internal="SEMANTIC-ERROR" value="388">This cause is sent when there is a semantic error.</enum>
+				<enum internal="UNSPECIFIED_-_PROTOCOL_CAUSE" value="390">This cause is sent due to an unspecified protocol error.</enum>
+				<enum internal="CONTROL-PROCESSING-OVERLOAD" value="512">The control-processing-overload cause code is a Miscellaneous cause for the S1AP protocol.</enum>
+				<enum internal="NOT-ENOUGH-USER-PLANE-PROCESSING-RESOURCES" value="513">The cause is sent when there are not enough processing resources on the user plane .</enum>
+				<enum internal="HARDWARE-FAILURE" value="514">This cause is sent when there is a hardware failure.</enum>
+				<enum internal="OM-INTERVENTION" value="515">The om-intervention cause code is a Miscellaneous cause for the S1AP protocol where the action is due to Operation and Maintenance intervention.</enum>
+				<enum internal="UNSPECIFIED_FAILURE_-_MISCELLANEOUS_CAUSE" value="516">This cause is sent when there is a unspecified failure.</enum>
+				<enum internal="NOS1APCAUSECODE" value="600">No response received from eNodeB</enum>
+				<enum internal="REDIRECTION_TOWARDS_1XRTT" value="36">The release is requested due to redirection towards a 1xRTT system.</enum>
+				<enum internal="THE_HANDOVER_HAS_BEEN_CANCELLED_BY_RADIO_NETWORK." value="4">The MME has received a Handover Cancel message and terminated the ongoing Handover
+preparation procedure.</enum>			
+                        </enumeration>
+		</parametertype>
+		<parametertype>
+			<name>SUB_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides "Detailed reason for failure" information. This information should be analyzed together with the "Cause Code" parameter and the "L_CAUSE_PROT_TYPE" parameter. Some sub cause codes are also used as BEARER_CAUSE.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="NO_VALUE" value="0">No SubCauseCode available</enum>
+				<enum internal="AUTH_FAILED" value="10">Auth failed</enum>
+				<enum internal="AUTH_FAILED:_UNKNOWN_SUBSCRIBER_PLMN_NOT_ALLOWED" value="11">Auth failed: unknown subscriber PLMN not allowed</enum>
+				<enum internal="AUTH_FAILED:_UNKNOWN_SUBSCRIBER,_OPERATOR_DETERMINED_BARRING" value="12">Auth failed: unknown subscriber, operator determined barring</enum>
+				<enum internal="AUTH_FAILED:_UNKNOWN_SUBSCRIBER,_IMSI_UNKNOWN" value="13">Auth failed: unknown subscriber, IMSI unknown</enum>
+				<enum internal="AUTH_FAILED:_UNKNOWN_SUBSCRIBER" value="14">Auth failed: unknown subscriber</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_NOT_ALLOWED_GPRS_SUBSCRIPTION_UNKNOWN" value="15">Auth failed: roaming not allowed GPRS subscription unknown</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_NOT_ALLOWED" value="16">Auth failed: roaming not allowed</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_NOT_ALLOWED,_OPERATOR_DETERMINED_BARRING" value="17">Auth failed: roaming not allowed, operator determined barring</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_NOT_ALLOWED,_PLMN_NOT_ALLOWED" value="18">Auth failed: roaming not allowed, PLMN not allowed</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_NOT_ALLOWED,_IMSI_UNKNOWN" value="19">Auth failed: roaming not allowed, IMSI unknown</enum>
+				<enum internal="AUTH_FAILED:_ROAMING_RESTRICTION_IN_SGSN_UNSUPPORTED_FEATURE" value="20">Auth failed: roaming restriction in SGSN unsupported feature</enum>
+				<enum internal="AUTH_FAILED:_NO_RELEVANT_GPRS_SUBSCRIPTION_IN_THIS_SGSN" value="21">Auth failed: no relevant GPRS subscription in this SGSN</enum>
+				<enum internal="AUTH_FAILED:_BAD_GMM_CAUSE_OR_OTHER_RIL3_REASON" value="22">Auth failed: bad GMM cause or other RIL3 reason</enum>
+				<enum internal="AUTH_FAILED:_CIPHERING_ALGORITHM_MISMATCH" value="23">Auth failed: ciphering algorithm mismatch</enum>
+				<enum internal="AUTH_FAILED:_UNDEFINED_IMSI_SERIES" value="24">Auth failed: undefined IMSI series</enum>
+				<enum internal="AUTH_FAILED:_UNDEFINED_IMSI" value="25">Auth failed: undefined IMSI</enum>
+				<enum internal="AUTH_FAILED:_ESTABLISH_CIPHERED_CONNECTION_FAILED" value="26">Auth failed: establish ciphered connection failed</enum>
+				<enum internal="AUTH_FAILED:_SYSTEM_FAILURE" value="27">Auth failed: system failure</enum>
+				<enum internal="AUTH_FAILED:_UNEXPECTED_DATA_VALUE" value="28">Auth failed: unexpected data value</enum>
+				<enum internal="AUTH_FAILED:_MAP_ERROR" value="29">Auth failed: map error</enum>
+				<enum internal="AUTH_FAILED:_ABORTED" value="30">Auth failed: aborted</enum>
+				<enum internal="AUTH_FAILED:_SRES_MISMATCH" value="31">Auth failed: SRES mismatch</enum>
+				<enum internal="AUTH_FAILED:_MAC_FAILURE" value="32">Auth failed: MAC failure</enum>
+				<enum internal="AUTH_FAILED:_SYNCH_FAILURE" value="33">Auth failed: synch failure</enum>
+				<enum internal="AUTH_FAILED:_ACCESS_RESTRICTED" value="34">Auth failed: access restricted</enum>
+				<enum internal="AUTH_FAILED:_NO_ANSWER_TO_AUTHENTICATION_AND_CIPHERING_REQUEST" value="35">Auth failed: no answer to authentication and ciphering request</enum>
+				<enum internal="AUTH_FAILED:_UNKNOWN_SUBSCRIBER,_GPRS_SUBSCRIPTION_UNKNOWN" value="36">Auth failed: unknown subscriber, GPRS subscription unknown</enum>
+				<enum internal="AUTH_FAILED:_UNEXPECTED_RESPONSE_FROM_MS" value="37">Auth failed: unexpected response from ms</enum>
+				<enum internal="AUTH_FAILED:_UMTS_GSM_RES_MISMATCH" value="38">Auth failed: UMTS GSM res mismatch</enum>
+				<enum internal="ERROR_INDICATION_FROM_GGSN/SGW_RECEIVED" value="39">Error Indication from GGSN/SGW received</enum>
+				<enum internal="REMOVAL_OF_SUBSCRIPTION_DATA_IN_HLR" value="40">Removal of Subscription data in HLR</enum>
+				<enum internal="GTP_TIMEOUT_TOWARDS_GGSN_DURING_SGSN_INITIATED_MODIFICATION" value="41">GTP timeout towards GGSN during SGSN initiated modification</enum>
+				<enum internal="GGSN_RESPONDED_WITH_REJECT_CAUSE_DIFFERENT_FROM_#192_DURING_SGSN_INITIATED_MODIFICATION" value="42">GGSN responded with reject cause different from #192 during SGSN initiated modification</enum>
+				<enum internal="CREATE_BSS_PFC_NACK_WITH_CAUSE_DIFFERENT_FROM_#00,#06_AND_#0A_RECEIVED" value="43">Create BSS PFC Nack with cause different from #00,#06 and #0A received</enum>
+				<enum internal="GTP_TIMEOUT_TOWARDS_GGSN_DURING_BSS_INITIATED_MODIFICATION" value="44">GTP timeout towards GGSN during BSS initiated modification</enum>
+				<enum internal="GGSN_RESPONDED_WITH_REJECT_CAUSE_DIFFERENT_FROM_#192_DURING_BSS_INITIATED_MODIFICATION" value="45">GGSN responded with reject cause different from #192 during BSS initiated modification</enum>
+				<enum internal="RNC_DID_NOT_RETURN_A_VALID_RESPONSE_WHEN_TYPE_IS_MODIFY" value="46">RNC did not return a valid response when type is modify</enum>
+				<enum internal="HIGHER_QOS_FROM_GGSN_DURING_MS_MODIFICATION_PROCEDURE_ADMISSION_CONTROL" value="47">Higher QoS from GGSN during MS modification procedure admission control</enum>
+				<enum internal="HIGHER_QOS_FROM_GGSN_DURING_ISRAU_OR_SGSN/BSS_MODIFICATION_PROCEDURE_LICENSE_MISSING" value="48">Higher QoS from GGSN during ISRAU or SGSN/BSS modification procedure license missing</enum>
+				<enum internal="HIGHER_QOS_FROM_GGSN_DURING_ISRAU_OR_SGSN/BSS_MODIFICATION_PROCEDURE_ADMISSION_CONTROL" value="49">Higher QoS from GGSN during ISRAU or SGSN/BSS modification procedure admission control</enum>
+				<enum internal="QOS_CHANGED_BY_GGSN_DURING_MS_MODIFICATION_PROCEDURE" value="50">QoS changed by GGSN during MS modification procedure</enum>
+				<enum internal="QOS_CHANGED_BY_GGSN_DURING_SGSN_MODIFICATION_PROCEDURE" value="51">QoS changed by GGSN during SGSN modification procedure</enum>
+				<enum internal="GGSN_RESPONDED_WITH_REJECT_CAUSE_#192_DURING_SGSN_INITIATED_MODIFICATION" value="52">GGSN responded with reject cause #192 during SGSN initiated modification</enum>
+				<enum internal="NO_RESPONSE_FROM_MS_DURING_SGSN_INITIATED_MODIFICATION" value="53">No response from MS during SGSN initiated modification</enum>
+				<enum internal="GGSN_RESPONDED_WITH_REJECT_CAUSE_#192_DURING_BSS_INITIATED_MODIFICATION" value="54">GGSN responded with reject cause #192 during BSS initiated modification</enum>
+				<enum internal="NO_RESPONSE_FROM_MS_DURING_BSS_INITIATED_MODIFICATION" value="55">No response from MS during BSS initiated modification</enum>
+				<enum internal="XID_NEGOTIATION" value="56">XID Negotiation</enum>
+				<enum internal="MODIFICATION_OF_VPLMN_ADDRESS_ALLOWED_IN_HLR" value="57">Modification of VPLMN address allowed in HLR</enum>
+				<enum internal="RAB_RE-ESTABLISHMENT_FAILURE" value="58">RAB re-establishment failure</enum>
+				<enum internal="PDP_DEACTIVATED_DURING_MOBILITY_PROCEDURE" value="59">PDP deactivated during mobility procedure</enum>
+				<enum internal="UPD_LOC_FAILED" value="60">Upd loc failed</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_NOT_ALLOWED,_GPRS_SUBSCRIBER_UNKNOWN" value="61">Upd loc failed: roaming not allowed, GPRS subscriber unknown</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_NOT_ALLOWED,_IMSI_UNKNOWN" value="62">Upd loc failed: roaming not allowed, IMSI unknown</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_NOT_ALLOWED,_OPERATOR_DETERMINED_BARRING" value="63">Upd loc failed: roaming not allowed, operator determined barring</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_NOT_ALLOWED,_PLMN_NOT_ALLOWED" value="64">Upd loc failed: roaming not allowed, PLMN not allowed</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_NOT_ALLOWED" value="65">Upd loc failed: roaming not allowed</enum>
+				<enum internal="UPD_LOC_FAILED:_ROAMING_RESTRICTION_SGSN_UNSUPPORTED_FEATURE" value="66">Upd loc failed: roaming restriction SGSN unsupported feature</enum>
+				<enum internal="UPD_LOC_FAILED:_UNDEFINED_IMSI_SERIES" value="67">Upd loc failed: undefined IMSI series</enum>
+				<enum internal="UPD_LOC_FAILED:_UNDEFINED_IMSI" value="68">Upd loc failed: undefined IMSI</enum>
+				<enum internal="UPD_LOC_FAILED:_NO_RELEVANT_GPRS_SUBSCRIPTION_IN_THIS_SGSN" value="69">Upd loc failed: no relevant GPRS subscription in this SGSN</enum>
+				<enum internal="UPD_LOC_FAILED:_UNKNOWN_SUBSCRIBER_PLMN_NOT_ALLOWED" value="70">Upd loc failed: unknown subscriber PLMN not allowed</enum>
+				<enum internal="UPD_LOC_FAILED:_UNKNOWN_SUBSCRIBER_OPERATOR_DETERMINED_BARRING" value="71">Upd loc failed: unknown subscriber operator determined barring</enum>
+				<enum internal="UPD_LOC_FAILED:_UNKNOWN_SUBSCRIBER" value="72">Upd loc failed: unknown subscriber</enum>
+				<enum internal="UPD_LOC_FAILED:_UNKNOWN_SUBSCRIBER_GPRS_SUBSCRIPTION_UNKNOWN" value="73">Upd loc failed: unknown subscriber GPRS subscription unknown</enum>
+				<enum internal="UPD_LOC_FAILED:_UNKNOWN_SUBSCRIBER_IMSI_UNKNOWN" value="74">Upd loc failed: unknown subscriber IMSI unknown</enum>
+				<enum internal="UPD_LOC_FAILED:_SYSTEM_FAILURE" value="75">Upd loc failed: system failure</enum>
+				<enum internal="UPD_LOC_FAILED:_UNEXPECTED_DATA_VALUE" value="76">Upd loc failed: unexpected data value</enum>
+				<enum internal="UPD_LOC_FAILED:_MAP_ERROR" value="77">Upd loc failed: map error</enum>
+				<enum internal="UPD_LOC_FAILED:_ABORTED" value="78">Upd loc failed: aborted</enum>
+				<enum internal="UPD_LOC_FAILED:_ACCESS_RESTRICTED" value="79">Upd loc failed: access restricted</enum>
+				<enum internal="NO_RESPONSE_FROM_MS_DURING_GGSN/PGW_INITIATED_MODIFICATION" value="80">No response from MS during GGSN/PGW initiated modification</enum>
+				<enum internal="RNC_REJECTED_RAB_RE-ESTABLISHMENT_WITH_A_NON_QOS_RELATED_CAUSE" value="81">RNC rejected RAB re-establishment with a non QoS related cause</enum>
+				<enum internal="HIGHER_QOS_FROM_GGSN_DURING_MS_MODIFICATION_PROCEDURE_LICENSE_MISSING" value="82">Higher QoS from GGSN during MS modification procedure license missing</enum>
+				<enum internal="QOS_FROM_GGSN_WITHOUT_TRAFFIC_CLASS_SUPPORT" value="83">QoS from GGSN without Traffic Class support</enum>
+				<enum internal="INTERFERENCE_OF_ACTIVATION:_DEACTIVATION" value="100">Interference of activation: deactivation</enum>
+				<enum internal="INTERFERENCE_OF_ACTIVATION:_ALREADY_ACTIVATED_CONTEXT" value="101">Interference of activation: already activated context</enum>
+				<enum internal="INTERFERENCE_OF_ACTIVATION:_DETACH" value="106">Interference of activation: detach</enum>
+				<enum internal="INTERFERENCE_OF_ACTIVATION:_MOBILITY_PROCEDURE" value="107">Interference of activation: mobility procedure</enum>
+				<enum internal="REJECT_FROM_SGSN,_GTP_MESSAGE_FAILED" value="110">Reject from SGSN, GTP message failed</enum>
+				<enum internal="REJECT_FROM_SGSN,_NO_RESPONSE_FROM_MS" value="111">Reject from SGSN, no response from MS</enum>
+				<enum internal="REJECT_FROM_SGSN,_BCM_VIOLATION" value="112">Reject from SGSN, BCM violation</enum>
+				<enum internal="REJECT_FROM_SGSN,_SGSN_DOES_NOT_SUPPORT_NETWORK_REQUESTED_BEARER_CONTROL" value="113">Reject from SGSN, SGSN does not support network requested bearer control</enum>
+				<enum internal="REJECT_FROM_SGSN,_LINKED_PDP_CONTEXT_NOT_EXIST_OR_DEACTIVATED" value="114">Reject from SGSN, linked pdp context not exist or deactivated</enum>
+				<enum internal="REJECT_FROM_MS" value="120">Reject from MS</enum>
+				<enum internal="RIL3_MESSAGE_FAILED,_REJECT_FROM_MS" value="121">Ril3 message failed, reject from MS</enum>
+				<enum internal="GTP97_NOT_SUPPORTED" value="125">GTP97 not supported</enum>
+				<enum internal="GTP:_TIMEOUT" value="127">GTP: timeout</enum>
+				<enum internal="GTP:_MANDATORY_IE_INCORRECT" value="128">GTP: Mandatory IE incorrect</enum>
+				<enum internal="GTP:_MANDATORY_IE_MISSING" value="129">GTP: Mandatory IE missing</enum>
+				<enum internal="GTP:_OPTIONAL_IE_INCORRECT" value="130">GTP: Optional IE incorrect</enum>
+				<enum internal="GTP:_INVALID_MESSAGE_FORMAT" value="131">GTP: Invalid message format</enum>
+				<enum internal="GTP:_SENDING_OF_MESSAGE_TOWARDS_SGSN_FAILED" value="133">GTP: sending of message towards SGSN failed</enum>
+				<enum internal="INSERT_IMSI_FAILED,_UNDEFINED_IMSI_SERIES" value="134">Insert IMSI failed, undefined IMSI series</enum>
+				<enum internal="INSERT_IMSI_FAILED,_OTHER_REASON" value="135">Insert IMSI failed, other reason</enum>
+				<enum internal="INSERT_IMSI_FAILED,_MULTIPLE_IMSIS" value="136">Insert IMSI failed, multiple IMSIs</enum>
+				<enum internal="IMSI_FAILURE_-_MULTIPLE_CIDS_USING_ONE_IMSI" value="138">IMSI failure - multiple CIDs using one IMSI</enum>
+				<enum internal="SGSN_CONTEXT_RESPONSE,_PTMSI_SIGN_MISMATCH" value="139">SGSN context response, PTMSI sign mismatch</enum>
+				<enum internal="SGSN_CONTEXT_RESPONSE,__IMSI_NOT_KNOWN" value="140">SGSN context response,  IMSI not known</enum>
+				<enum internal="SGSN_CONTEXT_RESPONSE,_SYSTEM_FAILURE" value="141">SGSN context response, system failure</enum>
+				<enum internal="SGSN_CONTEXT_RESPONSE,_OTHER_REASON" value="142">SGSN context response, other reason</enum>
+				<enum internal="OTHER_GTP_CAUSE_CODE" value="143">Other GTP cause code</enum>
+				<enum internal="RIL3_MESSAGE_FAILED" value="170">RIL3 message failed</enum>
+				<enum internal="RIL3_MESSAGE_FAILED:_AUTHENTICATION_REQUEST" value="171">RIL3 message failed: authentication request</enum>
+				<enum internal="RIL3_MESSAGE_FAILED:_AUTHENTICATION_RESPONSE" value="172">RIL3 message failed: authentication response</enum>
+				<enum internal="RIL3_MESSAGE_FAILED:_IDENTITY_REQUEST" value="173">RIL3 message failed: identity request</enum>
+				<enum internal="RIL3_MESSAGE_FAILED:_IDENTITY_RESPONSE" value="174">RIL3 message failed: identity response</enum>
+				<enum internal="RIL3_MESSAGE_FAILED:_ATTACH_REQUEST" value="175">RIL3 message failed: attach request</enum>
+				<enum internal="QOS_CHANGED" value="190">QoS changed</enum>
+				<enum internal="QOS_NEGOTIATION_FAILED" value="193">QoS negotiation failed</enum>
+				<enum internal="QOS_NEGOTIATION_FAILED,_NO_RESOURCES_(SUBSCRIBER)" value="194">QoS negotiation failed, no resources (Subscriber)</enum>
+				<enum internal="QOS_NEGOTIATION_FAILED,_INVALID_QOS_PROFILE" value="197">QoS negotiation failed, invalid QoS profile</enum>
+				<enum internal="QOS_NEGOTIATION_FAILED,_INVALID_BITRATE_(SUBSCRIBER)" value="199">QoS negotiation failed, invalid bitrate (Subscriber)</enum>
+				<enum internal="INVALID_BITRATE" value="213">Invalid bitrate</enum>
+				<enum internal="QOS_NO_RESOURCES" value="214">QoS no resources</enum>
+				<enum internal="SIGNALING_INTERFERENCE" value="240">Signaling interference</enum>
+				<enum internal="IDENTICAL_MESSAGES_RECEIVED" value="241">Identical messages received</enum>
+				<enum internal="RESENDING_LOOP" value="242">Resending loop</enum>
+				<enum internal="RESENDING_OF_REQUEST" value="243">Resending of request</enum>
+				<enum internal="ABORTED_BY_NEW_REQUEST" value="245">Aborted by new request</enum>
+				<enum internal="POOL:_RESEND_OF_ATTACH_WHILE_WAITING_FOR_ATTACH_COMPLETE" value="246">POOL: resend of attach while waiting for attach complete</enum>
+				<enum internal="POOL:_RESENDING_PTMSI_ATTACH" value="248">POOL: resending PTMSI attach</enum>
+				<enum internal="POOL:_RESENDING_INTRA_RAU" value="249">POOL: resending intra RAU</enum>
+				<enum internal="POOL:_NEW_RAU_ON_NEW_IU_CONNECTION" value="250">POOL: new RAU on new IU connection</enum>
+				<enum internal="POOL:_NEW_RAU_FROM_OUTSIDE_POOL" value="251">POOL: new RAU from outside pool</enum>
+				<enum internal="POOL:_NEW_ATTACH_FROM_OUTSIDE_POOL" value="252">POOL: new attach from outside pool</enum>
+				<enum internal="POOL:_NEW_INTER_RAU" value="254">POOL: new inter RAU</enum>
+				<enum internal="POOL:_NEW_PERIODIC_RAU" value="255">POOL: new periodic RAU</enum>
+				<enum internal="ATTACH_DURING_DETACH_NO_REATTACH_REQUIRED" value="271">Attach during detach no reattach required</enum>
+				<enum internal="NEW_ATTACH_REQUEST_ON_NEW_IU_CONNECTION" value="275">New attach request on new IU connection</enum>
+				<enum internal="NEW_ATTACH_WHILE_WAITING_FOR_ATTACH_COMPLETE" value="276">New attach while waiting for attach complete</enum>
+				<enum internal="NEW_ATTACH_WHILE_WAITING_FOR_UPDATE_LOCATION_RESPONSE" value="277">New attach while waiting for update location response</enum>
+				<enum internal="REATTACH_OLD_ATTACH_REQUEST" value="278">Reattach old attach request</enum>
+				<enum internal="INTERFERED_BY_ROUTING_AREA_UPDATE" value="280">Interfered by routing area update</enum>
+				<enum internal="INTERFERED_BY_DETACH" value="281">Interfered by detach</enum>
+				<enum internal="INTERFERED_BY_IMSI_PAGING" value="282">Interfered by IMSI paging</enum>
+				<enum internal="INTERFERED_BY_ATTACH" value="283">Interfered by attach</enum>
+				<enum internal="INTERFERED_BY_TAU" value="284">Interfered by tau</enum>
+				<enum internal="SUBSCRIPTION_DELETED" value="285">Subscription deleted</enum>
+				<enum internal="SUBSCRIPTION_CANCELLED" value="286">Subscription cancelled</enum>
+				<enum internal="TIMEOUT,_PAGING" value="287">Timeout, paging</enum>
+				<enum internal="TIMEOUT,_INITIAL_CONTEXT_SETUP_RESPONSE" value="288">Timeout, initial context setup response</enum>
+				<enum internal="ADMISSION_CONTROL" value="300">Admission control</enum>
+				<enum internal="ADMISSION_CONTROL,_HIGH_LOAD" value="301">Admission control, high load</enum>
+				<enum internal="ADMISSION_CONTROL,_CAPACITY_REACHED" value="302">Admission control, capacity reached</enum>
+				<enum internal="MAX_NO_OF_CONTEXT_PER_USER,_OR_NO_LLC_SAPI_AVAILABLE" value="305">Max no of context per user, or no LLC SAPI available</enum>
+				<enum internal="CONTEXT_LIMIT_REACHED" value="307">Context limit reached</enum>
+				<enum internal="PRIMARY_CONTEXT_ACTIVATED_USING_GTPV0" value="308">Primary context activated using GTPv0</enum>
+				<enum internal="STATIC_PDP_ADDRESSES_IN_USE_WHEN_ACTIVATING_PRIM_CONTEXT" value="310">Static PDP addresses in use when activating prim context</enum>
+				<enum internal="SECONDARY_PDP_CONTEXT_NOT_ENABLED" value="311">Secondary PDP context not enabled</enum>
+				<enum internal="UNSUPPORTED_PDP_TYPE" value="312">Unsupported PDP type</enum>
+				<enum internal="PDP_SUBSCRIPTION_FAILED" value="313">PDP subscription failed</enum>
+				<enum internal="PDP_CONTEXT_NOT_FOUND" value="316">PDP context not found</enum>
+				<enum internal="NO_PDP_CONTEXT_WITH_THE_SAME_TI" value="317">No PDP context with the same TI</enum>
+				<enum internal="GET_GGSN_ADDRESS_FAILED" value="318">Get GGSN address failed</enum>
+				<enum internal="APN_RESOLVING_FAILURE" value="319">APN resolving failure</enum>
+				<enum internal="SM_STATUS,_MS_REV_98,_INVALID_TI_VALUE" value="320">SM status, MS rev 98, invalid TI value</enum>
+				<enum internal="SM_STATUS,_TI_FLAG/VALUE_ERROR" value="321">SM Status, TI flag/value error</enum>
+				<enum internal="REJECT_CAUSE_128_FROM_GGSN,_REQUEST_ACCEPTED" value="336">Reject cause 128 from GGSN, Request accepted</enum>
+				<enum internal="REJECT_CAUSE_193_FROM_GGSN,_INVALID_MESSAGE_FORMAT" value="338">Reject cause 193 from GGSN, Invalid message format</enum>
+				<enum internal="REJECT_CAUSE_198_FROM_GGSN,_VERSION_NOT_SUPPORTED" value="343">Reject cause 198 from GGSN, Version not supported</enum>
+				<enum internal="REJECT_CAUSE_199_FROM_GGSN,_NO_RESOURCES_AVAILABLE" value="344">Reject cause 199 from GGSN, No resources available</enum>
+				<enum internal="REJECT_CAUSE_200_FROM_GGSN,_SERVICE_NOT_SUPPORTED" value="345">Reject cause 200 from GGSN, Service not supported</enum>
+				<enum internal="REJECT_CAUSE_201_FROM_GGSN,_MANDATORY_IE_INCORRECT" value="346">Reject cause 201 from GGSN, Mandatory IE incorrect</enum>
+				<enum internal="REJECT_CAUSE_204_FROM_GGSN,_SYSTEM_FAILURE" value="347">Reject cause 204 from GGSN, System failure</enum>
+				<enum internal="REJECT_CAUSE_209_FROM_GGSN,_USER_AUTHENTICATION_FAILED" value="352">Reject cause 209 from GGSN, User authentication failed</enum>
+				<enum internal="REJECT_CAUSE_210_FROM_GGSN,_CONTEXT_NOT_FOUND" value="353">Reject cause 210 from GGSN, Context not found</enum>
+				<enum internal="REJECT_CAUSE_211_FROM_GGSN,_ALL_DYNAMIC_PDP_ADDRESSES_ARE_OCCUPIED" value="354">Reject cause 211 from GGSN, All dynamic PDP addresses are occupied</enum>
+				<enum internal="REJECT_CAUSE_212_FROM_GGSN,_NO_MEMORY_IS_AVAILABLE" value="355">Reject cause 212 from GGSN, No memory is available</enum>
+				<enum internal="REJECT_CAUSE_214_FROM_GGSN,_UNKNOWN_MANDATORY_EXTENSION_HEADER" value="357">Reject cause 214 from GGSN, Unknown mandatory extension header</enum>
+				<enum internal="REJECT_CAUSE_215_FROM_GGSN,_SEMANTIC_ERROR_IN_THE_TFT_OPERATION" value="358">Reject cause 215 from GGSN, Semantic error in the TFT operation</enum>
+				<enum internal="REJECT_CAUSE_216_FROM_GGSN,_SYNTACTIC_ERRORS_IN_THE_TFT_OPERATION" value="359">Reject cause 216 from GGSN, Syntactic errors in the TFT operation</enum>
+				<enum internal="REJECT_CAUSE_217_FROM_GGSN,_SEMANTIC_ERRORS_IN_PACKET_FILTER(S)" value="360">Reject cause 217 from GGSN, Semantic errors in packet filter(s)</enum>
+				<enum internal="REJECT_CAUSE_218_FROM_GGSN,_SYNTACTIC_ERRORS_IN_PACKET_FILTER(S)" value="361">Reject cause 218 from GGSN, Syntactic errors in packet filter(s)</enum>
+				<enum internal="REJECT_CAUSE_219_FROM_GGSN,_MISSING_OR_UNKNOWN_APN" value="362">Reject cause 219 from GGSN, Missing or unknown APN</enum>
+				<enum internal="REJECT_CAUSE_220_FROM_GGSN,_UNKNOWN_PDP_ADDRESS_OR_PDP_TYPE" value="363">Reject cause 220 from GGSN, Unknown PDP address or PDP type</enum>
+				<enum internal="REJECT_CAUSE_221_FROM_GGSN,_PDP_CONTEXT_WITHOUT_TFT_ALREADY_ACTIVATED" value="364">Reject cause 221 from GGSN, PDP context without TFT already activated</enum>
+				<enum internal="REJECT_CAUSE_222_FROM_GGSN,_APN_ACCESS_DENIED_-_NO_SUBSCRIPTION" value="365">Reject cause 222 from GGSN, APN access denied - no subscription</enum>
+				<enum internal="REJECT_CAUSE_FROM_GGSN_(OTHER)" value="366">Reject cause from GGSN (other)</enum>
+				<enum internal="REJECT_CAUSE_202_FROM_GGSN,_MANDATORY_IE_MISSING" value="367">Reject cause 202 from GGSN, Mandatory IE missing</enum>
+				<enum internal="REJECT_CAUSE_203_FROM_GGSN,_OPTIONAL_IE_INCORRECT" value="368">Reject cause 203 from GGSN, Optional IE incorrect</enum>
+				<enum internal="RAN_TIMEOUT" value="378">RAN timeout</enum>
+				<enum internal="INCORRECT_CONFIGURATION" value="380">Incorrect configuration</enum>
+				<enum internal="CREATE_BSS_PFC_NACK" value="382">Create BSS PFC nack</enum>
+				<enum internal="MOCN_ATTACH_REJECT" value="384">MOCN attach reject</enum>
+				<enum internal="MS_LEAVING_NODE" value="386">MS leaving node</enum>
+				<enum internal="LOCATION_UPDATE_REJECT_FROM_MSC/VLR" value="387">Location update reject message received from MSC/VLR</enum>
+				<enum internal="SUBSCRIPTION_WITHDRAWN_FROM_HLR/HSS" value="390">Subscription withdrawn from HLR/HSS</enum>
+				<enum internal="SUBSCRIBER_DELETED_BY_CLI_COMMAND" value="391">Subscriber deleted by CLI command</enum>
+				<enum internal="DETACH_OF_INACTIVE_SUBSCRIBERS_INITIATED" value="392">Detach of inactive subscribers initiated</enum>
+				<enum internal="SGSN_INTERNAL" value="394">SGSN internal</enum>
+				<enum internal="PERIODIC/INTRA_RAU_FOR_UNKNOWN_SUBSCRIBER" value="397">Periodic/intra RAU for unknown subscriber</enum>
+				<enum internal="PROTOCOL_ERROR" value="398">Protocol error</enum>
+				<enum internal="ALERT_REQUEST_FROM_MSC/VLR" value="399">Alert request from MSC/VLR</enum>
+				<enum internal="SUSPEND_RECEIVED" value="400">Suspend received</enum>
+				<enum internal="BSSGP_STATUS_RECEIVED" value="401">BSSGP Status received</enum>
+				<enum internal="SM_STATUS_RECEIVED" value="402">SM status received</enum>
+				<enum internal="CANCEL_LOCATION_RECEIVED" value="403">Cancel location received</enum>
+				<enum internal="IDENTITY_CHECK_FAILED" value="405">Identity check failed</enum>
+				<enum internal="APN_ACCESS_DENIED,_NO_SUBSCRIPTION" value="411">APN access denied, no subscription</enum>
+				<enum internal="EIR_BLACKLISTED" value="412">EIR blacklisted</enum>
+				<enum internal="COLLIDING_TEMPORARY_LOGICAL_LINK_IDENTITIES_(TLLIS)" value="413">Colliding temporary logical link identities (tllis)</enum>
+				<enum internal="OLD_RA_UNKNOWN" value="414">Old RA unknown</enum>
+				<enum internal="NATIONAL_ROAMING_RESTRICTION" value="415">National Roaming Restriction</enum>
+				<enum internal="LLC_RESET_FAILED" value="416"></enum>
+				<enum internal="REJECT_CAUSE_001_FROM_RNC,_RAB_PRE_EMPTED" value="422">Reject cause 001 from RNC, rab pre empted</enum>
+				<enum internal="REJECT_CAUSE_018_FROM_RNC,_REQUESTED_TRAFFIC_CLASS_NOT_AVAILABLE" value="439">Reject cause 018 from RNC, requested traffic class not available</enum>
+				<enum internal="REJECT_CAUSE_019_FROM_RNC,_INVALID_RAB_PARAMETERS_VALUE" value="440">Reject cause 019 from RNC, invalid rab parameters value</enum>
+				<enum internal="REJECT_CAUSE_020_FROM_RNC,_REQUESTED_MAXIMUM_BITRATE_NOT_AVAILABLE" value="441">Reject cause 020 from RNC, requested maximum bitrate not available</enum>
+				<enum internal="REJECT_CAUSE_021_FROM_RNC,_REQUESTED_TRANSFER_DELAY_NOT_ACHIEVABLE" value="442">Reject cause 021 from RNC, requested transfer delay not achievable</enum>
+				<enum internal="REJECT_CAUSE_022_FROM_RNC,_REQUESTED_TRANSFER_DELAY_NOT_ACHIEVABLE" value="443">Reject cause 022 from RNC, requested transfer delay not achievable</enum>
+				<enum internal="REJECT_CAUSE_023_FROM_RNC,_INVALID_RAB_PARAMETERS_COMBINATION" value="444">Reject cause 023 from RNC, invalid rab parameters combination</enum>
+				<enum internal="REJECT_CAUSE_024_FROM_RNC,_CONDITION_VIOLATION_FOR_SDU_PARAMETERS" value="445">Reject cause 024 from RNC, condition violation for sdu parameters</enum>
+				<enum internal="REJECT_CAUSE_025_FROM_RNC,_CONDITION_VIOLATION_FOR_TRAFFIC_HANDLING_PRIORITY" value="446">Reject cause 025 from RNC, condition violation for traffic handling priority</enum>
+				<enum internal="REJECT_CAUSE_026_FROM_RNC,_CONDITION_VIOLATION_FOR_GUARANTEED_BITRATE" value="447">Reject cause 026 from RNC, condition violation for guaranteed bitrate</enum>
+				<enum internal="REJECT_CAUSE_027_FROM_RNC,_USER_PLANE_VERSIONS_NOT_SUPPORTED" value="448">Reject cause 027 from RNC, user plane versions not supported</enum>
+				<enum internal="REJECT_CAUSE_028_FROM_RNC,_IU_UP_FAILURE" value="449">Reject cause 028 from RNC, iu up failure</enum>
+				<enum internal="REJECT_CAUSE_033_FROM_RNC,_REQUESTED_MAXIMUM_BITRATE_FOR_DL_NOT_AVAILABLE" value="454">Reject cause 033 from RNC, requested maximum bitrate for dl not available</enum>
+				<enum internal="REJECT_CAUSE_034_FROM_RNC,_REQUESTED_MAXIMUM_BITRATE_FOR_UL_NOT_AVAILABLE" value="455">Reject cause 034 from RNC, requested maximum bitrate for ul not available</enum>
+				<enum internal="REJECT_CAUSE_035_FROM_RNC,_REQUESTED_GUARANTEED_BITRATE_FOR_DL_NOT_AVAILABLE" value="456">Reject cause 035 from RNC, requested guaranteed bitrate for dl not available</enum>
+				<enum internal="REJECT_CAUSE_036_FROM_RNC,_REQUESTED_GUARANTEED_BITRATE_FOR_UL_NOT_AVAILABLE" value="457">Reject cause 036 from RNC, requested guaranteed bitrate for ul not available</enum>
+				<enum internal="REJECT_CAUSE_046_FROM_RNC,_RADIO_CONNECTION_WITH_UE_LOST" value="467">Reject cause 046 from RNC, radio connection with UE lost</enum>
+				<enum internal="REJECT_CAUSE_066_FROM_RNC,_IU_TRANSPORT_CONNECTION_FAILED_TO_ESTABLISH" value="487">Reject cause 066 from RNC, iu transport connection failed to establish</enum>
+				<enum internal="REJECT_CAUSE_114_FROM_RNC,_NO_RESOURCE_AVAILABLE" value="498">Reject cause 114 from RNC, no resource available</enum>
+				<enum internal="REJECT_CAUSE_115_FROM_RNC,_UNSPECIFIED_FAILURE" value="499">Reject cause 115 from RNC, unspecified failure</enum>
+				<enum internal="INTERFERENCE_OF_ACTIVATION:_DEACTIVATION_DURING_MS_MOVE_OPERATION_WITHIN_SGSN_POOL" value="108">Interference of activation: deactivation during MS Move Operation within SGSN Pool</enum>
+				<enum internal="REJECT_WHEN_TAKING_THE_UE_TO_ECM-CONNECTED_STATE" value="518">The paging or Service Request procedure failed.</enum>
+				<enum internal="REJECT_CAUSE_65_FROM_SGW,_INVALID_MESSAGE_FORMAT" value="519">Reject cause 65 from SGW, Invalid message format</enum>
+				<enum internal="REJECT_CAUSE_67_FROM_SGW,_INVALID_LENGTH" value="502">Reject_cause_67_from_SGW,_invalid_length</enum>
+				<enum internal="REJECT_CAUSE_68_FROM_SGW,_SERVICE_NOT_SUPPORTED" value="503">Reject_cause_68_from_SGW,_service_not_supported</enum>
+				<enum internal="REJECT_CAUSE_69_FROM_SGW,_MANDATORY_IE_INCORRECT" value="504">Reject_cause_69_from_SGW,_mandatory_IE_incorrect</enum>
+				<enum internal="REJECT_CAUSE_70_FROM_SGW,_MANDATORY_IE_MISSING" value="505">Reject_cause_70_from_SGW,_mandatory_IE_missing</enum>
+				<enum internal="REJECT_CAUSE_72_FROM_SGW,_SYSTEM_FAILURE" value="506">Reject_cause_72_from_SGW,_system_failure</enum>
+				<enum internal="REJECT_CAUSE_73_FROM_SGW,_NO_RESOURCES_AVAILABLE" value="507">Reject_cause_73_from_SGW,_no_resources_available</enum>
+				<enum internal="REJECT_CAUSE_78_FROM_SGW,_MISSING_OR_UNKNOWN_APN" value="508">Reject_cause_78_from_SGW,_missing_or_unknown_APN</enum>
+				<enum internal="REJECT_CAUSE_82_FROM_SGW,_DENIED_IN_RAT" value="509">Reject_cause_82_from_SGW,_denied_in_RAT</enum>
+				<enum internal="REJECT_CAUSE_83_FROM_SGW,_PREFERRED_PDN_TYPE_NOT_SUPPORTED" value="510">Reject cause 83 from SGW, Preferred PDN type not supported</enum>
+				<enum internal="REJECT_CAUSE_84_FROM_SGW,_ALL_DYNAMIC_ADDRESSES_ARE_OCCUPIED" value="511">Reject cause 84 from SGW, All dynamic addresses are occupied</enum>
+				<enum internal="REJECT_CAUSE_86_FROM_SGW,_PROTOCOL_TYPE_NOT_SUPPORTED" value="512">Reject cause 86 from SGW, Protocol type not supported</enum>
+				<enum internal="REJECT_CAUSE_91_FROM_SGW,_NO_MEMORY_AVAILABLE" value="513">Reject cause 91 from SGW, No memory available</enum>
+				<enum internal="REJECT_CAUSE_92_FROM_SGW,_USER_AUTHENTICATION_FAILED" value="514">Reject cause 92 from SGW, User authentication failed</enum>
+				<enum internal="REJECT_CAUSE_93_FROM_SGW,_APN_ACCESS_DENIED_-_NO_SUBSCRIPTION" value="515">Reject cause 93 from SGW, APN access denied - no subscription</enum>
+				<enum internal="REJECT_CAUSE_100_FROM_SGW,_REMOTE_PEER_NOT_RESPONDING" value="516">Reject cause 100 from SGW, Remote peer not responding</enum>
+				<enum internal="REJECT_CAUSE_FROM_SGW" value="517">Reject cause from SGW</enum>
+				<enum internal="NO_DEFAULT_BEARER_MATCHED_BETWEEN_TARGET_ENB_AND_MME" value="500">No default bearer matched between Target eNB and MME</enum>
+				<enum internal="MODIFY_BEARER_REQUEST_OR_CREATE_SESSION_REQUEST_TOWARDS_SGW_UNSUCCESSFUL" value="501">Modify Bearer Request or Create Session Request towards SGW unsuccessful</enum>
+				<enum internal="DUPLICATE_E-RAB_ID_RECEIVED_FROM_ENB" value="520">Duplicate E-RAB Id received from eNB</enum>
+				<enum internal="SGW_ADDRESS_COULD_NOT_BE_DERIVED" value="521">SGW address could not be derived</enum>
+				<enum internal="IU_CONNECTION_RELEASE" value="84">Iu Connection Release</enum>
+				<enum internal="PDP_DEACTIVATED_SILENTLY_IN_SGSN" value="85">PDP deactivated silently in SGSN</enum>
+				<enum internal="SUBSCRIPTION_UPDATED" value="289">Subscription updated</enum>
+				<enum internal="TIMEOUT,_UE_CONTEXT_CONTEXT_MODIFICATION_RESPONSE" value="290">Timeout, UE context context modification response</enum>
+				<enum internal="CONTEXT_REQUEST_RECEIVED" value="291">Context Request received</enum>
+				<enum internal="SGSN_CONTEXT_REQUEST_RECEIVED" value="292">SGSN Context Request received</enum>
+				<enum internal="FEATURE_DEDICATED_BEARER_IS_DISABLED" value="522">Used in the Dedicated bearer activation procedure, for CC #68, service not supported.</enum>
+				<enum internal="CAUSE_129_FROM_PGW,_NEW_PDP_TYPE_DUE_TO_NETWORK_PREFERENCE" value="369">Cause 129 from PGW, New PDP type due to network preference</enum>
+				<enum internal="CAUSE_130_FROM_PGW,_NEW_PDP_TYPE_DUE_TO_SINGLE_ADDRESS_BEARER_ONLY" value="370">Cause 130 from PGW, New PDP type due to single address bearer only</enum>
+				<enum internal="SUBSCRIBED_PDP_TYPE_CHOSEN" value="322">Subscribed PDP Type chosen</enum>
+				<enum internal="PDP_TYPE_CHANGED_DUE_TO_SGSN_RESTRICTION" value="323">PDP Type changed due to SGSN restriction</enum>
+				<enum internal="REJECT_CAUSE_2_FROM_RNC" value="423">Reject_cause_2_from_RNC; Trelocoverall Expiry</enum>
+				<enum internal="REJECT_CAUSE_3_FROM_RNC" value="424">Reject_cause_3_from_RNC; Trelocprep Expiry</enum>
+				<enum internal="REJECT_CAUSE_4_FROM_RNC" value="425">Reject_cause_4_from_RNC; Treloccomplete Expiry</enum>
+				<enum internal="REJECT_CAUSE_5_FROM_RNC" value="426">Reject_cause_5_from_RNC; Tqueuing Expiry</enum>
+				<enum internal="REJECT_CAUSE_6_FROM_RNC" value="427">Reject_cause_6_from_RNC; Relocation Triggered</enum>
+				<enum internal="REJECT_CAUSE_7_FROM_RNC" value="428">Reject_cause_7_from_RNC; TRELOCalloc Expiry</enum>
+				<enum internal="REJECT_CAUSE_8_FROM_RNC" value="429">Reject_cause_8_from_RNC; Unable to Establish During Relocation</enum>
+				<enum internal="REJECT_CAUSE_9_FROM_RNC" value="430">Reject_cause_9_from_RNC; Unknown Target RNC</enum>
+				<enum internal="REJECT_CAUSE_10_FROM_RNC" value="431">Reject_cause_10_from_RNC; Relocation Cancelled</enum>
+				<enum internal="REJECT_CAUSE_11_FROM_RNC" value="432">Reject_cause_11_from_RNC; Successful Relocation</enum>
+				<enum internal="REJECT_CAUSE_12_FROM_RNC" value="433">Reject_cause_12_from_RNC; Requested Ciphering and/or Integrity Protection Algorithms not Supported</enum>
+				<enum internal="REJECT_CAUSE_13_FROM_RNC" value="434">Reject_cause_13_from_RNC; Conflict with already existing Integrity protection and/or Ciphering information</enum>
+				<enum internal="REJECT_CAUSE_14_FROM_RNC" value="435">Reject_cause_14_from_RNC; Failure in the Radio Interface Procedure</enum>
+				<enum internal="REJECT_CAUSE_15_FROM_RNC" value="436">Reject_cause_15_from_RNC; Release due to UTRAN Generated Reason</enum>
+				<enum internal="REJECT_CAUSE_16_FROM_RNC" value="437">Reject_cause_16_from_RNC; User Inactivity</enum>
+				<enum internal="REJECT_CAUSE_17_FROM_RNC" value="438">Reject_cause_17_from_RNC; Time Critical Relocation</enum>
+				<enum internal="REJECT_CAUSE_29_FROM_RNC" value="450">Reject_cause_29_from_RNC; Relocation Failure in Target CN/RNC or Target System</enum>
+				<enum internal="REJECT_CAUSE_30_FROM_RNC" value="451">Reject_cause_30_from_RNC; Invalid RAB ID</enum>
+				<enum internal="REJECT_CAUSE_31_FROM_RNC" value="452">Reject_cause_31_from_RNC; No remaining RAB</enum>
+				<enum internal="REJECT_CAUSE_32_FROM_RNC" value="453">Reject_cause_32_from_RNC; Interaction with other procedure</enum>
+				<enum internal="REJECT_CAUSE_37_FROM_RNC" value="458">Reject_cause_37_from_RNC; Repeated Integrity Checking Failure</enum>
+				<enum internal="REJECT_CAUSE_38_FROM_RNC" value="459">Reject_cause_38_from_RNC; Requested Request Type not supported</enum>
+				<enum internal="REJECT_CAUSE_39_FROM_RNC" value="460">Reject_cause_39_from_RNC; Request superseded</enum>
+				<enum internal="REJECT_CAUSE_40_FROM_RNC" value="461">Reject_cause_40_from_RNC; Release due to UE generated signalling connection release</enum>
+				<enum internal="REJECT_CAUSE_41_FROM_RNC" value="462">Reject_cause_41_from_RNC; Resource Optimisation Relocation</enum>
+				<enum internal="REJECT_CAUSE_42_FROM_RNC" value="463">Reject_cause_42_from_RNC; Requested Information Not Available</enum>
+				<enum internal="REJECT_CAUSE_43_FROM_RNC" value="464">Reject_cause_43_from_RNC; Relocation desirable for radio reasons</enum>
+				<enum internal="REJECT_CAUSE_44_FROM_RNC" value="465">Reject_cause_44_from_RNC; Relocation not supported in Target RNC or Target system</enum>
+				<enum internal="REJECT_CAUSE_45_FROM_RNC" value="466">Reject_cause_45_from_RNC; Directed Retry</enum>
+				<enum internal="REJECT_CAUSE_47_FROM_RNC" value="468">Reject_cause_47_from_RNC; RNC unable to establish all RFCs</enum>
+				<enum internal="REJECT_CAUSE_48_FROM_RNC" value="469">Reject_cause_48_from_RNC; Deciphering Keys Not Available</enum>
+				<enum internal="REJECT_CAUSE_49_FROM_RNC" value="470">Reject_cause_49_from_RNC; Dedicated Assistance data Not Available</enum>
+				<enum internal="REJECT_CAUSE_50_FROM_RNC" value="471">Reject_cause_50_from_RNC; Relocation Target not allowed</enum>
+				<enum internal="REJECT_CAUSE_51_FROM_RNC" value="472">Reject_cause_51_from_RNC; Location Reporting Congestion</enum>
+				<enum internal="REJECT_CAUSE_52_FROM_RNC" value="473">Reject_cause_52_from_RNC; Reduce Load in Serving Cell</enum>
+				<enum internal="REJECT_CAUSE_53_FROM_RNC" value="474">Reject_cause_53_from_RNC; No Radio Resources Available in Target cell</enum>
+				<enum internal="REJECT_CAUSE_54_FROM_RNC" value="475">Reject_cause_54_from_RNC; GERAN Iu-mode failure</enum>
+				<enum internal="REJECT_CAUSE_55_FROM_RNC" value="476">Reject_cause_55_from_RNC; Access Restricted Due to Shared Networks</enum>
+				<enum internal="REJECT_CAUSE_56_FROM_RNC" value="477">Reject_cause_56_from_RNC; Incoming Relocation Not Supported Due To PUESBINE Feature</enum>
+				<enum internal="REJECT_CAUSE_57_FROM_RNC" value="478">Reject_cause_57_from_RNC; Traffic Load In The Target Cell Higher Than In The Source Cell</enum>
+				<enum internal="REJECT_CAUSE_58_FROM_RNC" value="479">Reject_cause_58_from_RNC; MBMS - No Multicast Service For This UE</enum>
+				<enum internal="REJECT_CAUSE_59_FROM_RNC" value="480">Reject_cause_59_from_RNC; MBMS - Unknown UE ID</enum>
+				<enum internal="REJECT_CAUSE_60_FROM_RNC" value="481">Reject_cause_60_from_RNC; Successful MBMS Session Start - No Data Bearer Necessary</enum>
+				<enum internal="REJECT_CAUSE_61_FROM_RNC" value="482">Reject_cause_61_from_RNC; MBMS - Superseded Due To NNSF</enum>
+				<enum internal="REJECT_CAUSE_62_FROM_RNC" value="483">Reject_cause_62_from_RNC; MBMS - UE Linking Already Done</enum>
+				<enum internal="REJECT_CAUSE_63_FROM_RNC" value="484">Reject_cause_63_from_RNC; MBMS - UE De-Linking Failure - No Existing UE Linking</enum>
+				<enum internal="REJECT_CAUSE_64_FROM_RNC" value="485">Reject_cause_64_from_RNC; TMGI Unknown</enum>
+				<enum internal="REJECT_CAUSE_65_FROM_RNC" value="486">Reject_cause_65_from_RNC; Signalling Transport Resource Failure</enum>
+				<enum internal="REJECT_CAUSE_81_FROM_RNC" value="488">Reject_cause_81_from_RNC; User Restriction Start Indication</enum>
+				<enum internal="REJECT_CAUSE_82_FROM_RNC" value="489">Reject_cause_82_from_RNC; User Restriction End Indication</enum>
+				<enum internal="REJECT_CAUSE_83_FROM_RNC" value="490">Reject_cause_83_from_RNC; Normal Release</enum>
+				<enum internal="REJECT_CAUSE_97_FROM_RNC" value="491">Reject_cause_97_from_RNC; Transfer Syntax Error</enum>
+				<enum internal="REJECT_CAUSE_98_FROM_RNC" value="492">Reject_cause_98_from_RNC; Semantic Error</enum>
+				<enum internal="REJECT_CAUSE_99_FROM_RNC" value="493">Reject_cause_99_from_RNC; Message not compatible with receiver state</enum>
+				<enum internal="REJECT_CAUSE_100_FROM_RNC" value="494">Reject_cause_100_from_RNC; Abstract Syntax Error (Reject)</enum>
+				<enum internal="REJECT_CAUSE_101_FROM_RNC" value="495">Reject_cause_101_from_RNC; Abstract Syntax Error (Ignore and Notify)</enum>
+				<enum internal="REJECT_CAUSE_102_FROM_RNC" value="496">Reject_cause_102_from_RNC; Abstract Syntax Error (Falsely Constructed Message)</enum>
+				<enum internal="REJECT_CAUSE_113_FROM_RNC" value="497">Reject_cause_113_from_RNC; O&amp;M Intervention</enum>
+				<enum internal="UE_BLOCKED_DUE_TO_IMEI_CHECK" value="523">UE blocked due to IMEI Check</enum>
+				<enum internal="REJECT_CAUSE_17_FROM_SGW,_REQUEST_ACCEPTED_PARTIALLY" value="534">Reject cause 17 from SGW, Request accepted partially</enum>
+				<enum internal="REJECT_CAUSE_18_FROM_SGW,_NEW_PDN_TYPE_DUE_TO_NETWORK_PREFERENCE" value="524">Reject cause 18 from SGW, New PDN type due to network preference</enum>
+				<enum internal="REJECT_CAUSE_19_FROM_SGW,_NEW_PDN_TYPE_DUE_TO_SINGLE_ADDRESS_BEARER_ONLY" value="525">Reject cause 19 from SGW, New PDN type due to single address bearer only</enum>
+				<enum internal="REJECT_CAUSE_66_FROM_SGW,_VERSION_NOT_SUPPORTED_BY_NEXT_PEER" value="526">Reject cause 66 from SGW, Version not supported by next peer</enum>
+				<enum internal="REJECT_CAUSE_94_FROM_SGW,_REQUEST_REJECTED" value="527">Reject cause 94 from SGW, Request rejected</enum>
+				<enum internal="REJECT_CAUSE_103_FROM_SGW,_CONDITIONAL_IE_MISSING" value="528">Reject cause 103 from SGW, Conditional IE missing</enum>
+				<enum internal="REJECT_CAUSE_104_FROM_SGW,_APN_RESTRICTION_TYPE_INCOMPATIBILITY_WITH_CURRENTLY_ACTIVE_PDN_CONNECTION" value="529">Reject cause 104 from SGW, APN Restriction type incompatibility with currently active PDN Connection</enum>
+				<enum internal="QOS_NOT_SUPPORTED" value="191">When SGW responds Create Session Response with a higher QoS than QoS Policy map in SGSN, SGSN will reject the activation with cause code "Service Option not supported", and the sub cause code will be #191 QoS not supported.</enum>
+				<enum internal="QOS_NEGOTIATION_FAILED,_INVALID_PROFILE_(SUBSCRIBER)" value="201">QoS negotiation failed, invalid profile (Subscriber)</enum>
+				<enum internal="REJECT_INITIATED_FROM_CAMEL" value="388">Reject initiated from CAMEL</enum>
+				<enum internal="RELEASE_INITIATED_FROM_CAMEL" value="389">Release initiated from CAMEL</enum>
+				<enum internal="MS_NOT_RESPONDING" value="407">MS not responding</enum>
+				<enum internal="GTP-U_SETUP_FAILED" value="409">GTP-U setup failed</enum>
+				<enum internal="OTHER_REJECT_CAUSE_FROM_SGW" value="530">Only if SGSN receives other cause code than existing in paragraph of Create Session Response of 3GPP 29.274.</enum>
+				<enum internal="SGSN_NOT_SUPPORT_S4_MODE_ACTIVATION" value="531">Only if existing PDP indicates S4 mode and license of S4 turned off, then MS activates another PDP context.</enum>
+				<enum internal="GTPV2_CREATE_SESSION_RESPONSE_NOT_RECEIVED" value="532">The S4-SGSN does not receive a Create Session Response after the last retransmission and the T3ResponseCreateSession timeout.</enum>
+				<enum internal="S4_FALLBACK_TO_GN_NOT_ALLOWED" value="533">If the precondition for S4 mode activation not allowed and sysprop S4 Gn fallback allowed is set to "false".</enum>
+				<enum internal="GTPV2_MODIFY_BEARER_RESPONSE_NOT_RECEIVED" value="535">The SGSN using the S4 interface does not receive a Modify Bearer Response message after the last retransmission and the T3ResponseModifyBearer timeout.</enum>
+				<enum internal="REJECT_CAUSE_64_FROM_SGW,_CONTEXT_NOT_FOUND" value="537">Reject cause 64 from SGW, Context not found</enum>
+				<enum internal="IE_MISSING_OR_INCORRECT_IN_MODIFY_BEARER_RESPONSE" value="536">The IEs are missing or incorrect in the Modify Bearer Response message which is sent from SGW to the SGSN using the S4 interface.</enum>
+				<enum internal="CAMEL_SUBSCRIPTION_INFO_INSERTED" value="293">Camel Subscription Information (CSI) is inserted by the ISD message between the SGSN and HLR.</enum>
+				<enum internal="REJECT_CAUSE_109_FROM_SGW,_INVALID_PEER" value="538">Reject Cause 109 from SGW, Invalid peer</enum>
+				<enum internal="REJECT_CAUSE_116_FROM_RNC" value="600">Reject_cause_116_from_RNC; Network Optimisation</enum>
+				<enum internal="REJECT_CAUSE_257_FROM_RNC" value="601">Reject_cause_257_from_RNC; IP Multicast Address And APN Not Valid</enum>
+				<enum internal="REJECT_CAUSE_258_FROM_RNC" value="602">Reject_cause_258_from_RNC; MBMS De-Registration Rejected Due To Implicit Registration</enum>
+				<enum internal="REJECT_CAUSE_259_FROM_RNC" value="603">Reject_cause_259_from_RNC; MBMS - Request Superseded</enum>
+				<enum internal="REJECT_CAUSE_260_FROM_RNC" value="604">Reject_cause_260_from_RNC; MBMS De-Registration During Session Not Allowed</enum>
+				<enum internal="REJECT_CAUSE_261_FROM_RNC" value="605">Reject_cause_261_from_RNC; MBMS - No Data Bearer Necessary</enum>
+				<enum internal="REJECT_CAUSE_262_FROM_RNC" value="606">Reject_cause_262_from_RNC; Periodic Location Information not Available</enum>
+				<enum internal="REJECT_CAUSE_263_FROM_RNC" value="607">Reject_cause_263_from_RNC; GTP Resources Unavailable</enum>
+				<enum internal="REJECT_CAUSE_264_FROM_RNC" value="608">Reject_cause_264_from_RNC; TMGI in Use and Overlapping MBMS Service Area</enum>
+				<enum internal="REJECT_CAUSE_265_FROM_RNC" value="609">Reject_cause_265_from_RNC; MBMS - No cell in MBMS Service Area</enum>
+				<enum internal="REJECT_CAUSE_107_FROM_SGW,_INVALID_REPLY_FROM_REMOTE_PEER" value="610">Reject cause 107 from SGW, Invalid reply from remote peer</enum>
+				<enum internal="IE_MISSING_OR_INCORRECT_IN_CREATE_SESSION_RESPONSE" value="539">IE missing or incorrect in Create Session Response</enum>
+				<enum internal="DELETE_BEARERS_ON_SOURCE_SGSN_DURING_IRAT_HANDOVER" value="540">This cause code is used at the success event and indicates that bearers are deleted on the source SGSN during the IRAT PS handover procedure.</enum>
+				<enum internal="DELETE_UNSET-UP_BEARERS_ON_SOURCE_SGSN_DURING_IRAT_HANDOVER" value="541">This cause code is used by the source SGSN to indicate that the bearers, which are not set-up on the target SGSN-MME, are deleted on the source SGSN during the IRAT PS handover procedure.</enum>
+				<enum internal="REJECT_CAUSE_5001_FROM_HSS_USER_UNKNOWN" value="612">Reject_cause_5001_from_HSS_User_Unknown; DIAMETER_ERROR_UER_UNKNOWN</enum>
+				<enum internal="REJECT_CAUSE_5003_FROM_HSS_AUTHORIZATION_REJECTED" value="613">Reject_cause_5003_from_HSS_Authorization_Rejected; DIAMETER_AUTHORIZATION_REJECTED</enum>
+				<enum internal="REJECT_CAUSE_5004_FROM_HSS_ROAMING_NOT_ALLOWED" value="614">Reject_cause_5004_from_HSS_Roaming_not_allowed; DIAMETER_ERROR_ROAMING_NOT_ALLOWED</enum>
+				<enum internal="REJECT_CAUSE_5420_FROM_HSS_WITHOUT_ERROR_DIAGNOSTIC" value="615">Reject cause 5420 from HSS Unknown EPS Subscription without Error Diagnostic or GPRS DATA Subscribed</enum>
+				<enum internal="REJECT_CAUSE_5420_FROM_HSS_WITH_ERROR_DIAGNOSTIC" value="616">Reject cause 5420 from HSS Unknown EPS Subscription with Error Diagnostic of No GPRS DATA Subscribed</enum>
+				<enum internal="REJECT_CAUSE_5421_FROM_HSS_RAT_NOT_ALLOWED" value="617">Reject_cause_5421_from_HSS_RAT_not_allowed</enum>
+				<enum internal="REJECT_CAUSE_5004_FROM_HSS_INVALID_AVP_VALUE" value="618">Reject_cause_5004_from_HSS_Invalid_AVP_value</enum>
+				<enum internal="REJECT_CAUSE_5012_FROM_HSS_UNABLE_TO_COMPLY" value="619">Reject_cause_5012_from_HSS_Unable_to_Comply</enum>
+				<enum internal="SUBSCRIPTION_WITHDRAWN_FROM_HSS" value="620">The MME receives the Cancel Location Request message from the HSS with Cancel Type "Subscription Withdrawal".</enum>
+				<enum internal="DETACH_TRIGGERED_BY_PGW_TO_DEACTIVATE_LAST_PDN_CONNECTION" value="621">The MME receives the Delete Bearer Request message for the last PDN connection with GTPv2 cause code "PDN reconnection to this APN disallowed".</enum>
+				<enum internal="PGW_INITIATED_PDN_DISCONNECTION,_GTPV2_CAUSE_&quot;PDN_RECONNECTION_TO_THIS_APN_DISALLOWED&quot;" value="622">The MME receives the Delete Bearer Request message not for the last PDN connection with GTPv2 cause code "PDN reconnection to this APN disallowed".</enum>
+				<enum internal="PGW_INITATED_PDN_DISCONNECTION,_GTPV2_CAUSE&quot;_REACTIVATION_REQUESTED&quot;" value="623">The MME receives the Delete Bearer Request message not for the last PDN connection with GTPv2 cause code "Reactivation requested".</enum>
+				<enum internal="CLR_WITH_INITIAL_ATTACH_RECEIVED" value="542">CLR with initial attach received</enum>
+				<enum internal="CHANGE_OF_SUBSCRIPTION_DATA_IN_HSS" value="624">Change of Subscription data in the HSS.</enum>
+				<enum internal="QOS_PROFILE_INVALID" value="625">QoS profile invalid</enum>
+				<enum internal="REJECT_WHEN_TAKING_THE_UE_TO_PMM-CONNECTED_STATE" value="626">Reject when taking the UE to PMM-CONNECTED state.</enum>
+				<enum internal="FEATURE_NRSPCA_IS_DISABLED" value="627">Used in the Network Requested Secondary PDP Context Activation procedure using S4, for CC #68, service not supported.</enum>
+				<enum internal="IMS_EMERGENCY_SUPPORT_CONFIGURATION_IN_PLMN_DOES_NOT_MATCH" value="628">Used during attach or mobility procedure when the new PLMN does not support the corresponding IMS emergency service due to configuration, or when the configuration in new PLMN is not know during Inter-node mobility.</enum>
+				<enum internal="IMS_EMERGENCY_NOT_SUPPORTED_IN_GERAN/UMTS" value="629">Used during the IRAT HO for emergency attached UE if  the target side does not support IMS emergency service.</enum>
+				<enum internal="LOCATION_AREA_NOT_FOUND." value="632">The MME failed to find a mapping between Tracking Area and Location Area.</enum>
+				<enum internal="BEARER_DELETED_DUE_TO_SRVCC" value="635">Used in bearer deleted due to SRVCC procedure.</enum>
+				<enum internal="CAMEL_SUBSCRIPTION_INFO_INSERTED" value=""></enum>
+				<enum internal="REJECT_GN_DUE_TO_EXISTING_S4" value="633"></enum>
+				<enum internal="QOS_UNSPECIFIED_FAILURE" value="192"></enum>
+				<enum internal="QOS_NEGOTIATION_FAILED_NO_RESOURCES_CAMEL" value="196"></enum>
+				<enum internal="QOS_NEGOTIATION_FAILED_INVALID_BITRATE_CAMEL" value="198"></enum>
+				<enum internal="QOS_NEGOTIATION_FAILED_INVALID_PROFILE_CAMEL" value="200"></enum>
+				<enum internal="MSISDN_NOT_ACCEPTED" value="379">During Ms initiated primary pdp context activation procedure, SGSN will check MSISDN before send create pdp context request to GGSN. If check MSISDN failed, then SGSN will send activation reject to MS with cuase ?RIL3_INVALID_MANDATORY_INFORMATION.</enum>
+				<enum internal="INTERNAL_REASON" value="385"></enum>
+				<enum internal="INTERNAL_STATE_MISMATCH" value="404"></enum>
+				<enum internal="SERVICE_NOT_SUPPORTED" value="410">In S4-SGSN, MS initiated primary pdp context activation procedure, if S4-SGSN failed to do GW selction then S4-SGSN will try to fall back to Gn.
+But if sysprop ?s4_fallback_to_gn_allowed is false or MS has eps subscrition data or MS already has S4 PDN, then S4-SGSN failed to fall back to Gn.
+S4-SGSN will send activation reject to MS with cause ?RIL3_NETWORK_FAILURE.
+
+this SCC is also used in MME. When SRVCC HO is rejected because UE capablity/ MME don't supporte SRVCC procedure.</enum>
+				<enum internal="REJECT_GN_FALLBACK_DUE_TO_EXISTING_S4" value="611"></enum>
+				<enum internal="NO_RESPONSE_FROM_SGW" value="650">No response from SGW for Create Session Request</enum>
+				<enum internal="HSS_UNREACHABLE_FOR_AUTHENTICATION_INFO" value="636">S4-SGSN/MME did not receive authentication info answer from HSS.</enum>
+				<enum internal="HSS_UNREACHABLE_FOR_UPDATE_LOCATION" value="637">S4-SGSN/MME did not receive update location answer from HSS.</enum>
+				<enum internal="SUCCESS" value="2">No sub cause needed.</enum>
+				<enum internal="GTPV2_TIME_OUT" value="638">this is a common reason for the interface using GTPv2 protocol. It means there is no GTPv2 response message from peer node after SGSN-MME sends out a GTPv2 request message.</enum>
+				<enum internal="REJECT_DUE_TO_ATTACH_THROTTLING" value="578"></enum>
+				<enum internal="NO_VECTORS_RECEIVED" value="639">The authentication information answer from HSS/HLR did not contain any vectors.</enum>
+				<enum internal="AUTH_FAILED:_T3460_TIMEOUT" value="640">Timeout while waiting for authentication response.</enum>
+				<enum internal="AUTH_FAILED:_NON_EPS_AUTHENTICATION_UNACCEPTABLE" value="641">Non EPS authentication unacceptable.</enum>
+				<enum internal="AUTH_FAILED:_AUTS_MISSING" value="642">AUTS missing in the Authentication Failure message from UE.</enum>
+				<enum internal="AUTH_FAILED:_XRES_NEQ_RES" value="643">XRES was not equal to RES.</enum>
+				<enum internal="REJECTED_DUE_TO_ADMISSION_CONTROL" value="579"></enum>
+				<enum internal="IPV6_NOT_ALLOWED_FOR_VISITOR" value="651">The subcause goes together with cause "service option not supported" and cause "PDP type IPv4 only allowed.</enum>
+				<enum internal="MAX_NUMBER_OF_BEARERS_PER_USER" value="652">This sub-cause code indicates that the dedicated bearer activation is rejected because the max allowed number of bearers for the UE would be exceeded.</enum>
+				<enum internal="NOT_CURRENT_SGW" value="653">The request is rejected because it comes from an SGW that the MME does not regard as the current SGW.</enum>
+				<enum internal="PROCEDURE_INTERRUPTED_BY_OTHER_PROCEDURE" value="654">The bearer procedure was interrupted by or could not be started due to another, higher priority procedure, e.g., Detach.</enum>
+				<enum internal="FAILURE_IN_UE_OR_ENODEB" value="655">None of the dedicated bearers could be created due to failure in UE or eNodeB.</enum>
+				<enum internal="NON-EXISTING_BEARER" value="656">The received Linked Bearer Id indicates a non-existing bearer.</enum>
+				<enum internal="NOT_A_DEFAULT_BEARER" value="657">The received Linked Bearer Id indicates a dedicated bearer, not a default bearer.</enum>
+				<enum internal="IMS_EMERGENCY_NOT_SUPPORTED_IN_CURRENT_TAI_FOR_IMSI_SERIES" value="658">IMS Emergency service is not supported for the imsi series in current TAI.</enum>
+				<enum internal="UNEXPECTED_LINKED_BEARER_ID" value="659">The received Linked Bearer Id in a piggybacked Create Bearer Request message does not indicate the default bearer being created.</enum>
+				<enum internal="INVALID_DEFAULT_BEARER_ID" value="660">The UE indicates an invalid default bearer id at combined activation of default bearer and dedicated bearers.</enum>
+			</enumeration>
+		</parametertype>
+                <parametertype>
+			<name>BEARER_CAUSE_CODE</name>
+			<type>ENUM</type>
+			<description>This information element provides the possible values for the BEARER_CAUSE parameter.</description>
+			<numberofbits>10</numberofbits>
+			<range>
+				<low>0</low>
+				<high>1023</high>
+			</range>
+			<enumeration>
+				<enum internal="BEARER_SUCCESSFUL" value="0">Used as Bearer cause</enum>
+				<enum internal="BEARER_FAILED" value="1">Used as Bearer cause</enum>
+			</enumeration>
+		</parametertype>
+	</parametertypes>
+	<structuretypes>
+	</structuretypes>
+	<events>
+	</events>
+</eventspecification>

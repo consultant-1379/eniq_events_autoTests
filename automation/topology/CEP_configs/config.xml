@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appconfig xmlns="http://www.ericsson.com/app-config">
+	<!-- ========================================================================= -->
+	<!-- Additional component specific general properties are detailed in their -->
+	<!-- own config files -->
+	<!-- ========================================================================= -->
+	<AppStartTypeList>
+		<!-- Link to the Staple/Captool configuration properties -->
+		<AppStartType>CEP_MEDIATION</AppStartType>
+
+	</AppStartTypeList>
+
+	<properties>
+		<property>
+			<key>stats.collection.active</key>
+			<value>true</value>
+		</property>
+		<property>
+			<key>stats.collection.period</key>
+			<value>300000</value><!--5 minutes -->
+		</property>
+		<property>
+			<key>db.storage.active</key>
+			<value>true</value>
+		</property>
+		<property>
+			<key>db.max.thread.counter.delay</key>
+			<value>500</value>
+		</property>
+		<property>
+			<key>db.max.thread.count</key>
+			<value>5</value>
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for XML parsing of Event structure -->
+		<!-- ========================================================================= -->
+
+		<property>
+			<key>schematype.namespace</key>
+			<value>http://www.ericsson.com/SchemaTypes</value>
+		</property>
+		<property>
+			<key>schematype.schema</key>
+			<value>xml/SchemaTypes.xsd</value>
+		</property>
+		<property>
+			<key>schematype.xml.file</key>
+			<value>xml/SchemaTypes.xml</value>
+		</property>
+		<!-- Parameters for XML parsing of Event structure ends -->
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for publishing -->
+		<!-- ========================================================================= -->
+		<!-- The default publishing buffer size is the number of events that will be buffered before events are sent to publishing subscribers. The buffer size for gpeh and sgeh is defined with separate properties. -->
+		<property>
+			<key>publishing.buffer.size</key>
+			<value>1048756</value>
+		</property>
+		<!-- The gpeh buffer should be large enough to hold one hour of busy rop data. This is needed to guarantee that all rop events are sorted in the publisher before sent to subscribers -->
+		<property>
+			<key>gpeh.publishing.buffer.size</key>
+			<value>16780096</value>
+		</property>
+
+		<!-- The sgeh buffer should be large enough to hold one hour of busy rop data. This is needed to guarantee that all rop events are sorted in the publisher before sent to subscribers -->
+		<property>
+			<key>ebs.publishing.buffer.size</key>
+			<value>8390048</value>
+		</property>
+		<!-- Events are buffered in publishing buffers. These buffers are flushed periodically. This parameter sets the interval for buffer flushing. It is set in milliseconds. -->
+		<property>
+			<key>publishing.loading.scan.interval</key>
+			<value>600000</value> <!-- Scan interval is long for loading because publishing buffers are explicitly flushed by loaders -->
+		</property>
+		<property>
+			<key>publishing.correlating.scan.interval</key>
+			<value>10000</value> <!-- Scan interval is short for correlation because publishing buffers are not explicitly flushed by correlations -->
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for IQ datasources -->
+		<!-- ========================================================================= -->
+
+		<!-- Repdb datasource -->
+		<property>
+			<key>iq.repdb.datasource.user</key>
+			<value>dwhrep</value>
+		</property>
+		<property>
+			<key>iq.repdb.datasource.connection</key>
+			<value>dwhrep</value>
+		</property>
+		<!-- Dwhdb datasource -->
+		<property>
+			<key>iq.dwhdb.datasource.user</key>
+			<value>dc</value>
+		</property>
+		<property>
+			<key>iq.dwhdb.datasource.connection</key>
+			<value>dwh</value>
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for IQ binary file creation -->
+		<!-- ========================================================================= -->
+
+		<!-- Byte order for IQ binary files -->
+		<property>
+			<key>iq.binary.file.byte.order</key>
+			<value>LITTLE_ENDIAN</value>
+		</property>
+		<property>
+			<key>iq.binary.directory</key>
+			<value>/eniq/data/etldata_</value>
+		</property>
+		<property>
+			<key>iq.binary.file.buffer.size</key>
+			<value>65536</value>
+		</property>
+		<property>
+			<key>iq.binary.flush.records</key>
+			<value>100000</value>
+		</property>
+		<property>
+			<key>iq.binary.flush.interval</key>
+			<value>5000</value>
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for File System Monitor -->
+		<!-- ========================================================================= -->
+
+		<!-- Maximum percentage of the output file system (iq.binary.directory) that can be filled -->
+		<property>
+			<key>max.percentage.used.space</key>
+			<value>85</value> <!-- Value is % -->
+		</property>
+		<property>
+			<key>filesystem.monitor.poll.interval</key>
+			<value>30</value> <!-- Value is in seconds -->
+		</property>
+		<!-- Maximum disk space used by the tech pack directories that CEP Mediation populates -->
+		<property>
+			<key>max.diskspace.files</key>
+			<value>15360</value> <!-- Value is in MB -->
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Parameters for XML parsing of Event structure -->
+		<!-- ========================================================================= -->
+
+		<property>
+			<key>param.preamble</key>
+			<value>EVENT_PARAM_</value>
+		</property>
+
+		<property>
+			<key>value.preamble</key>
+			<value>EVENT_VALUE_</value>
+		</property>
+		<property>
+			<key>event.namespace</key>
+			<value>http://www.ericsson.com/PmEvents</value>
+		</property>
+		<property>
+			<key>event.schema</key>
+			<value>xml/EventFormat.xsd</value>
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Server specific configuration -->
+		<!-- ========================================================================= -->
+
+		<property>
+			<key>backlog.recovery.interval</key>
+			<value>75</value>  <!-- value is in minutes -->
+		</property>
+		<property>
+			<key>general.server.core.file.collection.mode</key>
+			<!-- LOCAL, REMOTE or SYMBOLIC_LINK -->
+			<value>SYMBOLIC_LINK</value>
+		</property>
+		<property>
+			<key>general.server.radio.file.collection.mode</key>
+			<!-- LOCAL, REMOTE or SYMBOLIC_LINK -->
+			<value>SYMBOLIC_LINK</value>
+		</property>
+		<property>
+			<key>gpeh.subfile.check</key>
+			<value>true</value>
+		</property>
+		<property><!-- file collection path in the local machine -->
+			<key>general.filecopy.destination</key>
+			<value>/output/</value>
+		</property>
+		<property>
+			<key>general.oss.server.alias.prefix</key>
+			<value>events_oss_</value>
+		</property>
+		<property>
+			<key>general.oss.server.isAdminServer</key>
+			<value>true</value>
+		</property>
+		<property>
+			<key>general.server.collection.start.delay</key>
+			<value>60</value> <!-- In seconds -->
+		</property>
+		<property>
+			<key>additional.gpeh.server.collection.start.delay</key>
+			<value>60</value> <!-- In seconds -->
+		</property>
+		<property>
+			<key>general.server.collection.interval</key>
+			<value>40</value> <!-- In seconds -->
+		</property>
+		<property>
+			<key>general.probe.file.collection.mode</key>
+			<!-- LOCAL, REMOTE or SYMBOLIC_LINK -->
+			<value>REMOTE</value>
+		</property>
+		<property>
+			<key>general.probe.log.batch.size</key>
+			<value>100</value>
+		</property>
+		<property>
+			<!-- Number of times to retry enriching UP event with IMSI before dropping -->
+			<key>general.userplane.retry.count</key>
+			<value>2</value>
+		</property>
+		<property>
+			<!-- Delay between retrying UP event enrichment, in milliseconds -->
+			<key>general.userplane.retry.delay</key>
+			<value>120000</value> <!-- 2 minutes -->
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Hyperic Specific Properties -->
+		<!-- ========================================================================= -->
+
+		<property>
+			<key>install.dir</key>
+			<value>/opt/ericsson/cep-mediation/cep-mediation/</value>
+		</property>
+		<property>
+			<key>server.type</key>
+			<value>CEP Mediation Server</value>
+		</property>
+		<property>
+			<key>server.version</key>
+			<value>1.0.1</value>
+		</property>
+		
+		<!-- ========================================================================= -->
+		<!-- properties required for auto-generation of network -->
+		<!-- ========================================================================= -->
+		
+		<property>
+			<key>gpeh.mount.point</key>
+			<value>/eniq/data/eventdata/events_oss_1/GPEHEvents_CEP</value>
+		</property>
+		
+		<property>
+			<key>cep.mediation.ini</key>
+			<value>/eniq/sw/conf/cep_mediation.ini</value>
+		</property>
+		
+		<!-- ratio of total memory used for gpeh file processing -->
+		<property>
+			<key>gpeh.process.memory.ratio</key>
+			<value>0.6</value>
+		</property>
+		
+		<!--  auto generation location for network elements -->
+		<property>
+			<key>auto.genertaion.location</key>
+			<value>/tmp</value>
+		</property>
+		
+		<!-- ========================================================================= -->
+		<!-- Other Properties -->
+		<!-- ========================================================================= -->
+		<property>
+			<key>jmx.port.starting.index</key>
+			<value>1200</value>
+		</property>
+		<property>
+			<!-- If true then user plane events (TCP & Classification) will be forwarded to database even though enrichment with SGEH data has failed. IMSI and related fields will be null in the database. This 
+				should be enabled at initial sanity check install just to verify how successful is enrichment. For production purposes should be enabled only if there is enough DB capacity. -->
+			<key>test.forward.up.unmatched</key>
+			<value>true</value>
+		</property>
+		<property>
+			<!-- Set to true if TCP partials should not be loaded to database and should be silently dropped. Should be false at initial install, if we see to large volume hammering the database, set to false. -->
+			<key>up.drop.tcp.partials</key>
+			<value>false</value>
+		</property>
+
+		<property>
+			<!-- If True the loader will delete the Staple ROP file once it has being loaded -->
+			<key>staple.deleteRemoteRopFile</key>
+			<value>false</value>
+		</property>
+		<property>
+			<!-- If True the loader will delete the Captool ROP file once it has being loaded -->
+			<key>captool.deleteRemoteRopFile</key>
+			<value>false</value>
+		</property>
+
+		<property>
+			<key>ip.partition.ttl</key>
+			<value>1800000</value>
+		</property>
+
+		<property>
+			<!-- disable/enable internal system utilization -->
+			<key>internal.disable.isu</key>
+			<value>false</value>
+		</property>
+
+		<property>
+			<!-- How long should ISU events live. -->
+			<key>internal.isu.ttl</key>
+			<value>600000</value>
+		</property>
+
+		<property>
+			<!-- If merge of GPEH session takes longer than this millis, then log info message -->
+			<key>sgeh.merge.report.threshold</key>
+			<value>1000</value>
+		</property>
+		<property>
+			<!-- If true merge of GPEH session with SGEH is disabled -->
+			<key>sgeh.merge.skip</key>
+			<value>false</value>
+		</property>
+		<property>
+			<!-- If true rrc measurement reports(like inter frequency and rat) without scrambling code will be processed -->
+			<key>rrc.measurement.process.without.sc</key>
+			<value>true</value>
+		</property>
+
+		<property>
+			<key>java.rmi.server.port</key>
+			<value>1099</value>
+		</property>
+
+		<property>
+			<!-- cache refresh period for the look up service, value is in minutes -->
+			<key>lookupservice.cache.refresh.period</key>
+			<value>1440</value>  <!-- Default value is 1 day -->
+		</property>
+
+		<property>
+			<!-- For how long should events related to IMEI enrichment be buffered before sending over hazeclast to the standalone application. -->
+			<key>imei.enrichment.hazelcast.flush.interval</key>
+			<value>10000</value>
+		</property>
+
+		<property>
+			<!-- Output Interval when enriched CFA/HFA events are sent out from Esper, value is in seconds -->
+			<key>interval.produce.output.correlated.events</key>
+			<value>10</value>
+		</property>
+
+		<!-- ========================================================================= -->
+		<!-- Licensing Service Properties -->
+		<!-- ========================================================================= -->
+
+		<property>
+			<key>licensing.service.host</key>
+			<value>licenceservice</value>
+		</property>
+		<property>
+			<key>licensing.service.port</key>
+			<value>1200</value>
+		</property>
+		<property>
+			<key>licensing.service.name</key>
+			<value>LicensingCache</value>
+		</property>
+
+
+		<!-- ========================================================================= -->
+		<!-- Serial Processing of network elements -->
+		<!-- ========================================================================= -->
+		<!-- If serial processing is enabled, then if more than one network elements are to be processed in one process, the network elements will be processed one after another rather than in parallel. Serial 
+			processing is needed to avoid memory problems and problems related to context switching between different threads running in one JVM but it can lead to slower processing compared to parallel. -->
+		<!-- <property> <key>gpeh.serial.processing</key> <value>true</value> </property> <property> <key>ebs.serial.processing</key> <value>false</value> </property> <property> <key>captool.serial.processing</key> 
+			<value>true</value> </property> <property> <key>staple.serial.processing</key> <value>true</value> </property> -->
+	</properties>
+	<!-- ========================================================================= -->
+	<!-- Features -->
+	<!-- ========================================================================= -->
+	<features>
+		<feature enabled="false">CFA</feature>
+		<feature enabled="true">HFA</feature>
+		<feature enabled="false">SESSION_BROWSER</feature>
+	</features>
+	<!-- ========================================================================= -->
+	<!-- Services Definitions -->
+	<!-- ========================================================================= -->
+	<serviceList>
+		<service service-id="1">
+			<name>LoadingService</name>
+			<class>com.ericsson.cepmediation.server.service.LoadingServiceProvider</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+		</service>
+		<service service-id="3">
+			<name>ForwarderService</name>
+			<class>com.ericsson.cepmediation.server.service.DataForwarderServiceProvider</class>
+			<forwarder-type>com.ericsson.cepmediation.forwarding.iq.IqForwarder</forwarder-type>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<event-listening>
+				<topic-name>IqTopic</topic-name>
+				<event-type>
+					<name>correlation.SGEH_SESSION</name>
+					<name>correlation.GPEH_SESSION</name>
+					<name>correlation.EE_VISITED_CELL</name>
+					<name>correlation.EE_RRC_MEASUREMENT</name>
+					<name>correlation.TCP_REPORT_ENRICHED</name>
+					<name>correlation.CLASSIFICATION_REPORT_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_OUT_HARD_HANDOVER_FAILURE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SUCCESSFUL_HSDSCH_CELL_CHANGE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SOHO_DS_MISSING_NEIGHBOUR_ENRICHED</name>
+					<name>gpeh.INTERNAL_SYSTEM_UTILIZATION</name>
+					<name>gpeh.INTERNAL_START_CONGESTION</name>
+					<name>gpeh.INTERNAL_STOP_CONGESTION</name>
+					<name>gpeh.INTERNAL_RECORDING_FAULT</name>
+					<name>gpeh.INTERNAL_RECORDING_RECOVERED</name>
+					<name>gpeh.INTERNAL_MP_OVERLOAD</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="4">
+			<name>3GCorrelationService</name>
+			<class>com.ericsson.cepmediation.server.service.CorrelationServiceProvider
+			</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<correlationspec>
+				<name>3GRadioSessionCorrelation</name>
+				<session-duration>FIVE_MINUTES</session-duration>
+				<listener>RadioSessionCorrelationEsperListener</listener>
+				<epl>
+					<name>_rc.epl</name>
+				</epl>
+				<statements>
+					<name>Session-Enrichment</name>
+				</statements>
+			</correlationspec>
+			<event-listening>
+				<topic-name>3GCorrelationTopic</topic-name>
+				<event-type>
+					<name>gpeh.INTERNAL_IMSI</name>
+					<name>gpeh.INTERNAL_RAB_ESTABLISHMENT</name>
+					<name>gpeh.INTERNAL_RAB_RELEASE</name>
+					<name>gpeh.INTERNAL_CHANNEL_SWITCHING</name>
+					<name>gpeh.INTERNAL_SYSTEM_RELEASE</name>
+					<name>gpeh.INTERNAL_FAILED_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_SUCCESSFUL_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_HSDSCH_CELL_SELECTION_NO_CELL_SELECTED</name>
+					<name>gpeh.INTERNAL_OUT_HARD_HANDOVER_FAILURE</name>
+					<name>gpeh.INTERNAL_IFHO_EXECUTION_ACTIVE</name>
+					<name>gpeh.INTERNAL_SOFT_HANDOVER_EXECUTION</name>
+					<name>gpeh.INTERNAL_SOHO_DS_MISSING_NEIGHBOUR</name>
+					<name>gpeh.INTERNAL_CMODE_ACTIVATE</name>
+					<name>gpeh.INTERNAL_CMODE_DEACTIVATE</name>
+					<name>gpeh.INTERNAL_SYSTEM_UTILIZATION</name>
+					<name>gpeh.RRC_MEASUREMENT_REPORT</name>
+					<name>gpeh.RRC_RRC_CONNECTION_SETUP</name>
+					<name>gpeh.RRC_RRC_CONNECTION_RELEASE_COMPLETE</name>
+					<name>gpeh.RANAP_IU_RELEASE_COMMAND</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="5">
+			<name>3GVCCorrelationService</name>
+			<class>com.ericsson.cepmediation.server.service.CorrelationServiceProvider</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<correlationspec>
+				<name>3GRadioSessionVCCorrelation</name>
+				<session-duration>FIVE_MINUTES</session-duration>
+				<listener>RadioSessionCorrelationEsperListener</listener>
+				<epl>
+					<name>vc.epl</name>
+				</epl>
+				<statements>
+					<name>Visited-Cells-Enrichment</name>
+				</statements>
+			</correlationspec>
+			<event-listening>
+				<topic-name>VCCorrelationTopic</topic-name>
+				<event-type>
+					<name>gpeh.INTERNAL_IMSI</name>
+					<name>gpeh.INTERNAL_RAB_ESTABLISHMENT</name>
+					<name>gpeh.INTERNAL_RAB_RELEASE</name>
+					<name>gpeh.INTERNAL_CHANNEL_SWITCHING</name>
+					<name>gpeh.INTERNAL_SYSTEM_RELEASE</name>
+					<name>gpeh.INTERNAL_FAILED_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_SUCCESSFUL_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_HSDSCH_CELL_SELECTION_NO_CELL_SELECTED</name>
+					<name>gpeh.INTERNAL_OUT_HARD_HANDOVER_FAILURE</name>
+					<name>gpeh.INTERNAL_IFHO_EXECUTION_ACTIVE</name>
+					<name>gpeh.INTERNAL_SOFT_HANDOVER_EXECUTION</name>
+					<name>gpeh.INTERNAL_SOHO_DS_MISSING_NEIGHBOUR</name>
+					<name>gpeh.INTERNAL_CMODE_ACTIVATE</name>
+					<name>gpeh.INTERNAL_CMODE_DEACTIVATE</name>
+					<name>gpeh.INTERNAL_SYSTEM_UTILIZATION</name>
+					<name>gpeh.RRC_MEASUREMENT_REPORT</name>
+					<name>gpeh.RRC_RRC_CONNECTION_SETUP</name>
+					<name>gpeh.RRC_RRC_CONNECTION_RELEASE_COMPLETE</name>
+					<name>gpeh.RANAP_IU_RELEASE_COMMAND</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="6">
+			<name>3GMCorrelationService</name>
+			<class>com.ericsson.cepmediation.server.service.CorrelationServiceProvider</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<correlationspec>
+				<name>3GRadioSessionMCorrelation</name>
+				<session-duration>FIVE_MINUTES</session-duration>
+				<listener>RadioSessionCorrelationEsperListener</listener>
+				<epl uses="cfa_hfa_common.epl,cfa.epl,hfa.epl,session_browser.epl">
+					<name>raw_events_base.epl</name>
+				</epl>
+				<statements>
+					<name>Handover-Enrichment</name>
+					<name>CellChange-Enrichment</name>
+					<name>Soho-Enrichment</name>
+					<name>Thirty-Second-RRC-Measurement-Reports-Before-Call-Drop</name>
+					<name>CallSetupFail-Enrichment</name>
+					<name>IncompleteCallSetupFail-Enrichment</name>
+					<name>Cleanup-IncompleteCallSetupFail-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteCallSetupFail-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteCallSetupFail</name>
+					<name>Flush-IncompleteCallSetupFail</name>
+					<name>SystemRelease-Enrichment</name>
+					<name>RrcUplinkDirectTransfer-Enrichment</name>
+					<name>IncompleteRrcUplinkDirectTransfer-Enrichment</name>
+					<name>SoftHandoverExecFail-Enrichment</name>
+					<name>IncompleteSoftHandoverExecFail-Enrichment</name>
+					<name>Cleanup-IncompleteSoftHandoverExecFail-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteSoftHandoverExecFail-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteSoftHandoverExecFail</name>
+					<name>Flush-IncompleteSoftHandoverExecFail</name>
+					<name>OutHardIfho-Enrichment</name>
+					<name>IncompleteOutHardIfho-Enrichment</name>
+					<name>Cleanup-IncompleteOutHardIfho-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteOutHardIfho-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteOutHardIfho</name>
+					<name>Flush-IncompleteOutHardIfho</name>
+					<name>OutHardIrat-Enrichment</name>
+					<name>IncompleteOutHardIrat-Enrichment</name>
+					<name>Cleanup-IncompleteOutHardIrat-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteOutHardIrat-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteOutHardIrat</name>
+					<name>Flush-IncompleteOutHardIrat</name>
+					<name>FailedHsdschCellChange-Enrichment</name>
+					<name>IncompleteFailedHsdschCellChange-Enrichment</name>
+					<name>Cleanup-IncompleteFailedHsdschCellChange-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteFailedHsdschCellChange-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteFailedHsdschCellChange</name>
+					<name>Flush-IncompleteFailedHsdschCellChange</name>
+					<name>HsdschNoCellSelected-Enrichment</name>
+					<name>IncompleteHsdschNoCellSelected-Enrichment</name>
+					<name>Cleanup-IncompleteHsdschNoCellSelected-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteHsdschNoCellSelected-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteHsdschNoCellSelected</name>
+					<name>Flush-IncompleteHsdschNoCellSelected</name>
+					<name>IfhoExecFail-Enrichment</name>
+					<name>IncompleteIfhoExecFail-Enrichment</name>
+					<name>Cleanup-IncompleteIfhoExecFail-On-Connection-Setup</name>
+					<name>Cleanup-IncompleteIfhoExecFail-On-Connection-Release</name>
+					<name>Cleanup-Expired-IncompleteIfhoExecFail</name>
+					<name>Flush-IncompleteIfhoExecFail</name>
+				</statements>
+			</correlationspec>
+			<event-listening>
+				<topic-name>MCorrelationTopic</topic-name>
+				<event-type>
+					<name>gpeh.INTERNAL_IMSI</name>
+					<name>gpeh.INTERNAL_SYSTEM_RELEASE</name>
+					<name>gpeh.INTERNAL_SUCCESSFUL_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_OUT_HARD_HANDOVER_FAILURE</name>
+					<name>gpeh.INTERNAL_SOFT_HANDOVER_EXECUTION</name>
+					<name>gpeh.INTERNAL_SOHO_DS_MISSING_NEIGHBOUR</name>
+					<name>gpeh.RRC_MEASUREMENT_REPORT</name>
+					<name>gpeh.INTERNAL_CALL_SETUP_FAIL</name>
+					<name>gpeh.INTERNAL_SYSTEM_RELEASE</name>
+					<name>gpeh.RRC_UPLINK_DIRECT_TRANSFER</name>
+					<name>gpeh.RRC_RRC_CONNECTION_SETUP</name>
+					<name>gpeh.RRC_RRC_CONNECTION_RELEASE_COMPLETE</name>
+					<name>gpeh.INTERNAL_FAILED_HSDSCH_CELL_CHANGE</name>
+					<name>gpeh.INTERNAL_HSDSCH_CELL_SELECTION_NO_CELL_SELECTED</name>
+					<name>gpeh.INTERNAL_IFHO_EXECUTION_ACTIVE</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="7">
+			<name>CoreCorrelationService</name>
+			<class>com.ericsson.cepmediation.server.service.CorrelationServiceProvider</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<correlationspec>
+				<name>CoreSessionCorrelation</name>
+				<session-duration>FIVE_MINUTES</session-duration>
+				<listener>CoreSessionCorrelationEsperListener</listener>
+				<epl>
+					<name>CoreCorrelation.epl</name>
+				</epl>
+				<statements>
+					<name>CORE_SESSION</name>
+				</statements>
+			</correlationspec>
+			<event-listening>
+				<topic-name>CoreCorrelationTopic</topic-name>
+				<event-type>
+					<name>ebm.ACTIVATE</name>
+					<name>ebm.DEACTIVATE</name>
+					<name>ebm.RAU</name>
+					<name>ebm.ISRAU</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="8">
+			<name>UserPlaneCorrelationService</name>
+			<class>com.ericsson.cepmediation.server.service.CorrelationServiceProvider</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<correlationspec>
+				<name>UserPlaneCorrelation</name>
+				<session-duration>ONE_MINUTE</session-duration>
+				<listener>WcdmaUserPlaneCorrelationEsperListener3</listener>
+				<epl>
+					<name>WcdmaUserPlaneCorrelation.epl</name>
+				</epl>
+				<statements>
+					<name>classification-handler</name>
+					<name>TCP_REPORT_ENRICHED</name>
+				</statements>
+			</correlationspec>
+			<event-listening>
+				<topic-name>UserPlaneCorrelationTopic</topic-name>
+				<event-type>
+					<name>bearer_plane.TCP_REPORT_PARTIAL</name>
+					<name>bearer_plane.CLASSIFICATION_REPORT</name>
+				</event-type>
+			</event-listening>
+		</service>
+		<service service-id="9">
+			<name>HazelcastForwarderService</name>
+			<class>com.ericsson.cepmediation.server.service.DataForwarderServiceProvider</class>
+			<forwarder-type>com.ericsson.cepmediation.forwarding.hazelcast.HazelcastForwarder</forwarder-type>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<event-listening>
+				<topic-name>IMEIEnrichmentTopic</topic-name>
+				<event-type>
+					<name>ebm.ATTACH</name>
+					<name>gpeh.enrichment.INTERNAL_CALL_SETUP_FAIL_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SYSTEM_RELEASE_ENRICHED</name>
+					<name>gpeh.enrichment.RRC_UPLINK_DIRECT_TRANSFER_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SOFT_HANDOVER_EXECUTION_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_FAILED_HSDSCH_CELL_CHANGE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_HSDSCH_CELL_SELECTION_NO_CELL_SELECTED_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_IFHO_EXECUTION_ACTIVE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_OUT_HARD_HANDOVER_FAILURE_IFHO_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_OUT_HARD_HANDOVER_FAILURE_IRAT_ENRICHED</name>
+				</event-type>
+			</event-listening>
+			<hazelcast-topic>
+				<topic-name>HazelcastIMEIEnrichmentTopic</topic-name>
+			</hazelcast-topic>
+		</service>
+	</serviceList>
+	<network-element-configurations>
+		<network-element ne-type="1"><!-- 1:Radio(GPEH) , 2:Core(SGEH) , 3:UserPlane(Captool, TCP) -->
+			<service-types>1,3,4,5,6,9</service-types>
+			<memory-size>20000</memory-size>
+			<memory-hint>-XX:+UseParallelGC#-XX:+UseParallelOldGC#-XX:MaxPermSize=900M#-XX:ParallelGCThreads=2#-XX:ConcGCThreads=2</memory-hint>
+			<serial-processing>true</serial-processing>
+			<recommendations>
+				<recommendation>
+					<memory-size>20000</memory-size>
+					<includes>
+						<include>CFA</include>
+						<include>HFA</include>
+						<include>SESSION_BROWSER</include>
+					</includes>
+				</recommendation>
+				<recommendation>
+					<memory-size>5000</memory-size>
+					<includes>						
+						<include>HFA</include>						
+					</includes>
+				</recommendation>
+				<recommendation>
+					<memory-size>6000</memory-size>
+					<includes>
+						<include>CFA</include>
+						<include>HFA</include>						
+					</includes>
+				</recommendation>
+			</recommendations>
+			<ip>atclvm559.athtem.eei.ericsson.se</ip>
+			<uname>dcuser</uname>
+			<password>central1</password>
+		</network-element>
+		<network-element ne-type="2"><!-- 1:Radio(GPEH) , 2:Core(SGEH) , 3:UserPlane(Captool, TCP) -->
+			<service-types>1,3,7,9</service-types>
+			<memory-size>4000</memory-size>
+			<memory-hint>-XX:+UseParallelGC#-XX:+UseParallelOldGC#-XX:MaxPermSize=700M#-XX:ParallelGCThreads=2#-XX:ConcGCThreads=2</memory-hint>
+			<serial-processing>true</serial-processing>
+			<ip>atclvm559.athtem.eei.ericsson.se</ip>
+			<uname>dcuser</uname>
+			<password>central1</password>
+		</network-element>
+		<network-element ne-type="3"><!-- 1:Radio(GPEH) , 2:Core(SGEH) , 3:UserPlane(Captool, TCP) -->
+			<service-types>1,3,8</service-types>
+			<memory-size>9000</memory-size>
+			<memory-hint>-XX:+UseParallelGC#-XX:+UseParallelOldGC#-XX:MaxPermSize=500M#-XX:ParallelGCThreads=2#-XX:ConcGCThreads=2</memory-hint>
+			<serial-processing>true</serial-processing>
+			<ip>atclvm559.athtem.eei.ericsson.se</ip>
+			<uname>dcuser</uname>
+			<password>central1</password>
+		</network-element>
+	</network-element-configurations>
+</appconfig>
+  

@@ -1,0 +1,6 @@
+dn: cn=eventsui.dashboard.view,ou=permissions,ou=pm,ou=oss,dc=ericsson,dc=se
+cn: eventsui.dashboard.view
+solutionSetName: general.network
+title: ENIQ Events UI Dashboard View
+description: This permission allows access dashboard
+objectClass: permission

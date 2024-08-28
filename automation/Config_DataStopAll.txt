@@ -1,0 +1,20 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/data/results,deftftauto,CentralRegression!!
+
+!---Get when tables were last populated
+CHECK_TIMES
+
+!-- Stops Various Datagen
+STOPDATAGEN_2G3G4G
+STOPDATAGEN_WCDMA
+STOPDATAGEN_MSS
+STOPDATAGEN_LTE
+STOPDATAGEN_KPI
+STOPDATAGEN_3GSESSIONBROWSER
+
+
+!---Wait for directories to clear
+WAIT 15
+
+!---Get when tables were last populated
+CHECK_TIMES

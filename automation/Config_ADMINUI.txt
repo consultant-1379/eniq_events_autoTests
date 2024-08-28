@@ -1,0 +1,27 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#This config will install Firefox 22
+DO_FIREFOX_VERSION new,22
+
+RUN_SELENIUM AdminUITestGroup,selenium_events_tests.jar,localhost
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,2
+
+!--- ADMIN UI Status Summary 
+OVERALLSTATUS
+
+!--- ADMIN UI - System Monitoring
+DISKSPACE
+ENIQVERSION
+INSTALLED_MODULES
+INSTALLED_TPS
+
+

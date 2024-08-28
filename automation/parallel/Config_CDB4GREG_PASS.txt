@@ -1,0 +1,9 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,8
+
+TOPOLOGYLOADWAIT
+
+RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/KgbCdbConfigFiles/2g3g4g_core_kgb_cdb_config.txt

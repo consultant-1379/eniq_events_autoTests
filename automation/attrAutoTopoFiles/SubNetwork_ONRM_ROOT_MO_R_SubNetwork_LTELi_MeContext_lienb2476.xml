@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<model>
+  <mo fdn="SubNetwork=ONRM_ROOT_MO_R,SubNetwork=LTELi,MeContext=lienb2476" mimName="ECIM_Top" lastModified="1441264840476">
+    <attr name="MeContextId">lienb2476</attr>
+    <attr name="userLabel">lienb2476</attr>
+    <attr name="neMIMversion">2.1.1.2.12</attr>
+    <attr name="timestampOfChange">2015-09-03 07:20:40.476</attr>
+    <attr name="swVersion"/>
+    <attr name="siteRef">SubNetwork=ONRM_ROOT_MO_R,Site=lienb2476</attr>
+    <attr name="fingerprint"/>
+    <attr name="nodeVersion"/>
+    <attr name="prodDesignation"/>
+  </mo>
+</model>

@@ -1,0 +1,12 @@
+<suite name="Servers Status Test Suite" preserve-order="true">
+	<test name="Control Zone Server Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.serverstatus.CoordinatorServerTests"/>
+		</classes>
+	</test>
+	<test name="Glassfish Server Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.serverstatus.GlassfishServerTests"/>
+		</classes>
+	</test>
+</suite>

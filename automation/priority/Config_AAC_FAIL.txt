@@ -1,0 +1,17 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,1
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+
+CHECKINGSERVICESTATUS
+
+!--- 'STOP_SELENIUM' will quit all selenium hub and RC connections. IT IS NOT A TEST. It is essentially a selenium refresh.
+!--- ONLY USE THIS IF SELENIUM TESTS WONT RUN as it can interfere with other running selenium tests. Should usually be commented (#)
+#STOP_SELENIUM
+

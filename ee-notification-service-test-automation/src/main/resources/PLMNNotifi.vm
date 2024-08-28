@@ -1,0 +1,7 @@
+select ManagedObjectInstance,DATE_ID,EventHour,EventMinute,MonitoredAttributeValues,ThresholdInformation 
+from 
+dc.dc_z_alarm_info_raw 
+where 
+MonitoredAttributes like '$kpiname' 
+and eventdate 
+between '$START_TIME' and '$END_TIME'

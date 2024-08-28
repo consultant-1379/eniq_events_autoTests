@@ -1,0 +1,34 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+DGSOURCE remote
+LOADTOPOLOGY 2G,3G,MSS,LTE,4G
+UPDATETOPOLOGY
+PRE_CONFIG_FOR_DATAGEN installLCHS
+STARTDATAGEN_LTE waitifstarting 150
+LTE_CREATE_GROUPS
+!--- 'STOP_SELENIUM' will quit all selenium hub and RC connections. IT IS NOT A TEST. It is essentially a selenium refresh.
+!--- ONLY USE THIS IF SELENIUM TESTS WONT RUN as it can interfere with other running selenium tests. Should usually be commented (#)
+#STOP_SELENIUM
+
+!--- The 'INIT_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute a single Selenium sanity test (UI login) using test group 'DummyTestGroup'
+!--- The HUB and RC will then be stopped.
+INIT_SELENIUM localhost
+
+!--- The 'RUN_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute the specified Selenium test group LteHfaTestGroup and JAR 'selenium_events_tests.jar'
+!--- These values will override the default value in the selenium.properties file.
+!--- The HUB and RC will then be stopped.
+
+!--- LTEHFA UI Testing (Phase 2)
+
+TEST_LIST -DTEST_SUITE=ltehfa -DTESTS=eCellHandoverFailureAnalysis_7_1,eCellGroupHandoverFailureAnalysis_7_2,eNodeBHandoverFailureAnalysis_7_3,eNodeBGroupHandoverFailureAnalysis_7_4,eNodeBCauseCodeAnalysis_7_11,eNodeBGroupCauseCodeAnalysis_7_12,eCellCauseCodeAnalysis_7_13,eCellGroupCauseCodeAnalysis_7_14,eNodeBGroupCauseCodeDrillDown_7_16,eCellGroupCauseCodeDrillDown_7_18,eNodeBEventVolumeAnalysis_8_1,eNodeBGroupEventVolumeAnalysis_8_2,AccessAreaEventVolumeAnalysis_8_3,AccessAreaGroupEventVolumeAnalysis_8_4,NetworkEventVolumeAnalysis_8_6,ControllerQCIStatistics_7_30_and_7_31,eNodeBGroupQCIstatistics_7_32,AccessAreaQCIStatistics_7_33_and_7_34,AccessAreaGroupQCIstatistics_7_35,eNodeBRankingPreparationFailures_6_2,eNodeBRankingExecFailures_6_32,SubscriberRankingHandoverPrepFailure_6_6,SubscriberRankingHandoverExecFailure_6_7,SourceCellRankingPrepFailures_6_26,SourceCellRankingExecFaliures_6_28,TargetCellRankingPrepFailures_6_26,TargetCellRankingExecFaliures_6_28,CauseCodeRankingPrepFailures_6_14,CauseCodeRankingExecFailures_6_15,TerminalRankingPrepFailure_6_16,TerminalRankingExecFailure_6_22,IMSISummaryEventsViewDrillDown_5_7,IMSISummaryEventsView_5_3,IMSIgroupAnalysisViewLTERANeventsSummaryEventAnalysis_5_4,IMSISummaryEventsViewEnodeBdrilldown_5_7,IMSISummaryEventsViewEcellDrilldown_5_8,IMSISummaryZeroERABdrilldown_5_7
+
+RUN_SELENIUM LteHfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39

@@ -1,0 +1,110 @@
+#!/usr/bin/perl
+##############################################################################
+# This script will test the acceptance of assureddc.
+# It creates the log in the format rquired by CAR.
+##############################################################################
+
+use Utils::logger;
+use Utils::CollectorUtility;
+ 
+our $collectorScript = "/eniq/sw/platform/assureddc-*/scripts/genericCollector.pl";
+
+sub main
+{
+  InitLog();
+  runTestCases();
+  EndLog();
+}
+
+# This will log in the required CAR format.
+sub assertUtils
+{
+    my ($output,$testCaseName,$testTag,$failureReason) = @_;
+    if($output eq 0){
+        LogInfo("TestName: \"$testCaseName\" TestTag: \"$testTag\" TestResult: \"PASS\"  FailureReason: \"N.A.\"");
+        print "TestName: \"$testCaseName\" TestTag: \"$testTag\" TestResult: \"PASS\"  FailureReason: \"N.A.\"\n";
+    }
+    else{
+        LogInfo("TestName: \"$testCaseName\" TestTag: \"$testTag\" TestResult: \"FAIL\"  FailureReason: \"$failureReason\"");
+        print "TestName: \"$testCaseName\" TestTag: \"$testTag\" TestResult: \"FAIL\"  FailureReason: \"$failureReason\"\n";
+    }
+}
+
+# This contains call to the test cases to be executed
+sub runTestCases{
+   print "######################## TEST CASES ###################\n";
+   #TC 1: Check collection with start action
+   assertUtils(testAssureDDCStart(),"Plugin Start action","testassureDDCStart",$failureReason);
+   #TC 2: Check collection with Trigger action
+   assertUtils(testAssureDDCTrigger(),"Plugin Trigger action","testAssureDDCTrigger",$failureReason);
+   #TC 3: Check collection with STOP action
+   assertUtils(testAssureDDCStop(),"Plugin Stop action","testAssureDDCStop",$failureReason);
+}
+
+# This TC will check the START action for the genericCollector.
+sub testAssureDDCStart{
+   CreateXMLFile();
+   my $output = `$collectorScript START`;
+   if( $? ne 0 ) {
+     print STDERR "\nERROR START action failed.\n";
+     $failureReason = "ERROR START action failed.";
+     return 1;
+   }
+   if( CheckTempFile() eq 0 ) {
+     return 0;
+   }
+   print STDERR "\nERROR START action failed.\n";
+   $failureReason = "ERROR START action failed.";
+   return 1;
+}
+
+# This TC will check the TRIGGER action for the genericCollector.
+sub testAssureDDCTrigger{
+   RemoveComponentDir();
+   my $output = `$collectorScript TRIGGER`;
+   if( $? ne 0 ) {
+     print STDERR "\nERROR TRIGGER action failed.\n";
+     $failureReason = "ERROR TRIGGER action failed.";
+     return 1;
+   }
+   if( CheckLogCollectionDir() ne 0 ) {
+     print STDERR "\nERROR TRIGGER action failed to create component dir.\n";
+     $failureReason = "ERROR TRIGGER action failed to create component dir.";
+     return 1;
+   }
+   if( CheckLogCollection() ne 0 ) {
+     print STDERR "\nERROR TRIGGER action failed to copy log file.\n";
+     $failureReason = "ERROR TRIGGER action failed to copy log file.";
+     return 1;
+   }
+   return 0;
+}
+
+# This TC will check the STOP action for the genericCollector.
+sub testAssureDDCStop{
+   RemoveComponentDir();
+   my $output = `$collectorScript STOP`;
+   if( $? ne 0 ) {
+     print STDERR "\nERROR STOP action failed.\n";
+     $failureReason = "ERROR STOP action failed.";
+     return 1;
+   }
+   if( CheckLogCollectionDir() ne 0 ) {
+     print STDERR "\nERROR STOP action failed to create component dir.\n";
+     $failureReason = "ERROR STOP action failed to create component dir.";
+     return 1;
+   }
+   if( CheckLogCollection() ne 0 ) {
+     print STDERR "\nERROR STOP  action failed to create component dir.\n";
+     $failureReason = "ERROR STOP action failed to copy log file.";
+     return 1;
+   }
+   if ( -f "${ddcLocation}/tempConfigFile" ) {
+      print STDERR "\nERROR STOP  action failed to remove temp config file.\n";
+     $failureReason = "ERROR STOP action failed to remove temp config file.";
+     return 1;
+   }
+   return 0;
+}
+
+main();

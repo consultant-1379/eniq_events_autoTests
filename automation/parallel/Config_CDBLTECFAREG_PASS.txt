@@ -1,0 +1,11 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,9
+
+TOPOLOGYLOADWAIT
+
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/OtherConfigFiles/ltecfa_tests_config.txt

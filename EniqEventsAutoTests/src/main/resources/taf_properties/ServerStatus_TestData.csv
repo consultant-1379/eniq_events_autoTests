@@ -1,0 +1,14 @@
+test_label,command,args,STDOUT,STDERR,EXITCODE,timeout,host
+webserverIsOnline,svcs -a | grep ,svc:/eniq/webserver:default,online,,0,0,controlzone
+engineIsOnline,svcs -a | grep , svc:/eniq/engine:default,online,,0,0,controlzone
+engineStatusIsActive,engine status | grep ,Status,Status: active,,0,0,controlzone
+engineCurrentProfileIsNormal,engine status | grep ,'Current Profile',Current Profile: Normal,,0,0,controlzone
+schedulerIsOnline,svcs -a | grep,svc:/eniq/scheduler:default,online,,0,0,controlzone
+licmgrIsOnline,svcs -a | grep,svc:/eniq/licmgr:default,online,,0,0,controlzone
+repdbIsOnline,svcs -a | grep, svc:/eniq/repdb:default,online,,0,0,controlzone
+controlzoneIsOnline,svcs -a | grep,svc:/eniq/controlzone:default,online,,0,0,controlzone
+swapfileAvailable,ls,/swapfile,swapfile,,0,0,controlzone
+swapfileInVfstab,grep /swapfile,/etc/vfstab,/swapfile,,0,0,controlzone
+eniq_sp_1InSwapFInVfstab,grep eniq_sp_1,/etc/vfstab,eniq_sp_1,,0,0,controlzone
+httpRedirectsToHttpsWhenHttpsIsEnabled,/eniq/glassfish/glassfish3/glassfish/bin/change_glassfish_security.sh,enable,,,,1200000,glassfish
+httpsRedirectsToHttpWhenHttpsIsDisabled,/eniq/glassfish/glassfish3/glassfish/bin/change_glassfish_security.sh,disable,,,,1200000,glassfish

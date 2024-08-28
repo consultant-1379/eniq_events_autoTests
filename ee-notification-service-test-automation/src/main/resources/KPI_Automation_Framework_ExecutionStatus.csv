@@ -1,0 +1,61 @@
+KPI Name@IgnoreCase
+LTE Attach Success Ratio - Subscriber (IMSI) group@Yes
+PDN Connection Success Ratio - Subscriber (IMSI) group@Yes
+Dedicated Bearer Activation Success Ratio - Subscriber (IMSI) group@Yes
+Attach Success Rate - Subscriber (IMSI) group@Yes
+S1 Handover Success Ratio - Subscriber (IMSI) group@Yes
+X2 Handover Success Ratio - Subscriber (IMSI) group@Yes
+LTE MS initiated Service Request Success Ratio - Subscriber (IMSI) group@Yes
+LTE network initiated Service Request Success Ratio - Subscriber (IMSI) group@Yes
+MS initiated PDP Context Activation Success Ratio - Subscriber (IMSI)@Yes
+PDP Context Cutoff Ratio - Subscriber (IMSI) group@Yes
+Network Initiated PDP Context Activation Success Ratio - SUBSCRIBER (IMSI) group@Yes
+3GDT MS initiated PDP Context Activation Success Ratio - Subscriber (IMSI) group@Yes
+3GDT Network Initiated PDP Context Activation Success Ratio - Subscriber (IMSI) group@Yes
+3GDT PDP Context Cutoff Ratio - Subscriber (IMSI) group@Yes
+SMS Terminating Success Ratio - Subscriber (IMSI) group@Yes
+SMS Originating Success Ratio - Subscriber (IMSI) group@Yes
+Location Request Success Ratio - Subscriber (IMSI) group@Yes
+Attach Success Rate - PLMN group@Yes
+LTE Attach Success Ratio - PLMN group@Yes
+PDN Connection Success Ratio - PLMN group@Yes
+Dedicated Bearer Activation Success Ratio - PLMN group@Yes
+Intra MME Tracking Area Update Success Ratio - PLMN group@Yes
+Inter MME Tracking Area Update Success Ratio - PLMN group@Yes
+MS initiated PDP Context Activation Success Ratio - PLMN group@Yes
+Network Initiated PDP Context Activation Success Ratio - PLMN group@Yes
+Intra SGSN Routing Area Update Success Ratio - PLMN group@Yes
+Inter SGSN Routing Area Update Success Ratio - PLMN group@Yes
+MS initiated Service Request Success Ratio - PLMN group@Yes
+Network initiated Service Request Success Ratio - PLMN group@Yes
+LTE Attach Success Ratio - SGSN-MME group@Yes
+PDN Connection Success Ratio - SGSN-MME group@Yes
+Dedicated Bearer Activation Success Ratio - SGSN-MME group@Yes
+LTE MS initiated Service Request Success Ratio - SGSN-MME group@Yes
+LTE network initiated Service Request Success Ratio - SGSN-MME group@Yes
+Attach Success Rate - SGSN-MME group@Yes
+PDP Context Cutoff Ratio - SGSN-MME group@Yes
+3GDT PDP Context Cutoff Ratio - SGSN-MME group@Yes
+SMS Terminating Success Ratio - MSS group@Yes
+SMS Originating Success Ratio - MSS group@Yes
+Location Request Success Ratio - MSS group@Yes
+Roaming Call Forwarding Success Ratio - Subscriber (IMSI) group@Yes
+MS Originating Emergency Call Completion Ratio - Subscriber (IMSI) group@Yes
+MS Terminating Call Completion Ratio - Subscriber (IMSI) group@Yes
+MS Originating Call Completion Ratio - Subscriber (IMSI) group@Yes
+Call Forwarding Success Ratio - Subscriber (IMSI) group@Yes
+Roaming Call Forwarding Success Ratio - MSS group@Yes
+MS Originating Emergency Call Completion Ratio - MSS group@Yes
+MS Terminating Call Completion Ratio - MSS group@Yes
+MS Originating Call Completion Ratio - MSS group@Yes
+Call Forwarding Success Ratio - MSS group@Yes
+Roaming Call Forwarding Drop Ratio - Subscriber (IMSI) group@Yes
+MS Originating Emergency Call Drop Ratio - Subscriber (IMSI) group@Yes
+MS Terminating Call Drop Ratio - Subscriber (IMSI) group@Yes
+MS Originating Call Drop Ratio - Subscriber (IMSI) group@Yes
+Call Forwarding Drop Ratio - Subscriber (IMSI) group@Yes
+Roaming Call Forwarding Drop Ratio - MSS group@Yes
+MS Originating Emergency Call Drop Ratio - MSS group@Yes
+MS Terminating Call Drop Ratio - MSS group@Yes
+MS Originating Call Drop Ratio - MSS group@Yes
+Call Forwarding Drop Ratio - MSS group@Yes

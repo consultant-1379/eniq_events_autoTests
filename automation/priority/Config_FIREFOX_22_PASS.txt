@@ -1,0 +1,2 @@
+#This config will install Firefox 22
+DO_FIREFOX_VERSION new,22

@@ -1,0 +1,21 @@
+#!/usr/bin/expect
+
+#Usage sshsudologin.expect <host> <ssh user> <ssh password> <su user> <su password>
+
+set arg1 [lindex $argv 0]
+set timeout 20
+
+
+spawn -noecho ssh -o StrictHostKeyChecking=no -p 22211 -l root $arg1.athtem.eei.ericsson.se
+
+expect {
+        "assword: " {
+                        send "shroot\r"
+                        exp_continue
+        }
+
+        "]# " {
+                        send "df -hk ;exit\r"
+                        exp_continue;
+        }
+}

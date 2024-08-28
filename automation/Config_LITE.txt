@@ -1,0 +1,92 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status. Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 3,8
+DGSOURCE ede
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+
+
+!------------------------------------------------------------------------
+!------------------------------------------------------------------------
+
+
+STARTDATAGEN 2G3G,4G,newIMEI
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=uiimprovements -DTESTS=possibleToDrillDownFromPieChartToDisplayTheEventAnalysisTable_4_8_9,testUserTableReorganazingPersistOnRevisit_T18_3_3_and_6_3,verticalScrollBarPresentInABoutBox_4_20_4,PLMNgroups_ADDING_EDITING_DELETING_SAVING_4_15_1,SGSNNewColumnsAddedorRemoved_4_42_3,deleteGroupsLaunchesaWindow_4_1_17,createdOrAvailableGroupsCanbeEditedinGroupManagement_4_1_9,verticalScrollBarPresentInABoutBox_4_20_4,aboutInOptionsMenuForAllTabs_4_20_2,greaterThanOrLessThanWillBeResetTobeEmpty_4_3_19,APNColumnStructureVisibleinLineWithDesignTemplate_4_42_1
+
+RUN_SELENIUM UIimprovementsTestGroup,localhost
+
+
+2G3G_CREATE_GROUPS
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=newui -DTESTS=showWorstPerformingDevicesByFailures_4_7_6,showWorstPerformingAPNsByFailures_4_7_16,verifyAllRelevant3GEventsAreDisplayedOnDrillDownFromRankingViews_4_7_22,IMSIEventTACDrillDown_4_5_10_,openDefaultViewForIMSI_4_5_11,displayEventSummaryForSelectedDeviceTypeGroup_4_9_3,openDefaultViewForIMSI_4_5_11,IMSIEventSGSNDrillDown_4_5_8,IMSIEventControllerDrillDown_4_5_7,drillByAPNToViewTheEventsForSameTemporalReference_4_7_17,drillByRNCToViewTheEventsForSameTemporalReference_4_7_12B
+
+RUN_SELENIUM 2G3GSgehTestGroup,localhost
+
+!------------------------------------------------------------------------
+!------------------------------------------------------------------------
+DGSOURCE remote
+STARTDATAGEN_MSS
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=mss -DTESTS=KPIsSupportedInNetworkAnalysisPerNominatedController2G_7_10_1,EventVolumeAnalysisPerNominatedNetworkElement_7_26_4,VerifyControllerDrillDownFunction_5_9,TerminalAnalysisDataForSelectedInterval_8_5,invalidIMSIForSubscribeBIDetails_4_9_3,EventVolumeAnalysisPerNominatedNetworkElement_7_26_2,DrillByMSCForSubscriberRankingBlockedCalls_6_20,AccessAreaRankingSummarySupportTop50AsDefaultForDroppedCalls_6_25,VerifyTACDrillDownFunction_5_8,callForwardingEventCanBeDisplayedInSubscriberSession_5_14
+
+RUN_SELENIUM MssTestGroupUILaunch,localhost
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=alarmkpi -DTESTS=testWindowOpensWithLastDataFromTime_4_7,testUIControlsAreVisibleAndFunctional_3_7,testRefreshButtonOnAllSeverityWindowsFunctioning_3_9,testDataOnWindowCanBeFilteredBySeverityType_5_2,testDataCanBefilteredWithCalenterDateAndTime_5_4,testClickingAgainOnSeverityButtonRefreshesTheWindow_4_2,testRefreshRateCanBeSetMinFiveMinutesAndMaxTwentyFourHours_3_5,testColomnOrderAndAllcolumnsAreVisibleForEachSeverityTypeWindow_3_13,testCSVButtonPresentOnallWindows_6_1,testPercentagesPresentUnderEachSeverityButton_2_4
+
+!--- KPI UI Testing (Phase 2)
+RUN_SELENIUM KPINotificationTestGroup,localhost
+
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=aac -DTESTS=testDeleteUserRoleAndPermission,testCreatePermissionGroupForEachPredefinedPermission,testModifyUserRoleAndPermission,TC1_createUser4EachPredefinedRole
+
+RUN_SELENIUM AacTestGroup,localhost
+
+
+!------------------------------------------------------------------------
+!------------------------------------------------------------------------
+
+
+STARTDATAGEN_LTE,dowaitif
+MONITOREC
+LTE_CREATE_GROUPS
+
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=ltecfa -DTEST_SUB_SUITE=SubscriberSessionTestGroup
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost
+
+
+INIT_SELENIUM localhost,noreport
+TEST_LIST -DTEST_SUITE=ltehfa -DTESTS=eNodeBGroupCauseCodeDrillDown_7_16,AccessAreaEventVolumeAnalysis_8_3,eNodeBGroupQCIstatistics_7_32,eNodeBRankingExecFailures_6_32,IMSISummaryEventsViewEcellDrilldown_5_8,AccessAreaGroupEventVolumeAnalysis_8_4,AccessAreaGroupQCIstatistics_7_35,IMSIgroupAnalysisViewLTERANeventsSummaryEventAnalysis_5_4,SourceCellRankingPrepFailures_6_26,TerminalRankingPrepFailure_6_16
+
+RUN_SELENIUM LteHfaTestGroup,localhost
+
+STOPMONITOREC
+
+!------------------------------------------------------------------------
+!------------------------------------------------------------------------
+
+
+!---------LOADTOPOLOGY 3GSessionBrowser
+!---------STARTDATAGEN_3GSESSIONBROWSER
+
+!---------SB_FIND_IMSI
+
+!---------TEST_LIST -DTEST_SUITE=sessionbrowser !----------DTESTS=testCoreSignallingAttachEvent_7_9,testCoreSignallingPDPDeactivateEvent_7_24,testCoreSignallingRAUEvent_7_40,testDataBearerSessionC!---------ore_DEFTFTS_44_3,!---------testHeaderChangesWhileScrolling_4_4_3,testInternalSoftHandoverExecutionFailure_7_70,testRRCMeasurementReport_7_106_2,test!---------InternalCallSetupFailure_10_1_4,te!---------stApplicationLayerChart,cogWheelInteraction3_Application_Layer_Performace_Chart
+
+!---------RUN_SELENIUM 3GSessionBrowserTestSuite,localhost
+
+
+!---------LOADMAPS
+
+!---------TEST_LIST -DTEST_SUITE=kpianalysis !----------DTESTS=checkSelectNetworkOption_26_5,verifyControlPlaneKpis_27_1,verifyKpiWindowTitleChart_27_3,openChartByMakeModel,checkGoodAndBadKpiCo!---------lourOrder_29_21,c!---------omparePercentages_29_22,checkErrorEmptyValue_29_22,checkBoundsForPercentageKPIs_29_22,testKpiMapNavigation_29_5,testKpiMa!---------pHoverShowsToolTipMultiCell_29_12
+
+!---------RUN_SELENIUM 3GKPIAnalysisTestSuite,localhost

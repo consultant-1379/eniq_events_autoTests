@@ -1,0 +1,13 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+#DGSOURCE remote
+#LOADTOPOLOGY force,2G,3G,4G
+LOADTOPOLOGY force,2G_Like4Like,3G_Like4Like,4G_Like4Like,LTE_CLIENT
+DATAGENSTART_ARREST_IT
+2G3G_CREATE_GROUPS
+WAIT 45
+RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/KgbCdbConfigFiles/2g3g4g_core_kgb_cdb_config.txt
+

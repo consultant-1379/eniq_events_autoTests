@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- settings appropriate for a 96G server -->
+<configlist prompt="true">
+    <config name="EC1">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <classpath path="lib/picostart.jar"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9090" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+    </config>
+    <config name="EC_SGEH_1">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <classpath path="lib/picostart.jar"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9092" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+    </config>
+    <config name="EC_LTEES_1">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg value="-XX:+UseCompressedStrings"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9094" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-lang.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-logging.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_base.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_ap_event_beans.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-event-dec.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic-java.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-xml-writer.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-commons.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/log4j.jar"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-Dlog4j.configuration=file:/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_1.log4j.properties"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_1.log4j.properties"/>
+    </config>
+    <config name="EC_LTEES_2">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg value="-XX:+UseCompressedStrings"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9095" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-lang.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-logging.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_base.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_ap_event_beans.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-event-dec.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic-java.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-xml-writer.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-commons.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/log4j.jar"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-Dlog4j.configuration=file:/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_2.log4j.properties"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_2.log4j.properties"/>
+    </config>
+    <config name="EC_LTEES_3">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseCompressedStrings"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9096" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-lang.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-logging.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_base.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_ap_event_beans.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-event-dec.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic-java.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-xml-writer.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-commons.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/log4j.jar"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-Dlog4j.configuration=file:/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_3.log4j.properties"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_3.log4j.properties"/>
+    </config>
+    <config name="EC_LTEES_4">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseCompressedStrings"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9097" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-lang.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/commons-logging.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_base.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/eniq_analysis_ap_event_beans.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-event-dec.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-counter-logic-java.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-xml-writer.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/xml-auto-commons.jar"/>
+        <classpath path="./../../mediation_inter/M_E_LTEES/lib/log4j.jar"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-Dlog4j.configuration=file:/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_4.log4j.properties"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/mediation_inter/M_E_LTEES/config/ec_ltees_4.log4j.properties"/>
+    </config>
+    <config name="EC_LTEEFA_1">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:+UseParallelGC"/>
+        <jdkarg value="-XX:+UseParallelOldGC"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9093" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+    </config>
+    <config name="EC_LTEEFA_2">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParallelGC"/>
+        <jdkarg value="-XX:+UseParallelOldGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9098" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-DctumCacheSize=3500000"/>
+    </config>
+    <config name="EC_LTEEFA_3">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx2000M"/>
+        <jdkarg value="-Xms2000M"/>
+        <jdkarg value="-XX:NewSize=1000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParallelGC"/>
+        <jdkarg value="-XX:+UseParallelOldGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9099" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+        <jdkarg value="-DctumCacheSize=3500000"/>
+    </config>
+    <config name="EC2">
+        <startclass class="com.digitalroute.picostart.PicoStart"/>
+        <jdkarg value="-Xmx16000M"/>
+        <jdkarg value="-Xms8000M"/>
+        <jdkarg value="-XX:NewSize=4000M"/>
+        <jdkarg value="-XX:NewRatio=1"/>
+        <jdkarg value="-XX:+UseParNewGC"/>
+        <jdkarg value="-XX:ParallelGCThreads=8"/>
+        <jdkarg value="-XX:SurvivorRatio=4"/>
+        <jdkarg value="-XX:+DisableExplicitGC"/>
+        <jdkarg value="-XX:+UseConcMarkSweepGC"/>
+        <jdkarg value="-XX:+UseCMSInitiatingOccupancyOnly"/>
+        <jdkarg value="-XX:+CMSClassUnloadingEnabled"/>
+        <jdkarg value="-d64"/>
+        <jdkarg value="-XX:-DontCompileHugeMethods"/>
+        <jdkarg value="-XX:MaxPermSize=256M"/>
+        <jdkarg vendor="sun,hp" value="-server"/>
+        <classpath path="lib/picostart.jar"/>
+        <property value="585a3c2a0eae6eb5ebef" name="ec.httpd.password"/>
+        <property value="9091" name="ec.httpd.port"/>
+        <property value="mzadmin" name="ec.httpd.user"/>
+        <property value="20000" name="ec.shutdown.time"/>
+        <property value="/eniq/mediation_sw/mediation_gw/tmp" name="ecsa.backlog.dir"/>
+        <property value=" com.digitalroute.wf.ECEventSender, com.digitalroute.wf.pico.ECSAHTTPD, com.digitalroute.wf.pico.ExecutionContextFactoryImpl, com.digitalroute.wfc.aggregation.storage.AggregationStorageImpl, com.digitalroute.wfc.dupudr2.RDupUDR2StorageImpl, com.digitalroute.wfc.interwf.storagehandler.BatchStorageImpl, com.digitalroute.ui.cmdline.sysinfo.RemoteCommandImpl" name="pico.bootstrapclass"/>
+        <property value="log/${config.name}.log" name="pico.stderr"/>
+        <property value="log/${config.name}.log" name="pico.stdout"/>
+        <property value="ec" name="pico.type"/>
+        <property value="32000" name="mz.aggregation.max_file_cache_size"/>
+        <property value="1000000" name="mz.aggregation.min_session_file_size"/>
+        <property value="35" name="sybase.iq.pool.maxlimit"/>
+        <jdkarg value="-Dcom.sun.management.jmxremote"/>
+        <property value="true" name="mz.aggregation.storage.profile_session_cache"/>
+        <jdkarg value="-Djava.util.logging.config.file=/eniq/sw/conf/streaming-probe-logging.properties"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialHost=glassfish"/>
+        <jdkarg value="-Dorg.omg.CORBA.ORBInitialPort=3700"/>
+        <classpath path="./../../glassfish/glassfish/glassfish/lib/gf-client.jar"/>
+        <jdkarg value="-Dorg.apache.commons.logging.Log=org.apache.commons.logging.impl.Log4JLogger"/>
+        <jdkarg value="-Dxml-auto.config.file=/eniq/sw/conf/xml-auto-config.properties"/>
+        <jdkarg value="-DstreamingProbepropsFile=/eniq/sw/conf/streaming-probe.properties"/>
+    </config>
+</configlist>

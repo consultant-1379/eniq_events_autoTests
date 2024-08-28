@@ -1,0 +1,18 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 12,20
+
+DGSOURCE ede 
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+STARTDATAGEN_LTE force 
+LTE_CREATE_GROUPS
+INIT_SELENIUM localhost
+
+TEST_LIST -DTEST_SUITE=ltecfa -DTESTS=NetworkEventVolumeAnalysis_8_6,IMSISummaryERABdrilldown_5_7,terminalGroupEventAnalysis_7_2
+
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost

@@ -1,0 +1,1 @@
+#This file is no longer in use. Go to this link to find out how to start data on a server: http://atrclin2.athtem.eei.ericsson.se/wiki/index.php/Using_ENIQ_Events_Auto_Tests

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupmgt>
+	<group name="HomeNetwork" type="MCC_MNC">
+		<group-element>
+			<key value ="460" name="MCC"/>
+			<key value ="00" name="MNC"/>
+		</group-element>
+		<group-element>
+			<key value ="460" name="MCC"/>
+			<key value ="01" name="MNC"/>
+		</group-element>
+	</group>
+</groupmgt>

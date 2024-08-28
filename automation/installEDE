@@ -1,0 +1,60 @@
+#!/usr/local/bin/expect
+
+set timeout -1
+spawn -noecho su root -c "ssh datagen ' rm -rf /ede ; mkdir /ede/ /test_tmp/ ; mount 10.59.130.118:/ede /test_tmp ; cp /test_tmp/EDEZIP/* /ede ; umount /test_tmp/ ; cd /ede; unzip *zip  ;cd ede* ; cp  ../installEDE.pl . ;./installEDE.pl ; rm edeInstall_temp.sh installEDE.sh ; bash  edeInstall.sh ; rm *.tar *.log '"
+ expect {
+        "assword: " {
+        send "shroot\n"
+        expect {
+                "Are you sure you want to continue connecting (yes/no)?" {
+                        send "yes\n"
+                        expect {
+                        "assword: " {
+                        send "shroot\n"
+                        expect {
+                        "# " {
+                        send "\n"
+                        expect {
+                        "# " {
+                        send "\n"
+                        expect {
+                        "> " { }
+                        "$ " { }
+                        "\} #: " { }
+                        "\} # " { }
+                        }
+                        }
+                        }
+                        }
+                        }
+                        }
+                        }
+        }
+        "assword: " {
+        send "shroot\n"
+        expect {
+                "> " { }
+                "$ " { }
+                "\} #: " { }
+                "\} # " { }
+                "# " {
+                send "\n"
+                expect {
+                        "# " {
+                                send "\n"
+                                expect {
+                                        "> " { }
+                                        "$ " { }
+                                        "\} #: " { }
+                                        "\} # " { }
+
+                                }
+                        }
+
+                }
+                }
+                }
+        }
+        }
+}
+}

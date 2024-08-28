@@ -1,0 +1,17 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+!--- ADMIN UI Status Summary 
+OVERALLSTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+DGSOURCE ede
+LOADTOPOLOGY 2G,3G,LTE,4G
+UPDATETOPOLOGY
+STARTDATAGEN_LTE force
+LTE_CREATE_GROUPS

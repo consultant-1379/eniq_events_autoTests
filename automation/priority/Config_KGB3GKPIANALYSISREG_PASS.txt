@@ -1,0 +1,20 @@
+
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+DGSOURCE remote
+LOADTOPOLOGY WCDMA_NEW
+STARTDATAGEN_3GSESSIONBROWSER
+
+LOADMAPS
+WAIT 45
+
+RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/KgbCdbConfigFiles/kpi_kgb_config.txt

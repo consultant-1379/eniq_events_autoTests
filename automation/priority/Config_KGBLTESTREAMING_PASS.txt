@@ -1,0 +1,11 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+CHECK_EC_ST_STATUS 1
+
+CHECK_EC_ST_STATUS 3
+
+RUN_EDE_KGBLTE_STREAMING

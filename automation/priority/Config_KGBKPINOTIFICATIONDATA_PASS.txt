@@ -1,0 +1,12 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+DGSOURCE remote
+LOADTOPOLOGY 2G,3G,MSS,LTE,4G
+#STARTDATAGEN 2G3G,4G,newIMEI
+STARTDATAGEN_KPI waitifstarting 150
+
+KPI_PHASE1_CREATE_GROUPS

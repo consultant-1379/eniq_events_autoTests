@@ -1,0 +1,8 @@
+
+<suite name="OptionsMenuTestSuite">
+	<test name="OptionsMenuUiTestSuite">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.ui.optionsmenu.OptionsMenuTests" />
+		</classes>
+	</test>
+</suite>

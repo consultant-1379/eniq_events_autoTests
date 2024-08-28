@@ -1,0 +1,7 @@
+<suite name="Topology Load Test Suite">
+	<test name="Topology Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.topology.TopologyLoadingTests"/>
+		</classes>
+	</test>
+</suite>

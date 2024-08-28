@@ -1,0 +1,2 @@
+#This config will restore Firefox 10
+DO_FIREFOX_VERSION old

@@ -1,0 +1,14 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+!--- COMPARE BASELINE
+COMPARE_BASELINE /net/159.107.177.67/export/SW_LOCATION/ENIQ_EVENTS/ENIQ_EVENTS/2.1.8/eniq_base_sw/
+#COMPARE_BASELINE /net/159.107.177.67/export/SW_LOCATION/ENIQ_EVENTS/ENIQ_EVENTS/2.1.7/eniq_base_sw/
+#COMPARE_BASELINE /net/159.107.177.67/export/jumpstart/ENIQ_E11.3/1.3.7/eniq_base_sw/
+

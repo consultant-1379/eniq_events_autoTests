@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupmgt>
+	<group name="AutomationIMSIGroup" type="IMSI">
+		<group-element>
+			<key name="IMSI" value="454063883716762" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307243719" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063392075441" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302933718" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307083104" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302993326" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302855350" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307298138" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061101486834" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063308003820" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307127486" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063392549329" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302400247" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302983110" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454064500556121" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063392441688" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061100392029" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061192623998" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307167955" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061100148219" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307191174" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302988166" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063300849550" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061105042156" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307115999" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307033945" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061192487437" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307041810" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307084451" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063308011049" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302306617" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063392563396" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302973214" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063308015915" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302689487" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302987513" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307052497" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307371252" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302938446" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302671559" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061106042195" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307054505" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063883732076" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302594974" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454064500534825" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307251514" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307056192" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061101292711" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307127885" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302960863" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302865121" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063302334477" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063899273455" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063307001644" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061021516056" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454063392562753" />
+		</group-element>
+		<group-element>
+			<key name="IMSI" value="454061106039696" />
+		</group-element>
+	</group>
+</groupmgt>

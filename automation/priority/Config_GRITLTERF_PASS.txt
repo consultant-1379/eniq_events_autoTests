@@ -1,0 +1,8 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 1,2
+
+RUN_GRIT_TOOL Rule_CTRS_4114_EVENT_E_LTE_CFA_ARRAY_ERAB_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_CTRS_4125_EVENT_E_LTE_CFA_ARRAY_ERAB_ERR_RAW.rules

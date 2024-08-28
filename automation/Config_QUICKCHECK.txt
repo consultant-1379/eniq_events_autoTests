@@ -1,0 +1,4 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+FAILURE_THRESHOLDS 0,0
+CHECK_TIMES

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appconfig xmlns="http://www.ericsson.com/app-config">
+	<hosts>
+		<host master="true" ip="10.45.192.119">
+			<process procid="1">
+				<network-elements>
+					<network-element ne-type="1">
+						<label>RNC09</label>
+						<directory>/ossrc/data/pmMediation/eventData/GpehEvents_CEP/SubNetwork=RNC09</directory>
+					</network-element>
+				</network-elements>
+				<memory-size>10824</memory-size>
+			</process>
+			<process procid="2">
+				<network-elements>
+					<network-element ne-type="2">
+						<label>SGSN09</label>
+						<directory>/ossrc/data/pmMediation/eventData/SgehEvents_CEP/ManagedElement=SGSN09</directory>
+					</network-element>
+				</network-elements>
+				<memory-size>4096</memory-size>
+			</process>
+			<process procid="3">
+				<network-elements>
+					<network-element ne-type="3">
+						<ip>localhost</ip>
+						<uname>dcuser</uname>
+						<password>dcuser</password>
+						<label>PCP1</label>
+						<directory>/ossrc/data/pmMediation/eventData/PCPEvents_CEP/PCP1</directory>
+					</network-element>
+				</network-elements>
+				<memory-size>9216</memory-size>
+			</process>
+		</host>
+	</hosts>
+</appconfig>

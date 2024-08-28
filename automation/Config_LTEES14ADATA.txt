@@ -1,0 +1,14 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+!--- LTE ES. To run type: RUN_LTEES param1, param2, param3, etc. e.g. RUN_LTEES 12A, PMS, NoVerification or DoVerification
+RUN_LTEES 14A, PMS, NoVerification

@@ -1,0 +1,14 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#This config will install Firefox 22
+#DO_FIREFOX_VERSION new,22
+
+#RUN_SELENIUM AdminUITestGroup,selenium_events_tests.jar,localhost
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+#DGSOURCE remote
+LOADTOPOLOGY force,2G,3G,4G
+DATAGENSTART_ARREST_IT
+2G3G_CREATE_GROUPS

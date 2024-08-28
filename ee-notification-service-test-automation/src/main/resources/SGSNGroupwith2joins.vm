@@ -1,0 +1,80 @@
+begin
+declare @@start_time_var timestamp;
+declare @@end_time_var timestamp;
+declare @@threshold_var float;
+set @@start_time_var = '$START_TIME'; // START_TIME Replaces with the start time
+set @@end_time_var = '$END_TIME';		// END_TIME Replaces with the end time
+set @@threshold_var = 98.8;
+SELECT
+isnull(suc.groupName, err.groupName) AS sgsnGroup, 
+isnull(suc.date_id, err.date_id) AS date_id,
+isnull(suc.hour_id, err.hour_id) AS hour_id,
+isnull(suc.min_id, err.min_id) AS min_id, 
+isnull(sucCount, 0) AS successCount,
+isnull(errCount, 0) AS errorCount,
+isnull(sucCount, 0) + isnull(errCount, 0) AS totalCount,
+( cast(isnull(sucCount, 0) AS float) / ( cast(isnull(sucCount, 0) AS float) + cast(isnull(errCount, 0) AS float)) * 100) AS successRatio,
+'<'||@@threshold_var AS definedThreshold,
+(
+case
+when ((cast(isnull(sucCount, 0) AS float) / ( cast(isnull(sucCount, 0) AS float) + cast(isnull(errCount, 0) AS float)))*100) < @@threshold_var
+then 'breached'
+else 'not breached'
+end 
+) AS isBreached 
+FROM 
+( // count the number of success events in success tables
+SELECT
+grp.group_name AS groupName,
+date_id, 
+hour_id,
+min_id,
+count(*) AS sucCount
+FROM 
+$SUC_TABLE_RAW AS r, //SUC_TABLE_RAW will be replaced with the success raw table name
+dc.group_type_e_evntsrc AS grp
+WHERE
+r.datetime_id BETWEEN @@start_time_var AND @@end_time_var
+AND r.EVENT_SOURCE_NAME = grp.EVENT_SOURCE_NAME
+AND r.event_id = $EVENT_ID // $EVENT_ID will be replaced with the event id
+$SUB_TYPE // SUB_TYPE will be replaced with the subtype
+GROUP BY
+grp.group_name,
+date_id, 
+hour_id,
+min_id
+) AS suc
+FULL OUTER JOIN
+( // count the number of error events in error tables
+SELECT
+grp.group_name AS groupName,
+date_id, 
+hour_id,
+min_id,
+count(*) AS errCount
+FROM 
+$ERR_TABLE_RAW AS r, // ERR_TABLE_RAW will be replaced with the error table name
+dc.group_type_e_evntsrc AS grp
+WHERE
+r.datetime_id BETWEEN @@start_time_var AND @@end_time_var
+AND r.EVENT_SOURCE_NAME = grp.EVENT_SOURCE_NAME
+AND r.event_id = $EVENT_ID // EVENT_ID will be replaced with the event id
+$SUB_TYPE // SUB_TYPE will be replaced with the subtype
+GROUP BY
+grp.group_name,
+date_id, 
+hour_id,
+min_id
+) AS err
+ON ( 
+err.groupName = suc.groupName 
+and err.date_id = suc.date_id 
+and err.hour_id = suc.hour_id 
+and err.min_id = suc.min_id
+)
+ORDER BY
+sgsnGroup,
+date_id,
+hour_id,
+min_id
+end

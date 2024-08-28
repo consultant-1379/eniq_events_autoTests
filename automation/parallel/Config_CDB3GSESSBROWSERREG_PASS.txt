@@ -1,0 +1,8 @@
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+FAILURE_THRESHOLDS 0,6
+
+TOPOLOGYLOADWAIT
+
+WAIT 30
+RUN_SELENIUM 3GSessionBrowserTestSuite,selenium_events_tests.jar,localhost

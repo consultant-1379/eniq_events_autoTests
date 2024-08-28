@@ -1,0 +1,1699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<context:annotation-config />
+<context:property-placeholder />
+<context:component-scan base-package="com.ericsson.eniq.events.ui.selenium" />
+
+<!-- Subscriber Tab -->
+<bean id="subscriberEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="subscriberOverview"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUB_BI_FAILED_EVENTS" />
+</bean>
+
+<bean id="EventVolumeOverview"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="EVENT_VOLUME" />
+</bean>
+
+<bean id="KPIAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="KPI_ANALYSIS" />
+</bean>
+
+<bean id="subscriberrankingcore"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_CORE" />
+</bean>
+
+<bean id="subscriberEventAnalysisForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SUBSCRIBER_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="subscriberOverviewForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SUB_BI_FAILED_EVENTS" />
+</bean>
+
+<bean id="kpiCriticalWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_KPI_NOTIFICATION_CRITICAL_DATA" />
+</bean>
+
+<bean id="kpiMajorWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_KPI_NOTIFICATION_MAJOR_DATA" />
+</bean>
+
+<bean id="kpiMinorWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_KPI_NOTIFICATION_MINOR_DATA" />
+</bean>
+
+<bean id="kpiWarningWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_KPI_NOTIFICATION_WARNING_DATA" />
+</bean>
+
+<bean id="subscriberEventAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_LTE_CFA_SUMMARY" />
+</bean>
+
+<bean id="subscriberEventAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<!-- For WCDMA HFA -->
+<bean id="rankingsCauseCodeWcdmaCallSetupFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_FAILURE_CC" />
+</bean>
+
+<bean id="wcdmaNetworkAccessAreaDisconnectionCodeAnalysisToggleToGrid"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_CHART_CELL_DISCONNECTION_CODE_FROM_DRILL_BY_CONFIG" />
+</bean>
+
+<bean id="rankingsTerminalWcdmaCfaToggleToGrid"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_CHART_TAC_DISCONNECTION_CODE_FROM_DRILL_BY" />
+</bean>
+
+<bean id="subCauseCodeAnalysisForWCDMAHandoverFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_FAILURE_CC" />
+</bean>
+
+<bean id="subscriberEventAnalysisForWCDMAHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_HANDOVER_FAILURE_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="sourceAccessAreaRankingWCDMAHandOverFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_SOURCE_CELL_RANKING_RAN_WCDMA_HFA" />
+</bean>
+
+<bean id="subscriberRankingWCDMAHandOverFailureSOHO"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_WCDMA_RAN_HANDOVER_SOHO" />
+</bean>
+
+<bean id="subscriberRankingWCDMAHandOverFailureIFHO"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_WCDMA_RAN_HANDOVER_IFHO" />
+</bean>
+
+<bean id="accessAreaEventAnalysisWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_SOURCE_CELL_RANKING_RAN_WCDMA_HFA" />
+</bean>
+
+<bean id="causeCodeRankingWCDMAHandOverFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CC_WCDMA_HFA_HANDOVER_TYPE" />
+</bean>
+
+<bean id="networkEventAnalysisWCDMAHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS_WCDMA_HFA" />
+</bean>
+
+<bean id="terminalAnalysisWCDMAHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_ANALYSIS_RAN_WCDMA_HFA_SOHO" />
+</bean>
+
+<bean id="NetworkCellRankingEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_RANKING_RAN_WCDMA_EVENT_ANALYSIS_SUMMARY" />
+</bean>
+
+
+<!-- Terminal Tab -->
+<bean id="terminalGroupAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.TerminalGroupAnalysisWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_GA_MOST_POPULAR_SUMMARY" />
+</bean>
+
+<bean id="terminalKPI"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="KPI" />
+</bean>
+
+
+<bean id="terminalEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="terminalFailedEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_FAILED_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="terminalEventAnalysisForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_TERMINAL_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="terminalAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.TerminalGroupAnalysisWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_MOST_POPULAR_SUMMARY" />
+</bean>
+
+<!-- Network Tab -->
+<bean id="networkEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="causeCodeAnalysisHSDSCH"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_HSDSCH_BSC_GROUP_DRILL" />
+</bean>
+
+<bean id="accessAreacauseCodeAnalysisHSDSCH"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_HSDSCH_CELL_DRILL" />
+</bean>
+
+<bean id="controllerCauseCodeAnalysisIFHO"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_IFHO_BSC_DRILL" />
+</bean>
+
+<bean id="accessAreaCauseCodeAnalysisSOHO"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_SOHO_CELL_DRILL" />
+</bean>
+
+
+<bean id="controllerGroupCauseCodeAnalysisIRAT"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_IRAT_BSC_GROUP_DRILL" />
+</bean>
+
+<bean id="controllerCauseCodeAnalysisHSDSCH"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_HFA_CC_HSDSCH_BSC_DRILL" />
+</bean>
+
+<bean id="networkCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="networkCauseCodeAnalysisGrid"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0"
+type="java.lang.String"
+value="EXTRA_NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<!-- Controller SubCauseCode Widget -->
+<bean id="networkControllerSubCauseCodeWidget"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0"
+type="java.lang.String"
+value="CAUSE_CODE_TABLE_SCC_WCDMA" />
+</bean>
+
+<bean id="APNCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="ControllerCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="ControllerRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="ControllerEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="SGSNCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="AccessAreaCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="CoreRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="BSCRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_BSC_RANKING" />
+</bean>
+
+<bean id="RNCRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_RNC_RANKING" />
+</bean>
+
+
+<bean id="ENodeBRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_ENODEB_RANKING" />
+</bean>
+
+<bean id="ImsiEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="TacEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="selenium_tag_baseWindow" />
+</bean>
+
+<bean id="accessAreaRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_RANKING" />
+</bean>
+
+<bean id="controllerRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_BSC_RANKING" />
+</bean>
+
+<bean id="rncRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_RNC_RANKING" />
+</bean>
+
+<bean id="roamingByOperatorEvents"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_BY_OPERATOR_EVENTS" />
+</bean>
+<bean id="roamingByOperatorDataVol"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_BY_OPERATOR_DATAVOL" />
+</bean>
+
+<bean id="roamingByCountryEvents"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_BY_COUNTRY_EVENTS" />
+</bean>
+
+<bean id="roamingByCountryDataVol"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_BY_COUNTRY_DATAVOL" />
+</bean>
+
+<bean id="drillCoreRoamingByCountryEventsSubpie"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_CORE_ROAMING_BY_COUNTRY_EVENTS_SUBPIE" />
+</bean>
+
+<bean id="drillCoreRoamingByOperatorEventsSubpie"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_CORE_ROAMING_BY_OPERATOR_EVENTS_SUBPIE" />
+</bean>
+
+<bean id="networkDataVolumeWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DATAVOL_ANALYSIS" />
+</bean>
+
+<bean id="networkEventAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkEventAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkEventVolumeAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkEventVolAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_VOLUME_LTE_CFA" />
+</bean>
+
+<bean id="networkEventVolAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkEventVolumeAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<!-- <bean id="networkQCIAnalysisForLTECFA" class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init"> <constructor-arg index="0" type="java.lang.String" value="NETWORK_RAN_LTE_CFA_QOS_QCI_SUMM"
+/> </bean> -->
+
+<bean id="networkCauseCodeAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkCauseCodeAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkQCIAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="networkQCIAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+
+<bean id="networkQosStatisticsAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="QOS_STATISTICS" />
+</bean>
+
+
+<!-- Ranking Tab -->
+<bean id="subCauseCodeAnalysisCallSetupFailureWcdmaHfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CC_CFA_CALL_SETUP" />
+</bean>
+
+<bean id="subscriberRankingCallDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_CALL_DROPS" />
+</bean>
+
+
+<bean id="bscRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_BSC_RANKING" />
+</bean>
+
+<bean id="subRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING" />
+</bean>
+
+<bean id="termRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_RANKINGS" />
+</bean>
+
+<bean id="cellRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_RANKING" />
+</bean>
+
+<!-- Added by earimon, for test class TestGroupFourAccessArea -->
+<bean id="networkEventAnalysisForAccessArea"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="apnRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_APN_RANKING" />
+</bean>
+
+<bean id="causeCodeRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CAUSE_CODE_RANKING" />
+</bean>
+
+<bean id="eventVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_VOLUME" />
+</bean>
+
+<!-- Data Volume related window -->
+<bean id="subRankingsDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_IMSI" />
+</bean>
+
+<bean id="subGroupRankingsDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_IMSI_GROUP" />
+</bean>
+
+<bean id="terminalGroupRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_TERMINAL_GROUP" />
+</bean>
+
+<bean id="sgsnMmeRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_SGSN" />
+</bean>
+
+<bean id="sgsnMmeGroupRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_SGSN_GROUP" />
+</bean>
+
+<bean id="ggsnRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_GGSN" />
+</bean>
+
+<bean id="apnRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_APN" />
+</bean>
+
+<bean id="apnGroupRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_APN_GROUP" />
+</bean>
+
+<bean id="qosClassRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_QOS" />
+</bean>
+
+<bean id="terminalRankingDataVolume"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DATAVOLUME_RANKING_TAC" />
+</bean>
+
+<!-- For MSS -->
+
+<!-- Ranking tab -->
+
+<bean id="bscRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_BSC_RANKING" />
+</bean>
+
+<bean id="rncRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_RNC_RANKING" />
+</bean>
+
+<bean id="subBlockedRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SUBSCRIBER_BLOCKED_RANKING" />
+</bean>
+
+<bean id="subDroppedRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SUBSCRIBER_DROPPED_RANKING" />
+</bean>
+
+<bean id="accessAreaBlockedRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_NETWORK_CELL_BLOCKED_RANKING" />
+</bean>
+
+<bean id="accessAreaDroppedRankings"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_NETWORK_CELL_DROPPED_RANKING" />
+</bean>
+
+
+
+<bean id="subDroppedRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SUBSCRIBER_DROPPED_RANKING" />
+</bean>
+
+
+<bean id="termRankingsBlocked"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_TERMINAL_BLOCKED_RANKING" />
+</bean>
+
+<bean id="termRankingsDropped"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_TERMINAL_DROPPED_RANKING" />
+</bean>
+
+<bean id="networkEventAnalysisForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_NETWORK_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="causeCodeRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_NETWORK_CAUSE_CODE_RANKING" />
+</bean>
+
+<bean id="msOrigUnansweredCallsRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_MS_ORIGINATING_UNANSWERED_CALLS_RANKING" />
+</bean>
+
+<bean id="msTermUnansweredCallsRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_MS_TERMINATING_UNANSWERED_CALLS_RANKING" />
+</bean>
+
+<bean id="mscBlockedRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_MSC_BLOCKED_RANKING" />
+</bean>
+
+<bean id="mscDroppedRankingsForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_MSC_DROPPED_RANKING" />
+</bean>
+
+<bean id="networkCauseCodeAnalysisForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="networkRoamingAnalysisByOperator"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_ROAMING_BY_OPERATOR" />
+</bean>
+
+<bean id="networkRoamingAnalysisByCountry"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_ROAMING_BY_COUNTRY" />
+</bean>
+
+<bean id="networkEventVolumnVoiceForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_EVENT_VOLUME" />
+</bean>
+
+<bean id="eventVolumnVoiceForMSS"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_EVENT_VOLUME" />
+</bean>
+
+<bean id="KPIWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="KPI" />
+</bean>
+
+<bean id="rncRankingBlockedVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_RNC_BLOCKED_RANKING" />
+</bean>
+
+
+<bean id="rncRankingDroppedVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_RNC_DROPPED_RANKING" />
+</bean>
+
+<bean id="bscRankingBlockedVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_BSC_BLOCKED_RANKING" />
+</bean>
+
+<bean id="bscRankingDroppedVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_BSC_DROPPED_RANKING" />
+</bean>
+
+<bean id="longDurationRankingVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_LONG_DURATION_CALLS_RANKING" />
+</bean>
+
+<bean id="shortDurationRankingVoiceCalls"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CS_SHORT_DURATION_CALLS_RANKING" />
+</bean>
+
+<!-- LTE CFA -->
+
+<bean id="subscriberRankingLTEcallSetupFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="subscriberRankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="subscriberRankingLTErecurringFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eNodeBrankingLTEcallSetupFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eNodeBrankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eCellRankingLTEcallSetupFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eCellRankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="trackingAreaRankingLTEcallSetup"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="trackingAreaRankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="causeCodeRankingLTEcallSetup"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="causeCodeRankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="causeCodeRankingLTEHFAprep"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="causeCodeRankingLTEHFAexec"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="terminalRankingLTEcallSetup"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_RANKING_RAN_LTE_CFA_CALL_SETUP" />
+</bean>
+
+<bean id="terminalRankingLTEcallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_RANKING_RAN_LTE_CFA_CALL_DROP" />
+</bean>
+
+<bean id="terminalRankingLTEprep"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="terminalRankingLTEexec"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="terminalEventAnalysisForLTECFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="terminalEventAnalysisForLTEHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<!-- LTE HFA -->
+
+<bean id="subscriberRankingLteHandOverPrepFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="subscriberRankingLteHandOverExecFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eNodeBrankingLteHandoverPrepFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="eNodeBrankingLteHandoverExecFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="sourceCellRankingLteHandoverPrepFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="targetCellRankingLteHandoverPrepFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="sourceCellRankingLteHandoverExecFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="targetCellRankingLteHandoverExecFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="" />
+</bean>
+
+<bean id="trackingAreaRankingLteHandoverPrepFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_TRACKING_AREA_RAN_LTE_HANDOVER_RANKING_PREPARATION" />
+</bean>
+
+<bean id="trackingAreaRankingLteHandoverExecFailures"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_TRACKING_AREA_RAN_LTE_HANDOVER_RANKING_EXECUTION" />
+</bean>
+
+<!-- WCDMA HFA -->
+
+<bean id="chartGripViewAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="x-auto-927" />
+</bean>
+
+<bean id="rncRankingWCDMAHandOverFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_HFA" />
+</bean>
+
+<bean id="targetAccessAreaRankingWCDMAHandOverFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_TARGET_CELL_RANKING_RAN_WCDMA_HFA" />
+</bean>
+
+<bean id="terminalRankingWCDMAHOF"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_WCDMA_TAC_HFA" />
+</bean>
+
+<bean id="subscriberRankingWCDMAHandOverFailureIRAT"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_WCDMA_RAN_HANDOVER_IRAT" />
+</bean>
+
+<bean id="subscriberRankingWCDMAHandOverFailureHSDSCH"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_WCDMA_RAN_HANDOVER_HSDSCH" />
+</bean>
+
+<bean id="controllerEventAnalysisWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_HFA" />
+</bean>
+
+<bean id="subscriberWCDMASOHOWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_WCDMA_RAN_HANDOVER_SOHO" />
+</bean>
+
+<bean id="terminalGroupAnalysisWCDMAHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_HFA_SOHO" />
+</bean>
+
+<bean id="terminalEventAnalysisWCDMAHFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_EVENT_ANALYSIS_WCDMA_HFA_SUMMARY" />
+</bean>
+
+<!-- WCDMA CFA -->
+<bean id="wcdmaNetworkAccessAreaDisconnectionCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_DISCONNECTION_CODE_ANALYSIS_FROM_DRILL_BY_CELL_DRILL" />
+</bean>
+
+<bean id="wcdmaNetworkRncDisconnectionCodeAnalysisToggleToGrid"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_CHART_RNC_DISCONNECTION_CODE_FROM_DRILL_BY_CONFIG" />
+</bean>
+
+<bean id="terminalEventAnalysisHandoverFailureAnalysisWCDMA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_EVENT_ANALYSIS_WCDMA_HFA_SUMMARY" />
+</bean>
+
+<bean id="wcdmaNetworkAccessAreaRabTypeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_RAB_TYPE_ANALYSIS_FROM_DRILL_BY_CELL_DRILL" />
+</bean>
+
+<bean id="wcdmaNetworkAccessAreaSubCauseCodeDrillByCell"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="WCDMA_NETWORK_SCC_DEA_CELL_DRILL" />
+</bean>
+<bean id="wcdmaNetworkRncDisconnectionCodeAnalysisDrillByBsc"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_RNC_DISCONNECTION_CODE_ANALYSIS_FROM_DRILL_BY_BSC_DRILL" />
+</bean>
+
+<bean id="wcdmaNetworkRncRabTypeAnalysisDrillByBsc"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_RNC_RAB_TYPE_ANALYSIS_FROM_DRILL_BY_BSC_DRILL" />
+</bean>
+
+<bean id="wcdmaNetworkSubCauseCodeDetailedAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="WCDMA_NETWORK_SCC_DEA_BSC_DRILL" />
+</bean>
+
+<bean id="wcdmaNetworkCauseCodeAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="WCDMA_NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="ranWcdmaRoamingByOperator"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_RAN_WCDMA_ROAMING_BY_EVENTS_SUBPIE_OPERATOR" />
+</bean>
+
+<bean id="ranWcdmaRoamingByCountry"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DRILL_RAN_WCDMA_ROAMING_BY_EVENTS_SUBPIE_COUNTRY" />
+</bean>
+
+<bean id="terminalRabDescAnalysisFromDrillByTAC"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_RAB_DESC_ANALYSIS_FROM_DRILL_BY_TAC_DRILL" />
+</bean>
+
+<bean id="terminalDisconnectionCodeAnalysisFromDrillByTAC"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_DISCONNECTION_CODE_ANALYSIS_FROM_DRILL_BY_TAC_DRILL" />
+</bean>
+
+<bean id="networkDetailedEventAnalysisWcdmaCfaCellCallSetupConfig"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CELL_CALL_SETUP_CONFIG" />
+</bean>
+
+<bean id="networkDetailedEventAnalysisWcdmaCfaCellCallDropsConfig"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CELL_CALL_DROPS_CONFIG" />
+</bean>
+
+
+<bean id="wcdmaCFARANRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_CFA" />
+</bean>
+
+<bean id="wcdmaCFANetworkEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS_WCDMA_CFA_BSC" />
+</bean>
+
+<bean id="networkDetailedEventAnalysisWcdmaCfaBscCfaCallDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_BSC_CALL_DROPS_CONFIG" />
+</bean>
+
+
+<bean id="accessAreaCFARanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_CELL_RANKING_RAN_WCDMA_CFA" />
+</bean>
+
+<bean id="accessAreaNetworkEventAnalysisCell"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS_WCDMA_CFA_CELL" />
+</bean>
+
+<bean id="networkEventAnalysisCallFailureRnc"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS_CALL_FALURE_RNC" />
+</bean>
+
+<bean id="subscriberCallSetupFailuresRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_CALL_SETUP_FAILURES" />
+</bean>
+
+<bean id="subscriberCallDropsRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_CALL_DROPS" />
+</bean>
+
+<bean id="subscriberMultipleRecurringFailureRanking"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_MULTIPLE_RECURRING_FAILURES" />
+</bean>
+
+<bean id="subscriberCallFailureEventAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_CALL_FAILURE_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="subscriberFailureOverviewWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUB_BI_FAILED_EVENTS_CFA" />
+</bean>
+
+<bean id="rankingsCauseCodeWcdmaCallDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CC_CFA_CALL_DROPS" />
+</bean>
+
+<bean id="rankingsDisconnectionCodeWcdmaCallDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="DC_CFA_CALL_DROPS" />
+</bean>
+
+<bean id="causeCodeAnalysisCallSetupFailureWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CC_CFA_CALL_SETUP" />
+</bean>
+
+<bean id="networkDetailedEventAnalysisWcdmaCfaBscCallSetup"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_BSC_CALL_SETUP_CONFIG" />
+</bean>
+
+<bean id="subCauseCodeAnalysisCallDropsWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CALL_DROP_CC" />
+</bean>
+
+<bean id="subCauseCodeAnalysisCallSetupWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CALL_SETUP_CC" />
+</bean>
+
+<bean id="detailedEventAnalysisWcdmaCfaCallDrop"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CALL_DROP" />
+</bean>
+
+<bean id="detailedEventAnalysisWcdmaCfaCallSetup"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_DETAILED_EVENT_ANALYSIS_WCDMA_CFA_CALL_SETUP" />
+</bean>
+
+<bean id="rankingsTerminalWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.SubscriberOverviewWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_WCDMA_TAC_CFA" />
+</bean>
+
+<bean id="terminalGroupAnalysisWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_CFA_CALL_DROPS" />
+</bean>
+
+<bean id="terminalAnalysisCfaMostDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_ANALYSIS_RAN_WCDMA_CALLFAILURE_MOST_DROPS" />
+</bean>
+
+<bean id="terminalEventAnalysisWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_EVENT_ANALYSIS_WCDMA_CFA_SUMMARY" />
+</bean>
+
+<bean id="terminalEventAnalysisWcdmaCfaTac"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="TERMINAL_EVENT_ANALYSIS_WCDMA_CFA_SUMMARY_TAC" />
+</bean>
+
+<bean id="networkEventAnalysisWcdmaCfa"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_EVENT_ANALYSIS_WCDMA_CFA" />
+</bean>
+
+<!-- GSM CFA -->
+
+<bean id="accessAreaRankingGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_CFA_CELL_RANKING" />
+</bean>
+
+<bean id="bscRankingGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_CFA_BSC_RANKING" />
+</bean>
+
+<bean id="bscRankingGSMCFAEventAnalysisSummary"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_GSM_EVENT_ANALYSIS_SUMMARY" />
+</bean>
+
+
+<bean id="causeCodeRankingGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_CFA_CC_CALL_DROPS_RANKING" />
+</bean>
+
+<bean id="terminalRankingGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RAN_GSM_TAC_CFA" />
+</bean>
+
+<bean id="subscriberRankingGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_GSM_CALL_DROPS" />
+</bean>
+
+<bean id="subscriberRankingGSMDV"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_DATAVOLUME_RANKING_IMSI" />
+</bean>
+
+<bean id="bscRankingGSMDV"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_DATAVOLUME_RANKING_CONTROLLER" />
+</bean>
+
+<bean id="accessAreaRankingGSMDV"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ACCESSAREA_DATAVOLUME_RANKING" />
+</bean>
+
+<bean id="controllerGroupNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_GSM_EVENT_ANALYSIS_SUMMARY" />
+</bean>
+
+<bean id="controllerNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_GSM_EVENT_ANALYSIS_SUMMARY" />
+</bean>
+
+<bean id="accessAreaGroupNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NETWORK_RAN_GSM_DETAILED_EVENT_ANALYSIS" />
+</bean>
+
+<bean id="controllerCauseCodeNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_NETWORK_DRILL_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="accessAreaCauseCodeNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="roamingAnalysisByCountryNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_ANALYSIS_RAN_GSM_COUNTRY" />
+</bean>
+
+<bean id="roamingAnalysisByCountrySummaryNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_ROAMING_ANALYSIS_SUMMARY_BY_COUNTRY" />
+</bean>
+
+<bean id="roamingAnalysisByOperatorNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="ROAMING_ANALYSIS_RAN_GSM_OPERATOR" />
+</bean>
+
+<bean id="roamingAnalysisByOperatorSummaryNetworkGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_ROAMING_ANALYSIS_SUMMARY_BY_OPERATOR" />
+</bean>
+
+<bean id="imsiSubscriberGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY" />
+</bean>
+
+<bean id="imsiGroupSubscriberGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY" />
+</bean>
+
+<bean id="imsiGroupSubscriberGSMConnectionFailure"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_PS_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY" />
+</bean>
+
+<bean id="imsiSubscriberSummaryGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY" />
+</bean>
+
+<bean id="msisdnSubscriberSummaryGSMCFA"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY" />
+</bean>
+
+<bean id="subscriberRankingGSMCallFailureAnalysisByCallDrops"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SUBSCRIBER_RANKING_GSM_CALL_DROPS" />
+</bean>
+
+<bean id="rankPanelGridSonVis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RANKING_PANEL_GRID_SON_VIS" />
+</bean>
+
+<bean id="cellDetailsPanelGridSonVis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="SON_CELL_DETAILS" />
+</bean>
+
+<bean id="causeCodeAalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="NEW_WORKSPACE_1_1_TAB" />
+</bean>
+
+<bean id="gridGraphviewRankingGroupTests"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="WCDMA_HFA_NETWORK_CAUSE_CODE_ANALYSIS" />
+</bean>
+
+<bean id="groupMgtWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.groupmanagement.GroupManagementWindow">
+</bean>
+
+<bean id="groupMgtEditWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.groupmanagement.GroupManagementEditWindow">
+</bean>
+
+<bean id="plmnEditWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.groupmanagement.PLMNGroupEditWindow">
+</bean>
+
+<bean id="groupTerAndIMSIWindow"
+class="com.ericsson.eniq.events.ui.selenium.events.groupmanagement.TerminalAndIMSIGroupManagementWindow">
+</bean>
+
+<bean id="failuresRecurrencesSummary"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="RECUR_ERR_SUMMARY" />
+</bean>
+
+<bean id="CauseCodeRankingAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CAUSE_CODE_RANKING" />
+</bean>
+
+<bean id="CorePSCauseCodeTableAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CAUSE_CODE_TABLE_CC" />
+</bean>
+
+<bean id="CorePSSubCauseCodeTableAnalysis"
+class="com.ericsson.eniq.events.ui.selenium.events.windows.CommonWindow"
+init-method="init">
+<constructor-arg index="0" type="java.lang.String"
+value="CAUSE_CODE_TABLE_SCC" />
+</bean>
+
+</beans>

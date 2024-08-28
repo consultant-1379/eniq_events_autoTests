@@ -1,0 +1,30 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!--- 2G3G and/or 4G dataload
+!--- 1. Loads Topology files for 2G, 3G and 4G
+!--- 2. Loads Data Gen (topology) for all
+!--- 3. Starts DataGen for 2G3G and/or 4G
+!--- 4. Let DataGen run for 5 Minutes
+!--- 5. Stops DataGen for 2G3G and/or 4G
+DGSOURCE ede
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+STARTDATAGEN 2G3G,4G,newIMEI
+
+WAIT 15
+
+INIT_SELENIUM localhost
+#Currently all UIIMPROVEMENTS tests pass. 15/05/2013 build 3.2.4
+#TEST_LIST -DTEST_SUITE=uiimprovements -DTESTS=
+
+#RUN_SELENIUM UIimprovementsTestGroup,selenium_events_tests.jar,localhost

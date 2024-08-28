@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupmgt>
+	<group name="WHITELIST" type="RAN_CFA_CV_ECV">
+		<group-element>
+			<key value ="1" name="CAUSE_VALUE"/>           
+			<key value ="16" name="EXTENDED_CAUSE_VALUE"/>
+		</group-element>
+	</group>
+</groupmgt>

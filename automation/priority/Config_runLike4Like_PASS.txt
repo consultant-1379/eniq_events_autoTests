@@ -1,0 +1,16 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+DGSOURCE ede
+REFERENCE_SERVER_IP 10.44.95.31
+RUN_EDE_LIKE4LIKE  KILLEDE
+RUN_EDE_LIKE4LIKE  TRUNCATETABLES,LOADTOPOLOGYFORLTES
+LOADTOPOLOGY force,2G_Like4Like,3G_Like4Like,4G_Like4Like,LTE_CLIENT
+RUN_EDE_LIKE4LIKE RESTARTALLEC,PROVISIONWORKFLOWS,STARTEDE
+STARTDATAGEN_LIKE4LIKE 2G3G_Like4Like,4G_Like4Like force
+RUN_EDE_LIKE4LIKE PROVISIONSGEHONREFERENCESERVER,RESTARTALLEC
+RUN_EDE_LIKE4LIKE DATACHECK 
+RUN_LIKE4LIKE like4like
+EXEC_LTEES_LIKE4LIKE

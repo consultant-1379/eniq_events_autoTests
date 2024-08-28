@@ -1,0 +1,18 @@
+#!/usr/local/bin/expect
+set timeout -1
+
+spawn /EST/ede/ede-6.0.15-Release/edeInstall.sh; 
+
+expect {
+        "Enter the external IP address of master server" {
+        send "127.0.0.0\r"
+        expect {
+        "Do you have any other server to install EDE tool" {
+        send "N\r"
+	expect {
+	"#:"
+	}
+	}
+	}
+	}
+	}

@@ -1,0 +1,46 @@
+Export started at 2011-12-12 12:14:14
+Output target is C:\Users\eankmuk\Documents\4G\dataGen4G_12_12_Latest-2011.zip
+--------------------------------------------------
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_010A
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_010AFP
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_010B
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_010B_FP
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_011A
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events3G_09B
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_010A
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_010AFP
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_010B
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_010B_FP
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_011A
+[Configuration/eankmuk_4G/APL Code] - Exporting eankmuk_4G.eniq_events_09B
+--------------------------------------------------
+[Configuration/eankmuk_4G/Database Profile] - Exporting eankmuk_4G.eniq_events
+--------------------------------------------------
+[Configuration/eankmuk_4G/External Reference Profile] - Exporting eankmuk_4G.conf
+--------------------------------------------------
+[Configuration/eankmuk_4G/UDR View] - Exporting eankmuk_4G.BIN_UDRVIEW
+[Configuration/eankmuk_4G/UDR View] - Exporting eankmuk_4G.udrView
+--------------------------------------------------
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_010A
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_010AFP
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_010B
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_010B_FP
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_011A
+[Configuration/eankmuk_4G/Ultra Format] - Exporting eankmuk_4G.encode_09B
+--------------------------------------------------
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_010A
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_010AFP
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_010B
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_010B_FP
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_011A
+[Configuration/eankmuk_4G/Workflow] - Exporting eankmuk_4G.dataGen_09B
+--------------------------------------------------
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen010B_FP
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen011A
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen_010A
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen_010A_001
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen_010A_FP
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen_010B
+[Configuration/eankmuk_4G/Workflow Group] - Exporting eankmuk_4G.WG_dataGen_09B
+--------------------------------------------------
+Export finished at 2011-12-12 12:14:19

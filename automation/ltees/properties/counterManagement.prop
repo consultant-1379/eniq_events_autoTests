@@ -1,0 +1,47 @@
+#13A counters
+13A=pmAdvCellSupRecoveryCellAtt 
+13A=pmAdvCellSupRecoveryNodeAtt 
+13A=pmAdvCellSupDetection 
+#13B counters
+13B=pmHoPrepRejInLicMobInterMode 
+13B=pmHoPrepInAttUtran 
+13B=pmHoPrepInSuccUtran 
+#14B counters
+14B=pmCellHoExeAtt 
+14B=pmCellHoPrepSucc 
+14B=pmCellHoPrepAtt 
+#15A counters
+15A=pmAnrUeCapFailGeran
+15A=pmAnrUeCapFailUtran
+15A=pmAnrUeCapSuccGeran
+15A=pmRrcConnEstabFailLackOfResources 
+15A=pmRrcConnEstabFailUnspecified 
+15A=pmX2ConnEstabFailOut 
+#16A counters
+#16A=pmHoPrepInX2Rej 
+#16A=pmHoPrepOutRejIntraEnbInterFreq 
+#16A=pmHoPrepOutRejIntraEnbIntraFreq 
+#16A=
+16A=pmHoExeAttLteInter 
+16A=pmHoExeSuccLteInter 
+16A=pmHoPrepAttLteInterFAto 
+16A=pmHoPrepSuccLteInterFAto 
+16A=pmAgMeasSuccCgi 
+#16B=
+16B=pmHoExeAttAto 
+16B=pmHoExeSuccAto 
+16B=pmHoExeAttSrvccAto 
+16B=pmHoExeSuccSrvccAto 
+16B=pmHoExeAttUeMeas 
+#14A=
+14A=pmAnrMeas
+14A=pmAnrNeighbrelAdd	
+14A=pmAnrUeCap
+14A=pmErabEstab
+14A=pmNoOfEtws
+#12B=
+12B=pmHoExeSucc
+12B=pmHoPrep
+12B=pmHoSigExeOut
+12B=pmNoOfCmas
+12B=pmNoOfEtws 

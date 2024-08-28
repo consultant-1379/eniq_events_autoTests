@@ -1,0 +1,4 @@
+test_label,command,args,STDOUT,STDERR,EXITCODE,timeout,host
+twoGDataCanBeLoadedOnEniqServer,,,,,0,0,controlzone
+lteDataCanBeLoadedOnEniqServer,,,,,0,0,controlzone
+threeGSessionBrowserDataCanBeLoadedOnEniqServer,,,,,0,0,controlzone

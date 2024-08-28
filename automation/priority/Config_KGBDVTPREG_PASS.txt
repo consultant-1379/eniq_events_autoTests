@@ -1,0 +1,25 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+#This config will install Firefox 22
+DO_FIREFOX_VERSION new,22
+
+STARTDATAGEN_DVTP
+
+!--- The 'INIT_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute a single Selenium sanity test (UI login) using test group 'DummyTestGroup'
+!--- The HUB and RC will then be stopped.
+##INIT_SELENIUM localhost
+
+!--- The 'RUN_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute the specified Selenium test group LteCfaTestGroup and JAR 'selenium_events_tests.jar'
+!--- These values will override the default value in the selenium.properties file.
+!--- The HUB and RC will then be stopped.
+
+TEST_LIST -DTEST_SUITE=newui -DTESTS=subscriberRankingDataVolumeWindowFromRankingTab_9_1,subscriberGroupRankingDataVolumeWindowFromRankingTab_9_2,apnRankingDataVolumeWindowFromRankingTab_9_3,apnGroupRankingDataVolumeWindowFromRankingTab_9_4,terminalRankingDataVolumeWindowFromRankingTab_9_5,terminalGroupRankingDataVolumeWindowFromRankingTab_9_6,ggsnRankingDataVolumeWindowFromRankingTab_9_7,verifyApnGroupDataVolumeChart_9_11,verifyTerminalDataVolumeChart_7_21,verifyTerminalGroupDataVolumeChart_9_13,verifyApnDataVolumeChart_7_19,verifySubscriberDataVolumeChart_7_20,verifySubscriberGroupDataVolumeChart_9_9,verifyMsisdnDataVolumeChart_7_21
+
+RUN_SELENIUM 2G3GDvdtTestGroup,selenium_events_tests.jar,localhost
+STOPDATAGEN_DVTP

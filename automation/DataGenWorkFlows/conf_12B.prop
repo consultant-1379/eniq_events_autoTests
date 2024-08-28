@@ -1,0 +1,84 @@
+NO_OF_EVENTS=3602
+binRanges=24,30,36,42,48,54,60,66,72,9223372036854775807
+binRanges_S1Setup=500,1000,2000,3000,4000,5000,6000,6600,7200,9000
+pmUeCtxtRelTimeDistr_bin_range=10,20,30,40,50,60,70,80,90,100,110,120,200
+binRangesPmErabID=29,57,65,77,93,101,117,126,141,158
+binRangesPmErabAD=8,10,12,14,16,18,20,22,24,9223372036854775807
+#binRanges=10,20,30,40,50,60,70,80,90,100
+cctr_enable=false
+cctr_no=2,3,4
+cctr_ctr_both=false
+only_ctr=true
+WithEnodeBstream=false
+Cause0_Cell=50,20,10,140
+Cause1_Cell=50,50,30,40
+Cause2_Cell=30,50,120,30
+Cause3_Cell=130,20,20,30
+Cause4_Cell=20,30,20,30
+Dul_Naming=true
+No_Record_InternalProcRrcConnSetupInt=100
+No_Record_InternalProcHoExecS1OutInt=100
+No_Record_InternalProcS1SetupInt=101
+No_Record_InternalProcX2SetupInt=101
+No_Record_InternalProcHoExecX2OutInt=100
+No_Record_InternalProcUeCtxtReleaseEnbInt=100
+No_Record_InternalProcInitialCtxtSetupInt=150
+No_Record_InternalProcErabSetupInt=150
+No_Record_InternalPerProcessorLoadInt=100
+No_Record_S1UplinkNasTransportInt=50
+No_Record_S1DownlinkNasTransportInt=50
+No_Record_InternalProcX2Reset_Int =100
+No_Record_InternalProcS1ErrorIndication_Int=100
+No_Record_InternalEventS1NasNonDeliveryIndication=100
+No_Record_InternalEventX2ErrorIndication_Int=100
+No_Record_InternalProcSctpShutdown_Int=100
+No_Record_internalProcErabReleaseInt=100
+No_Record_InternalEventCmasReqInt=100
+No_Record_InternalEventCmasRespInt=100
+No_Record_InternalEventEtwsReqInt=100
+No_Record_InternalEventEtwsRespInt=100
+No_Record_InternalEventAnrPciReportWantedInt=100
+No_Record_InternalProcHoExecS1InInt=100
+No_Record_InternalEventUnkownUeAtReEstabInt=100
+No_Record_InternalPerEventCmsRepetComplInt=100
+No_Record_InternalEventNeighborrelAddInt=100
+No_Record_InternalProcAnrCgiReportInt=100
+No_Record_InternalProcHoPrepS1InInt=100
+No_Record_InternalProcHoPrepS1OutInt=100
+No_Record_InternalProcHoPrepX2InInt=100
+No_Record_InternalProcHoPrepX2OutInt=100
+No_Record_InternalProcRrcConnectionReEstablishmentInt=100
+No_Record_InternalProcRrcConnReconfNoMobInt=100
+No_Record_InternalProcHoExecX2InInt=100
+No_Record_InternalProcUeCtxtModifyInt=100
+No_Record_InternalProcErabModifyInt=100
+No_Record_dummyEventInt=300
+No_Of_Nodes=20
+RcValueForFile=1
+#Start_Time can be empty also .If empty, defalut system time will be considered else provide the start time in yyyy-MM-dd-Hh-Mm format
+#Start_Time=2011-11-25-10-20
+Start_Time=
+Rop_Time_InMinute=15
+
+MME_IP1=/eniq/data/eventdata/events_oss_1/lteRbsCellTrace/dir1
+MME_IP2=/eniq/data/eventdata/events_oss_2/lteRbsCellTrace/dir20
+MME_IP3=/eniq/data/eventdata/events_oss_3/lteRbsCellTrace/dir30
+MME_IP4=/eniq/data/eventdata/events_oss_4/lteRbsCellTrace/dir40
+FTP_ENB=0
+OSS_IP=10.45.16.35
+OSS_USERNAME=dcuser
+OSS_PASSWORD=585e3c3b2d2b3d2aebef
+OSS_1=/eniq/data/eventdata/events_oss_1/lteRbsCellTrace
+OSS_2=/eniq/data/eventdata/events_oss_2/lteRbsCellTrace
+OSS_3=/eniq/data/eventdata/events_oss_3/lteRbsCellTrace
+OSS_4=/eniq/data/eventdata/events_oss_4/lteRbsCellTrace
+Successful_Rate=50
+
+Note : i) No_Record_InternalProcS1SetupInt  has to be multiple of 10.
+      ii) All the records are accumulative summation of previous one. Means No_Record_InternalProcS1SetupInt it has only 60 records allocated to it .
+ii )No_Record_InternalProcUeCtxtReleaseEnbInt -
+---No_Record_InternalProcHoExecX2OutInt should always be a multiple of 13.
+# cctr_ctr_both=true only_ctr=true // CTR+CCTR
+#cctr_ctr_both=true only_ctr=false // CTR+CCTR
+#cctr_ctr_both=false only_ctr=true //  CTR
+#cctr_ctr_both=false only_ctr=false // CCTR

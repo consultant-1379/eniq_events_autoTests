@@ -1,0 +1,19 @@
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,1
+
+TOPOLOGYLOADWAIT
+#This config will install Firefox 16
+DO_FIREFOX_VERSION new,16
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+!--- AAC UI Testing
+RUN_SELENIUM AacTestGroup,selenium_events_tests.jar,localhost,rc_server_version=25
+
+#This config will install Firefox 22
+DO_FIREFOX_VERSION new,22
+

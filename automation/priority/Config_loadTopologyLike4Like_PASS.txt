@@ -1,0 +1,4 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+
+LOADTOPOLOGY  force,LTE_CLIENT
+RUN_EDE_LIKE4LIKE RESTARTALLEC 

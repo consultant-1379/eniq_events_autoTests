@@ -1,0 +1,10 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+FAILURE_THRESHOLDS 0,0
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+#CHECKINGSERVICESTATUS
+
+DGSOURCE ede
+LOADTOPOLOGY force,2G_Like4Like,3G_Like4Like,4G_Like4Like
+STARTDATAGEN_LIKE4LIKE 2G3G_Like4Like,4G_Like4Like, force

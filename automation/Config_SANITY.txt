@@ -1,0 +1,56 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,2
+
+!--- COMPARE BASELINE
+#COMPARE_BASELINE /net/159.107.177.67/export/SW_LOCATION/ENIQ_EVENTS/ENIQ_EVENTS/2.2.8/eniq_base_sw/
+#COMPARE_BASELINE /net/159.107.177.67/export/SW_LOCATION/ENIQ_EVENTS/ENIQ_EVENTS/2.1.7/eniq_base_sw/
+#COMPARE_BASELINE /net/159.107.177.67/export/jumpstart/ENIQ_E11.3/1.3.7/eniq_base_sw/
+
+!--- ADMIN UI Status Summary 
+OVERALLSTATUS
+
+!--- GENERIC TESTS 
+DISKSPACE
+ENIQVERSION
+INSTALLED_MODULES
+INSTALLED_TPS
+VERIFY_DIRECTORIES
+VERIFY_EXECUTABLES
+#GLASSFISHCLI
+#SCHEDULERCLI
+#ENGINECLI
+#DWHDBCLI
+#REPDBCLI
+#LICSERVCLI
+#WEBSERVERCLI
+#LICMGRCLI
+
+!--- TOPOLOGY and DATAGEN Grouping (3)
+!--- 1. Loads Topology files for 2G, 3G and 4G
+!--- 2. Loads Data Gen (topology) for all
+!--- 3. Starts DataGen for 2G3G and/or 4G
+!--- 4. Let DataGen run for 5 Minutes
+!--- 5. Stops DataGen for 2G3G and/or 4G
+#LOADTOPOLOGY 2G,3G,4G
+#LOADDATAGEN_2G3G4G
+#STARTDATAGEN 2G3G,4G,newIMEI
+#WAIT 30
+#STOPDATAGEN_2G3G4G
+
+!--- ADMIN UI - USER ADMINISTERATION (1)
+#VERIFYLDAP
+
+!--- START SELENIUM (Basic Tests)
+#INIT_SELENIUM
+
+!--- READ LOGS (1)
+#READLOG

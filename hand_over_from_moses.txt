@@ -1,0 +1,86 @@
+1. DataGen
+	Be familiar with the scripts and files in centralDatagen folder in
+	our git repo. Also have a look at this links for 3g session browser 
+	data tool:
+	https://confluence-oss.lmera.ericsson.se/display/SB/SessionBrowser+Datagen
+
+	In case a reboot was needed:
+	a. Run /eniq/home/dcuser/centralDatagen/init_datagen_server.pl
+	b. check /tmp/datagen_start_stop.log
+	c. If any step failed in the log, please re-do it manually.
+	d. check the workflows from desktop viewer. NOTE: if GPEH_SESSION workflow
+		is failing, make sure the 3g sess browser datagen tool is running, check the
+		exception message, remove the blocking file if necessary and do not 
+		restart the workflow manually. It will start after every 15 min.
+	
+2. Running WCDMA CFA/HFA in eclipse.
+
+	a. Load WCDMA CFA/HFA data. You almost always have to do this
+		inorder to clear the tables of 3g Session browser  data.
+	b. Make sure selenium.properties file is pointing to correct ENIQ hosts.
+	c. Make sure selenium.properties file is pointing to correct selenium server IP and port.
+	
+3. Running 3G Session browser in eclipse.
+	
+	a. Load data if server does not have 3g Sess browser data
+	b. Run Config_3GSESSBROWSER.txt with all but SB_FIND_IMSI commented out.
+	c. Copy IMSI lines in server reservedData.csv to eclipse reservedData.csv. Session browser
+		imsi lines begin with SB_IMSI_ in the reservedData.csv. You can find the server file at
+		/eniq/home/dcuser/selenium/selenium-grid-1.0.8/test-cases/resources/reservedData.csv
+	d. Make sure selenium.properties file is pointing to correct ENIQ hosts
+	e. Selenium server not required i.e webdriver based.
+	
+4. CI Scripts 
+	CAR is currently in charge of eniq_jump.pl, eniq_upgrade.pl, eniq_events_rollback.pl 
+	and eniq_events_post_install.pl.
+	You can access these from clearcase with a dynamic view.
+	
+	See link below for creating a dynamic view:
+	http://atrclin2.athtem.eei.ericsson.se/wiki/index.php/Hub_FAQ_for_Athlone#How_do_I_create_a_ClearCase_dynamic_view
+	
+	Config spec:
+		element * CHECKEDOUT
+		element * R6_OSSRC_3PP
+		element * .../eniq/LATEST
+		element * /main/LATEST
+	
+	You can open this view in clearcase explorer and see the files in ossrc_del-mgt/bin
+	
+	Checking out/in the scripts:
+	a. You would need to ssh into clearcase master server 150.132.151.70 with your 
+		windows username and password.
+	b. set view and change folder to CI bin folder:
+		emosjil selid1a029> ct setview emosjil_view3
+		emosjil_view3 selid1a029> cd /vobs/ossrc/del-mgt/bin/
+	c. checkout your script. press CTRL+D when done entering comments.
+		emosjil_view3 selid1a029> ct co eniq_upgrade.pl
+		Checkout comments for "eniq_upgrade.pl":
+		For Testing
+		^D
+		Please do not checkout a file unless you are a member of the ENIQ CI Execution Team
+
+		If there is an issue with a script please log a JIRA ticket
+		Do you wish to Continue: (YES/NO)
+		YES
+		Checked out "eniq_upgrade.pl" from version "/main/296".
+	d. Make changes and test. You can access the file from clearcase viewer and use notepad++.
+	e. checkin your changes.
+		emosjil_view3 selid1a029> ct ci eniq_upgrade.pl
+	f. You can choose to cancel checkout.
+		emosjil_view3 selid1a029> ct unco eniq_upgrade.pl
+		Save private copy of "eniq_upgrade.pl"?  [yes] no
+		Checkout cancelled for "eniq_upgrade.pl".
+		emosjil_view3 selid1a029>
+	
+5. Jenkins jobs for testing CI scripts
+	
+	The following are jenkins jobs to test CI scripts:
+	http://eselivm2v214l.lmera.ericsson.se:8080/jenkins/view/CAR/job/eniq_events_multiblade_initial_install/
+	http://eselivm2v214l.lmera.ericsson.se:8080/jenkins/view/CAR/job/eniq_events_multiblade_upgrade/
+	http://eselivm2v214l.lmera.ericsson.se:8080/jenkins/view/CAR/job/eniq_events_rollback/
+	http://eselivm2v214l.lmera.ericsson.se:8080/jenkins/view/CAR/job/eniq_events_standalone_install/
+	http://eselivm2v214l.lmera.ericsson.se:8080/jenkins/view/CAR/job/eniq_events_standalone_upgrade/
+	
+	Make sure to use your view when testing. That way you can test your
+	changes before checking them in.
+	

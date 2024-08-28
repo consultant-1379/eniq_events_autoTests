@@ -1,0 +1,49 @@
+<appconfig xmlns="http://www.ericsson.com/app-config">
+	<!-- This file defines services to be started in a separate process(JVM) as standalone application. -->
+	<hosts>
+		<host master="true" ip="10.45.192.119">
+			<!-- The process id should be unique e.g. not declared in network-elements.xml. Therefore the procId is 100 -->
+			<process procid="100">
+				<memory-size>8000</memory-size>
+				<memory-hint>-XX:+UseParallelGC#-XX:+UseParallelOldGC#-XX:MaxPermSize=700M#-XX:ParallelGCThreads=2#-XX:ConcGCThreads=2</memory-hint>
+				<service-types>1,2</service-types>
+			</process>
+		</host>
+	</hosts>
+
+	<serviceList>
+		<service service-id="1">
+			<name>IMEIEnrichmentService</name>
+			<class>com.ericsson.cepmediation.server.service.IMEIEnrichmentServiceProvider
+			</class>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<hazelcast-topic>
+				<topic-name>HazelcastIMEIEnrichmentTopic</topic-name>
+			</hazelcast-topic>
+		</service>
+
+		<service service-id="2">
+			<name>ForwarderService</name>
+			<class>com.ericsson.cepmediation.server.service.DataForwarderServiceProvider
+			</class>
+			<forwarder-type>com.ericsson.cepmediation.forwarding.iq.IqForwarder
+			</forwarder-type>
+			<init-method>init</init-method>
+			<proc-enabled>true</proc-enabled>
+			<event-listening>
+				<topic-name>StandaloneIqTopic</topic-name>
+				<event-type>
+					<name>gpeh.enrichment.INTERNAL_CALL_SETUP_FAIL_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SYSTEM_RELEASE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_SOFT_HANDOVER_EXECUTION_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_FAILED_HSDSCH_CELL_CHANGE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_HSDSCH_CELL_SELECTION_NO_CELL_SELECTED_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_IFHO_EXECUTION_ACTIVE_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_OUT_HARD_HANDOVER_FAILURE_IFHO_ENRICHED</name>
+					<name>gpeh.enrichment.INTERNAL_OUT_HARD_HANDOVER_FAILURE_IRAT_ENRICHED</name>
+				</event-type>
+			</event-listening>
+		</service>
+	</serviceList>
+</appconfig>

@@ -1,0 +1,17 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+FAILURE_THRESHOLDS 0,0
+
+LOADMAPS
+
+STARTUPNODESERVICES http://10.42.33.82:3000
+
+RUN_SELENIUM 3GKPIAnalysisTestSuite,selenium_events_tests.jar,localhost
+
+TEARDOWNNODESERVICES

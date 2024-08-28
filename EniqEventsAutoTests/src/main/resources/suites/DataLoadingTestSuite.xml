@@ -1,0 +1,27 @@
+<suite name="Data Load Test Suite" preserve-order="true">
+	<test name="2g 3g 4g Data Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.TwoG3g4gDataLoadingTests"/>
+		</classes>
+	</test>
+	<test name="MSS Data Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.MSSDataloadingTests"/>
+		</classes>
+	</test>
+	<test name="KPI Data Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.KpiDataloadingTests"/>
+		</classes>
+	</test>
+	<test name="LTE Data Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.LteDataLoadingTests"/>
+		</classes>
+	</test>
+	<test name="3G Session Browser Data Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.ThreeGSessionBrowserDataLoadingTests"/>
+		</classes>
+	</test>
+</suite>

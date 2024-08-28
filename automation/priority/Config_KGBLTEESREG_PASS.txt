@@ -1,0 +1,12 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 4,8
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/nmi/results,deftftauto,CentralRegression!!
+
+!--- LTE ES. To run type: RUN_LTEES param1, param2, param3, etc. e.g. RUN_LTEES 12A, PMS
+RUN_LTEES 16B, PMS
+RUN_CM_LTEES 16B, PMS

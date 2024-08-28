@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupmgt>
+    <group name="systemtest" type="RNC01">
+        <group-element>
+            <key value="454" name="MCC"/>
+            <key value="06" name="MNC"/>
+        </group-element>
+    </group>
+</groupmgt>

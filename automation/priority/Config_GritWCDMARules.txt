@@ -1,0 +1,15 @@
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 1,3
+
+RUN_GRIT_TOOL Rule_GPEH_408_EVENT_E_RAN_HFA_SOHO_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_409_EVENT_E_RAN_CFA_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_423_EVENT_E_RAN_HFA_IFHO_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_433_EVENT_E_RAN_HFA_HSDSCH_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_436_EVENT_E_RAN_HFA_HSDSCH_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_438_EVENT_E_RAN_CFA_ERR_RAW.rules
+RUN_GRIT_TOOL Rule_GPEH_456_EVENT_E_RAN_CFA_ERR_RAW.rules1
+RUN_GRIT_TOOL Rule_GPEH_456_EVENT_E_RAN_CFA_ERR_RAW.rules2
+RUN_GRIT_TOOL Rule_GPEH_458_EVENT_E_RAN_HFA_IFHO_ERR_RAW.rules

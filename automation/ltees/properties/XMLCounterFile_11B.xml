@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<mdc>
+    
+<mfh>
+        
+	<ffv>32.401 V6.2.0</ffv>
+        
+	<sn>SubNetwork=ONRM_RootMo_R,MeContext=LTE01ERBS00005</sn>
+       
+ 	<st>OSS</st>
+        
+	<vn>Ericsson AB</vn>
+        
+	<cbt>20110517151500</cbt>
+    
+</mfh>
+    
+<md>
+       	
+ <neid>
+            	
+	<neun>LTE01ERBS00005</neun>
+   
+        <nedn>SubNetwork=ONRM_RootMo_R,MeContext=LTE01ERBS00005</nedn>
+  
+        <nesw>CXP90112123_R7A06</nesw>
+      
+ </neid>
+        
+<mi>
+            
+	<mts>20110517153000</mts>
+            
+	<gp>900</gp>
+            
+		<mt>pmRrcConnEstabSuccMta</mt>
+            
+		<mt>pmRrcConnEstabSuccMos</mt>
+            
+		<mt>pmRrcConnEstabSuccMod</mt>
+           
+		<mt>pmRrcConnEstabTimeSumEm</mt>
+            
+		<mt>pmRrcConnEstabTimeSumHpa</mt>
+            
+		<mt>pmRrcConnEstabTimeSumMta</mt>
+            
+		<mt>pmRrcConnEstabTimeSumMos</mt>
+            
+		<mt>pmRrcConnEstabTimeSumMod</mt>
+            
+		<mt>pmRrcConnEstabTimeMaxEm</mt>
+            
+		<mt>pmRrcConnEstabTimeMaxHpa</mt>
+            
+		<mt>pmRrcConnEstabTimeMaxMta</mt>
+            
+		<mt>pmRrcConnEstabTimeMaxMos</mt>
+            
+		<mt>pmRrcConnEstabTimeMaxMod</mt>
+            
+		<mt>pmRrcConnEstabTimeDistrEm</mt>
+            
+		<mt>pmRrcConnEstabTimeDistrHpa</mt>
+            
+		<mt>pmRrcConnEstabTimeDistrMta</mt>
+            
+		<mt>pmRrcConnEstabTimeDistrMos</mt>
+            
+		<mt>pmRrcConnEstabTimeDistrMod</mt>
+            
+		<mt>pmS1UlNasTransportSent</mt>
+            
+		<mt>pmS1DlNasTransportRcvd</mt>
+            
+		<mt>pmUeCtxtRelTimeSamp</mt>
+            
+		<mt>pmUeCtxtRelTimeSum</mt>
+            
+		<mt>pmUeCtxtRelTimeDistr</mt>
+            
+		<mt>pmUeCtxtRelTimeS1HoSamp</mt>
+            
+		<mt>pmUeCtxtRelTimeS1HoSum</mt>
+            
+		<mt>pmUeCtxtRelTimeX2HoSamp</mt>
+            
+		<mt>pmUeCtxtRelTimeX2HoSum</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci1</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci2</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci3</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci4</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci5</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci6</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci7</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci8</mt>
+            
+		<mt>pmErabEstabTimeInitSumQci9</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci1</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci2</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci3</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci4</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci5</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci6</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci7</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci8</mt>
+            
+		<mt>pmErabEstabTimeInitDistrQci9</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci1</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci2</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci3</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci4</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci5</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci6</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci7</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci8</mt>
+            
+		<mt>pmErabEstabTimeInitMaxQci9</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci1</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci2</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci3</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci4</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci5</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci6</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci7</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci8</mt>
+            
+		<mt>pmErabEstabTimeAddedSumQci9</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci1</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci2</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci3</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci4</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci5</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci6</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci7</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci8</mt>
+            
+		<mt>pmErabEstabTimeAddedDistrQci9</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci1</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci2</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci3</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci4</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci5</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci6</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci7</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci8</mt>
+            
+		<mt>pmErabEstabTimeAddedMaxQci9</mt>
+		<mt>pmHoSigExeOutTimeX2Samp</mt>
+
+           	<mt>pmHoSigExeOutTimeX2Sum</mt>
+   
+         	<mt>pmHoSigExeOutTimeS1Samp</mt>
+  
+          	<mt>pmHoSigExeOutTimeS1Sum</mt>
+		<mt>pmS1ConnEstabTimeSum</mt>
+
+            	<mt>pmS1ConnEstabSucc</mt>
+  
+          	<mt>pmS1ConnEstabTimeDistr</mt>
+            	<mt>pmX2ConnEstabSucc</mt>
+
+ 		<mt>pmProcessorLoadSamp</mt>
+
+	        <mt>pmProcessorLoadSum</mt>
+  
+	        <mt>pmProcessorLoadMax</mt>
+	</mi>
+	</md>	
+	<mff>
+		<ts>2011012112300200</ts>
+	</mff>
+</mdc>

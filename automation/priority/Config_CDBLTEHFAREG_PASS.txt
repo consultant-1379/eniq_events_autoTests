@@ -1,0 +1,26 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!--- The 'RUN_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute the specified Selenium test group LteCFATestGroup and JAR 'selenium_events_tests.jar'
+!--- These values will override the default value in the selenium.properties file.
+!--- The HUB and RC will then be stopped.
+
+INIT_SELENIUM localhost,noreport
+
+TEST_LIST -DTEST_SUITE=ltecfa -DTEST_SUB_SUITE=NetworkAnalysisTestGroup -DTESTS=eCellHandoverFailureAnalysis_7_1,eCellGroupHandoverFailureAnalysis_7_2,eNodeBHandoverFailureAnalysis_7_3,eNodeBGroupHandoverFailureAnalysis_7_4,eNodeBCauseCodeAnalysis_7_11,eNodeBGroupCauseCodeAnalysis_7_12,eCellCauseCodeAnalysis_7_13,eCellGroupCauseCodeAnalysis_7_14,eNodeBCauseCodeDrillDown_7_15,eNodeBGroupCauseCodeDrillDown_7_16,eCellCauseCodeDrillDown_7_17,eCellGroupCauseCodeDrillDown_7_18,eNodeBEventVolumeAnalysis_8_1,eNodeBGroupEventVolumeAnalysis_8_2,AccessAreaEventVolumeAnalysis_8_3,AccessAreaGroupEventVolumeAnalysis_8_4,NetworkEventVolumeAnalysis_8_6,ControllerQCIStatistics_7_30_and_7_31,eNodeBGroupQCIstatistics_7_32,AccessAreaQCIStatistics_7_33_and_7_34,AccessAreaGroupQCIstatistics_7_35
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+TEST_LIST -DTEST_SUITE=ltecfa -DTEST_SUB_SUITE=RankingEngineTestGroup -DTESTS=eNodeBRankingPreparationFailures_6_2,eNodeBRankingExecFailures_6_32,SubscriberRankingHandoverPrepFailure_6_6,SubscriberRankingHandoverExecFailure_6_7,SourceCellRankingPrepFailures_6_26,SourceCellRankingExecFaliures_6_28,TargetCellRankingPrepFailures_6_26,TargetCellRankingExecFaliures_6_28,CauseCodeRankingPrepFailures_6_14,CauseCodeRankingExecFailures_6_15,TerminalRankingPrepFailure_6_16,TerminalRankingExecFailure_6_22
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+TEST_LIST -DTEST_SUITE=ltecfa -DTEST_SUB_SUITE=SubscriberSessionTestGroup -DTESTS=IMSISummaryEventsView_5_3,IMSISummaryEventsViewDrillDown_5_7,IMSISummaryERABdrilldown_5_7,IMSISummaryZeroERABdrilldown_5_7,IMSIgroupAnalysisViewLTERANeventsSummaryEventAnalysis_5_4,IMSIgroupSummaryEventsViewDrillDown_5_8,IMSISummaryEventsViewEnodeBdrilldown_5_7,IMSISummaryEventsViewEcellDrilldown_5_8
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+TEST_LIST -DTEST_SUITE=ltecfa -DTEST_SUB_SUITE=TerminalAnalysisTestGroup -DTESTS=terminalEventAnalysis_7_1,terminalGroupEventAnalysis_7_2
+RUN_SELENIUM LteCfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+STOPMONITOREC

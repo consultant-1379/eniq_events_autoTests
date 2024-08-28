@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groupmgt>
+<group name="Core_IMSI1" type="IMSI">
+
+<group-element>
+<key name="IMSI" value="310410000030404"/>
+</group-element>
+
+<group-element>
+<key name="IMSI" value="310410000024603"/>
+</group-element>
+
+</group>
+</groupmgt>

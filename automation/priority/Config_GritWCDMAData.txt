@@ -1,0 +1,9 @@
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 1,2
+
+LOADTOPOLOGY force,WCDMA_GRIT
+STOPDATAGEN_3GSESSIONBROWSER
+STARTDATAGEN_WCDMA

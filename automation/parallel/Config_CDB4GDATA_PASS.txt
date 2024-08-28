@@ -1,0 +1,9 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+TOPOLOGYLOADWAIT
+LOADTOPOLOGY force,2G_Like4Like,3G_Like4Like,4G_Like4Like
+DATAGENSTART_ARREST_IT
+2G3G_CREATE_GROUPS

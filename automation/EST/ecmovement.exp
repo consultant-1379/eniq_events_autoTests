@@ -1,0 +1,81 @@
+#!/usr/local/bin/expect
+set timeout -1
+
+spawn /usr/bin/python /eniq/mediation_inter/bin/service_assign.py; 
+
+expect {
+        "Configure your system as an Increased Volume Deployment? Y|N:" {
+        send "N\r"
+        expect {
+        "maintain current assignment of EC_DVTP" {
+        send "1\n"
+	expect {
+        "maintain current assignment of EC_DVTP" {
+        send "1\n"
+        expect {
+        "maintain current assignment of EC_LTEEFA" {
+        send "1\n"
+	expect {
+        "maintain current assignment of EC_LTEEFA" {
+        send "1\n"
+	expect {
+        "maintain current assignment of EC_LTEEFA" {
+        send "1\n"
+        expect {
+        "maintain current assignment of EC_LTEES" {
+        send "2\n"
+	expect {
+        "maintain current assignment of EC_LTEES" {
+        send "2\n"
+	expect {
+        "maintain current assignment of EC_LTEES" {
+        send "2\n"
+	expect {
+        "maintain current assignment of EC_LTEES" {
+        send "2\n"
+        expect {
+        "maintain current assignment of EC_SGEH" {
+        send "1\n"
+        expect {
+        "maintain current assignment of EC_ST" {
+        send "1\n"
+        expect {
+        "Modify Assignments? Y|N:" {
+        send "N\n"
+        expect {
+        ":" {
+        send "Y\n"
+	expect {
+	"#" {
+	send "done\r"
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}	
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+

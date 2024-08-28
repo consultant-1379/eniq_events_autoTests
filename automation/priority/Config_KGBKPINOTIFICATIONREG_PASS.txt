@@ -1,0 +1,33 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,2
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+DGSOURCE remote
+LOADTOPOLOGY 2G,3G,MSS,LTE,4G
+#STARTDATAGEN 2G3G,4G,newIMEI
+STARTDATAGEN_KPI waitifstarting 150
+
+KPI_PHASE1_CREATE_GROUPS
+
+WAIT 65
+
+
+!--- The 'INIT_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute a single Selenium sanity test (UI login) using test group 'DummyTestGroup'
+!--- The HUB and RC will then be stopped.
+INIT_SELENIUM localhost
+
+!--- The 'RUN_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute the specified Selenium test group 'KPINotificationTestGroup' and JAR 'selenium_events_tests.jar'
+!--- These values will override the default value in the selenium.properties file.
+!--- The HUB and RC will then be stopped.
+
+TEST_LIST -DTEST_SUITE=alarmkpi -DTESTS=testAllButtonsPresentOnKPIPanel_2_2,testPercentagesPresentUnderEachSeverityButton_2_4,testSumOfAllPercentagesAround100_2_6,testSettingsWindowContainsAllRequiredFields_3_1,testValuesChangingOnceUpdatedOnSettingsWindow_3_9,testRefreshRateCanBeSetMinFiveMinutesAndMaxTwentyFourHours_3_5,testLastDataFromCanBeSetMinFiveMinutesAndMaxSixHours_3_7,testClickingAgainOnSeverityButtonRefreshesTheWindow_4_2,testWindowOpensWithLastDataFromTime_4_7,testUIControlsAreVisibleAndFunctional_3_7,testPageNavigationsByClickingOnthePageNavigationButtons_3_10,testIfTimeChangedInListBoxThenDataAlsoShouldBeChanged_3_11,testColomnOrderAndAllcolumnsAreVisibleForEachSeverityTypeWindow_3_13,testDataOnWindowCanBeFilteredByTime_5_1,testDataOnWindowCanBeFilteredBySeverityType_5_2,testColumnsAreSortableOnAllWindows_5_3,testDataCanBefilteredWithCalenterDateAndTime_5_4,testCSVButtonPresentOnallWindows_6_1
+
+!--- KPI UI Testing (Phase 2)
+RUN_SELENIUM KPINotificationTestGroup,selenium_events_tests.jar,localhost

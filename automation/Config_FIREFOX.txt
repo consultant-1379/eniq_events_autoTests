@@ -1,0 +1,8 @@
+##The below line sets Selenium tests (and solaris in general) to use the version of Firefox that comes packaged with ENIQ_EVENTS_AUTO_TESTS instead of its default version 3.6
+## It unzips firefox17.tar.bz2 (or whatever the currently packaged version is) into /eniq/home/dcuser/automation and sets the default solaris firefox folder /usr/lib/firefox to be a symbolic link to /eniq/home/dcuser/automation/firefox. 
+
+DO_FIREFOX_VERSION new
+
+
+##Uncomment the below line to restore the original version of firefox that comes installed with Solaris
+#DO_FIREFOX_VERSION old

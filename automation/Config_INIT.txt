@@ -1,0 +1,27 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+#HTTPSTEST - Removing for 13B,14A,15A
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!--- SGEH_CDR dataload
+DGSOURCE ede
+LOADTOPOLOGY force,2G,3G,MSS,LTE,4G,WCDMA_NEW
+STARTDATAGEN 2G3G,4G,newIMEI
+DGSOURCE remote
+STARTDATAGEN_KPI
+DGSOURCE ede
+STARTDATAGEN_LTE
+DGSOURCE remote
+#STARTDATAGEN_WCDMA
+STARTDATAGEN_3GSESSIONBROWSER
+
+LOADMAPS
+

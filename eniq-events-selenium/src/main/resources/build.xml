@@ -1,0 +1,28 @@
+<project name="Selenium Grid Distribution" basedir=".">
+
+<description>Selenium Grid Distribution</description>
+
+  <property file="${basedir}/project.properties"/>  
+  <property name="version" value="SNAPSHOT"/>
+  
+  <path id="hub.classpath">
+    <pathelement path="${basedir}/"/>
+    <fileset dir="${basedir}/lib">
+      <include name="selenium-grid-hub-standalone-${version}*.jar"/>
+    </fileset>
+    <pathelement path="${java.class.path}/"/>
+  </path>  
+
+  <target name="launch-hub" description="Launch Selenium Hub">
+    <java classname="com.thoughtworks.selenium.grid.hub.HubServer"
+          classpathref="hub.classpath"
+          fork="true"
+          failonerror="true" >
+
+      <sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      <sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      <sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      <sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+    </java>
+  </target>
+</project>

@@ -1,0 +1,11 @@
+testid,testgroup,jar,host
+Dummy,DummyTestGroup,selenium_events_tests.jar,localhost
+UIImprovements,UIimprovementsTestGroup,selenium_events_tests.jar,localhost
+TwoG3GSgeh,2G3GSgehTestGroup,selenium_events_tests.jar,localhost
+Aac,AacTestGroup,selenium_events_tests.jar,localhost
+KpiNotification,KPINotificationTestGroup,selenium_events_tests.jar,localhost
+LteHfa,LteHfaTestGroup,selenium_events_tests.jar,localhost
+LteCfa,LteCfaTestGroup,selenium_events_tests.jar,localhost
+Mss,MssTestGroupUILaunch,selenium_events_tests.jar,localhost
+ThreeGKpiAnalysis,3GKPIAnalysisTestSuite,selenium_events_tests.jar,localhost
+ThreeGSessionBrowser,3GSessionBrowserTestSuite,selenium_events_tests.jar,localhost

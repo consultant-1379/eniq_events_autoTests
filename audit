@@ -1,0 +1,1262 @@
+2013-10-17 15:17:08 3g-session-browser-datagen
+2013-10-17 15:17:08 3g-session-browser-datagen-bin.tar.gz
+2013-10-17 15:17:08 3gSessBrowBackup
+2013-10-17 15:17:08 ClearDatagenDirs.pl
+2013-10-17 15:17:08 DBChecker.pl
+2013-10-17 15:17:08 DBChecker.pl.backup
+2013-10-17 15:17:08 DataGenTopology4G.zip
+2013-10-17 15:17:08 DataGenWorkFlows
+2013-10-17 15:17:08 Desktop
+2013-10-17 15:17:08 Documents
+2013-10-17 15:17:08 GpehCollStratHelperApl.mzp
+2013-10-17 15:17:08 M_E_SGEH_R6E_b134.tpi
+2013-10-17 15:17:08 RunCommandAsRoot.sh
+2013-10-17 15:17:08 SFWexpct.pkg
+2013-10-17 15:17:08 centralDatagen
+2013-10-17 15:17:08 checklicense.mzp
+2013-10-17 15:17:08 conf_lte_cfa_hfa.prop
+2013-10-17 15:17:08 configuration.properties
+2013-10-17 15:17:08 configurationGPEH.properties
+2013-10-17 15:17:08 configurationSGEH.properties
+2013-10-17 15:17:08 create_ctr_symlink.py
+2013-10-17 15:17:08 data-archive
+2013-10-17 15:17:08 decrypt_tpi
+2013-10-17 15:17:08 decrypt_tpi.zip
+2013-10-17 15:17:08 default.adm
+2013-10-17 15:17:08 emg
+2013-10-17 15:17:08 help.txt
+2013-10-17 15:17:08 init_datagen_server.pl
+2013-10-17 15:17:08 input
+2013-10-17 15:17:08 launchmzsh.sh
+2013-10-17 15:17:08 lchs_datagen.zip
+2013-10-17 15:17:08 local.cshrc
+2013-10-17 15:17:08 local.login
+2013-10-17 15:17:08 local.profile
+2013-10-17 15:17:08 medi
+2013-10-17 15:17:08 monitor.pl
+2013-10-17 15:17:08 mz
+2013-10-17 15:17:08 nohup.out
+2013-10-17 15:17:08 nslookup.pl
+2013-10-17 15:17:08 pl.pl
+2013-10-17 15:17:08 pythonTest.py
+2013-10-17 15:17:08 sgeh_decoder
+2013-10-17 15:17:08 ssh_check.sh
+2013-10-17 15:17:08 ssh_coordCheck.pl
+2013-10-17 15:17:08 streaming-probe.mzp
+2013-10-17 15:17:08 streaming_probe-12.0-SNAPSHOT-jar-with-dependencies.jar
+2013-10-17 15:17:08 testDBChecker.pl
+2013-10-17 15:18:49 appcontext.txt
+2013-10-17 15:18:49 data
+2013-10-17 15:18:49 desktop.ini
+2013-10-17 15:18:49 Downloads
+2013-10-17 15:18:49 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 15:18:49 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 15:18:49 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 15:18:49 Java Programming For Testers.pdf
+2013-10-17 15:18:49 My Music
+2013-10-17 15:18:49 My Pictures
+2013-10-17 15:18:49 My Videos
+2013-10-17 15:18:49 $RECYCLE.BIN
+2013-10-17 15:18:49 Test
+2013-10-17 15:18:49 WDP
+2013-10-17 15:18:49 WINDOWS
+2013-10-17 15:28:42 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 15:34:13 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:44:54 appcontext.txt
+2013-10-17 16:44:54 data
+2013-10-17 16:44:54 desktop.ini
+2013-10-17 16:44:54 Downloads
+2013-10-17 16:44:54 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:44:54 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:44:54 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:44:54 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:44:54 Java Programming For Testers.pdf
+2013-10-17 16:44:54 My Music
+2013-10-17 16:44:54 My Pictures
+2013-10-17 16:44:54 My Videos
+2013-10-17 16:44:54 $RECYCLE.BIN
+2013-10-17 16:44:54 Test
+2013-10-17 16:44:54 WDP
+2013-10-17 16:44:54 WINDOWS
+2013-10-17 16:45:24 appcontext.txt
+2013-10-17 16:45:24 data
+2013-10-17 16:45:24 desktop.ini
+2013-10-17 16:45:24 Downloads
+2013-10-17 16:45:24 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:45:24 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:45:24 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:45:24 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:45:24 Java Programming For Testers.pdf
+2013-10-17 16:45:24 My Music
+2013-10-17 16:45:24 My Pictures
+2013-10-17 16:45:24 My Videos
+2013-10-17 16:45:24 $RECYCLE.BIN
+2013-10-17 16:45:24 Test
+2013-10-17 16:45:24 WDP
+2013-10-17 16:45:24 WINDOWS
+2013-10-17 16:48:48 appcontext.txt
+2013-10-17 16:48:48 data
+2013-10-17 16:48:48 desktop.ini
+2013-10-17 16:48:48 Downloads
+2013-10-17 16:48:48 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:48:48 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:48:48 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:48:48 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:48:48 Java Programming For Testers.pdf
+2013-10-17 16:48:48 My Music
+2013-10-17 16:48:48 My Pictures
+2013-10-17 16:48:48 My Videos
+2013-10-17 16:48:48 $RECYCLE.BIN
+2013-10-17 16:48:48 Test
+2013-10-17 16:48:48 WDP
+2013-10-17 16:48:48 WINDOWS
+2013-10-17 16:52:22 appcontext.txt
+2013-10-17 16:52:22 data
+2013-10-17 16:52:22 desktop.ini
+2013-10-17 16:52:22 Downloads
+2013-10-17 16:52:22 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:52:22 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:52:22 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:52:22 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:52:22 Java Programming For Testers.pdf
+2013-10-17 16:52:22 My Music
+2013-10-17 16:52:22 My Pictures
+2013-10-17 16:52:22 My Videos
+2013-10-17 16:52:22 $RECYCLE.BIN
+2013-10-17 16:52:22 Test
+2013-10-17 16:52:22 WDP
+2013-10-17 16:52:22 WINDOWS
+2013-10-17 16:52:22 total 220880
+2013-10-17 16:52:22 drwx-----x  7 epagarv ossdes      4096 2012-04-18 15:05 data
+2013-10-17 16:52:22 drwx-----x  2 epagarv ossdes      4096 2012-04-18 15:06 $RECYCLE.BIN
+2013-10-17 16:52:22 drwx-----x  3 epagarv ossdes      4096 2012-06-20 12:49 WINDOWS
+2013-10-17 16:52:22 -rw-rw-r--  1 epagarv ossdes  59114128 2012-08-20 14:41 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:52:22 -rwx-----x  1 epagarv ossdes    105974 2012-09-05 17:56 Java Programming For Testers.pdf
+2013-10-17 16:52:22 -rwx-----x  1 epagarv ossdes    133904 2012-09-18 18:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:52:22 -rwx-----x  1 epagarv ossdes    133904 2012-09-18 18:21 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:52:22 -rwx-----x  1 epagarv ossdes     45530 2013-01-21 15:46 appcontext.txt
+2013-10-17 16:52:22 drwxrwxr-x  3 epagarv ossdes      4096 2013-04-24 15:32 Test
+2013-10-17 16:52:22 drwx-----x 13 epagarv ossdes      4096 2013-08-29 12:02 WDP
+2013-10-17 16:52:22 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Videos
+2013-10-17 16:52:22 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Pictures
+2013-10-17 16:52:22 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Music
+2013-10-17 16:52:22 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 Downloads
+2013-10-17 16:52:22 -rwx-----x  1 epagarv ossdes       402 2013-09-30 12:25 desktop.ini
+2013-10-17 16:52:22 -rw-r--r--  1 epagarv ossdes 166123294 2013-10-17 17:19 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:53:27 appcontext.txt
+2013-10-17 16:53:27 data
+2013-10-17 16:53:27 desktop.ini
+2013-10-17 16:53:27 Downloads
+2013-10-17 16:53:27 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-17 16:53:27 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:53:27 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:53:27 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:53:27 Java Programming For Testers.pdf
+2013-10-17 16:53:27 My Music
+2013-10-17 16:53:27 My Pictures
+2013-10-17 16:53:27 My Videos
+2013-10-17 16:53:27 $RECYCLE.BIN
+2013-10-17 16:53:27 Test
+2013-10-17 16:53:27 WDP
+2013-10-17 16:53:27 WINDOWS
+2013-10-17 16:53:27 total 220880
+2013-10-17 16:53:27 drwx-----x  7 epagarv ossdes      4096 2012-04-18 15:05 data
+2013-10-17 16:53:27 drwx-----x  2 epagarv ossdes      4096 2012-04-18 15:06 $RECYCLE.BIN
+2013-10-17 16:53:27 drwx-----x  3 epagarv ossdes      4096 2012-06-20 12:49 WINDOWS
+2013-10-17 16:53:27 -rw-rw-r--  1 epagarv ossdes  59114128 2012-08-20 14:41 ENIQ_EVENTS_AUTO_TESTS_R6A14.zip
+2013-10-17 16:53:27 -rwx-----x  1 epagarv ossdes    105974 2012-09-05 17:56 Java Programming For Testers.pdf
+2013-10-17 16:53:27 -rwx-----x  1 epagarv ossdes    133904 2012-09-18 18:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-17 16:53:27 -rwx-----x  1 epagarv ossdes    133904 2012-09-18 18:21 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-17 16:53:27 -rwx-----x  1 epagarv ossdes     45530 2013-01-21 15:46 appcontext.txt
+2013-10-17 16:53:27 drwxrwxr-x  3 epagarv ossdes      4096 2013-04-24 15:32 Test
+2013-10-17 16:53:27 drwx-----x 13 epagarv ossdes      4096 2013-08-29 12:02 WDP
+2013-10-17 16:53:27 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Videos
+2013-10-17 16:53:27 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Pictures
+2013-10-17 16:53:27 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 My Music
+2013-10-17 16:53:27 drwx-----x  3 epagarv ossdes      4096 2013-09-30 12:25 Downloads
+2013-10-17 16:53:27 -rwx-----x  1 epagarv ossdes       402 2013-09-30 12:25 desktop.ini
+2013-10-17 16:53:27 -rw-r--r--  1 epagarv ossdes 166123294 2013-10-17 17:19 ENIQ_EVENTS_AUTO_TESTS_R20A20.zip
+2013-10-21 16:26:19 appcontext.txt
+2013-10-21 16:26:19 data
+2013-10-21 16:26:19 desktop.ini
+2013-10-21 16:26:19 Downloads
+2013-10-21 16:26:19 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:26:19 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-21 16:26:19 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-21 16:26:19 Java Programming For Testers.pdf
+2013-10-21 16:26:19 My Music
+2013-10-21 16:26:19 My Pictures
+2013-10-21 16:26:19 My Videos
+2013-10-21 16:26:19 $RECYCLE.BIN
+2013-10-21 16:26:19 Test
+2013-10-21 16:26:19 WDP
+2013-10-21 16:26:19 WINDOWS
+2013-10-21 16:27:12 -rw-r--r-- 1 epagarv ossdes 166123155 2013-10-21 16:26 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:31:09 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:31:51 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:35:40 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:35:40 /usr/atria/bin/cleartool
+2013-10-21 16:41:20 appcontext.txt
+2013-10-21 16:41:20 data
+2013-10-21 16:41:20 desktop.ini
+2013-10-21 16:41:20 Downloads
+2013-10-21 16:41:20 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:41:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-21 16:41:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-21 16:41:20 Java Programming For Testers.pdf
+2013-10-21 16:41:20 My Music
+2013-10-21 16:41:20 My Pictures
+2013-10-21 16:41:20 My Videos
+2013-10-21 16:41:20 $RECYCLE.BIN
+2013-10-21 16:41:20 Test
+2013-10-21 16:41:20 WDP
+2013-10-21 16:41:20 WINDOWS
+2013-10-21 16:41:21 /home/epagarv
+2013-10-21 16:41:43 Working directory view: ** NONE **
+2013-10-21 16:41:43 Set view: epagarv_view
+2013-10-21 16:48:15 /home/epagarv
+2013-10-21 16:48:52 /home/epagarv
+2013-10-21 16:50:46 /home/epagarv
+2013-10-21 16:52:27 appcontext.txt
+2013-10-21 16:52:27 data
+2013-10-21 16:52:27 desktop.ini
+2013-10-21 16:52:27 Downloads
+2013-10-21 16:52:27 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 16:52:27 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-21 16:52:27 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-21 16:52:27 Java Programming For Testers.pdf
+2013-10-21 16:52:27 My Music
+2013-10-21 16:52:27 My Pictures
+2013-10-21 16:52:27 My Videos
+2013-10-21 16:52:27 $RECYCLE.BIN
+2013-10-21 16:52:27 Test
+2013-10-21 16:52:27 WDP
+2013-10-21 16:52:27 WINDOWS
+2013-10-21 16:52:53 Working directory view: ** NONE **
+2013-10-21 16:52:53 Set view: epagarv_view
+2013-10-21 16:55:59 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m 
+2013-10-21 16:56:10 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m 
+2013-10-21 16:56:11 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m 
+2013-10-21 16:56:11 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m 
+2013-10-21 16:56:12 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m ls
+2013-10-21 16:56:12 appcontext.txt*				     My Music/
+2013-10-21 16:56:12 data/					     My Pictures/
+2013-10-21 16:56:12 desktop.ini*				     My Videos/
+2013-10-21 16:56:13 Downloads/				     $RECYCLE.BIN/
+2013-10-21 16:56:13 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip	     Test/
+2013-10-21 16:56:13 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx*  WDP/
+2013-10-21 16:56:13 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx*  WINDOWS/
+2013-10-21 16:56:13 Java Programming For Testers.pdf*
+2013-10-21 16:56:14 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m pwd
+2013-10-21 16:56:14 /home/epagarv
+2013-10-21 16:56:23 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m exit
+2013-10-21 16:56:23 exit
+2013-10-21 16:56:54 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m 
+2013-10-21 16:56:57 [1;31meselivm2v210l[0m [0;34m~[0m [1;31m>[0m exit
+2013-10-21 16:56:57 exit
+2013-10-21 16:58:32 /home/epagarv
+2013-10-21 16:58:49 Working directory view: ** NONE **
+2013-10-21 16:58:49 Set view: epagarv_view
+2013-10-21 17:00:25 /home/epagarv
+2013-10-21 17:00:30 afs
+2013-10-21 17:00:30 app
+2013-10-21 17:00:30 bin
+2013-10-21 17:00:30 boot
+2013-10-21 17:00:30 cc
+2013-10-21 17:00:30 core
+2013-10-21 17:00:30 dev
+2013-10-21 17:00:30 env
+2013-10-21 17:00:30 etc
+2013-10-21 17:00:30 home
+2013-10-21 17:00:30 lib
+2013-10-21 17:00:30 lib64
+2013-10-21 17:00:30 lost+found
+2013-10-21 17:00:30 media
+2013-10-21 17:00:30 mnt
+2013-10-21 17:00:30 net
+2013-10-21 17:00:30 opt
+2013-10-21 17:00:30 proc
+2013-10-21 17:00:30 proj
+2013-10-21 17:00:30 root
+2013-10-21 17:00:30 sbin
+2013-10-21 17:00:30 selinux
+2013-10-21 17:00:30 srv
+2013-10-21 17:00:30 sys
+2013-10-21 17:00:30 tmp
+2013-10-21 17:00:30 usr
+2013-10-21 17:00:30 var
+2013-10-21 17:00:30 view
+2013-10-21 17:00:30 vobs
+2013-10-21 17:00:37 3pp
+2013-10-21 17:00:37 aau
+2013-10-21 17:00:37 adjacentcell
+2013-10-21 17:00:37 alex_design
+2013-10-21 17:00:37 aos
+2013-10-21 17:00:37 appfwk_cm
+2013-10-21 17:00:37 appfwk_topology
+2013-10-21 17:00:37 apps_r7_delivery
+2013-10-21 17:00:37 archive
+2013-10-21 17:00:37 atcctest
+2013-10-21 17:00:37 atst
+2013-10-21 17:00:37 automation-commons
+2013-10-21 17:00:37 bom
+2013-10-21 17:00:37 BPmaint
+2013-10-21 17:00:37 bss
+2013-10-21 17:00:37 bulkcm
+2013-10-21 17:00:37 cade
+2013-10-21 17:00:37 cap_tas
+2013-10-21 17:00:37 cc
+2013-10-21 17:00:37 cc_performance_benchmark
+2013-10-21 17:00:37 cdmart
+2013-10-21 17:00:37 cello
+2013-10-21 17:00:37 cex
+2013-10-21 17:00:37 cha
+2013-10-21 17:00:37 cha2
+2013-10-21 17:00:37 CHA_X86
+2013-10-21 17:00:37 cif_appfwk
+2013-10-21 17:00:37 cif_mc_bridge
+2013-10-21 17:00:37 cif_notif_conv
+2013-10-21 17:00:37 cmadmin
+2013-10-21 17:00:37 cmg
+2013-10-21 17:00:37 cmg_4.1
+2013-10-21 17:00:37 cmg_5.0
+2013-10-21 17:00:37 cmg_transfer
+2013-10-21 17:00:37 CMPIP
+2013-10-21 17:00:37 cmtools
+2013-10-21 17:00:37 cna
+2013-10-21 17:00:37 cnai
+2013-10-21 17:00:37 cnamb
+2013-10-21 17:00:37 cnos_ast_etm
+2013-10-21 17:00:37 cnos_atm_configuration
+2013-10-21 17:00:37 cnos_efm_adaptations
+2013-10-21 17:00:37 cn_oss3.0
+2013-10-21 17:00:37 cominf_3pp
+2013-10-21 17:00:37 cominf_alex
+2013-10-21 17:00:37 cominf_bindr
+2013-10-21 17:00:37 cominf_bismrsmc
+2013-10-21 17:00:37 cominf_cominst
+2013-10-21 17:00:37 cominf_design
+2013-10-21 17:00:37 cominf_dhcp
+2013-10-21 17:00:38 cominf_dynport
+2013-10-21 17:00:38 cominf_jasscustm
+2013-10-21 17:00:38 cominf_media
+2013-10-21 17:00:38 cominf_sdse
+2013-10-21 17:00:38 cominf_smrsbi_dir
+2013-10-21 17:00:38 cominf_tcko
+2013-10-21 17:00:38 cominf_uni_smrs
+2013-10-21 17:00:38 cominf_utils
+2013-10-21 17:00:38 common_apps_gma
+2013-10-21 17:00:38 common_apps_nma
+2013-10-21 17:00:38 common_cm
+2013-10-21 17:00:38 common_domain
+2013-10-21 17:00:38 common_nsd
+2013-10-21 17:00:38 common_r9
+2013-10-21 17:00:38 common_sdm
+2013-10-21 17:00:38 common_son_service
+2013-10-21 17:00:38 common_status_service
+2013-10-21 17:00:38 common_topology
+2013-10-21 17:00:38 config_svz
+2013-10-21 17:00:38 core_domain
+2013-10-21 17:00:38 core_ps_nsd
+2013-10-21 17:00:38 core_ps_snad
+2013-10-21 17:00:38 core_topology
+2013-10-21 17:00:38 cosm
+2013-10-21 17:00:38 crbs
+2013-10-21 17:00:38 dm_eniq
+2013-10-21 17:00:38 docs
+2013-10-21 17:00:38 doss
+2013-10-21 17:00:38 dte
+2013-10-21 17:00:38 eam
+2013-10-21 17:00:38 emt
+2013-10-21 17:00:38 eniq
+2013-10-21 17:00:38 eniq_events
+2013-10-21 17:00:38 eniq_evol
+2013-10-21 17:00:38 eniqm
+2013-10-21 17:00:38 eniqm_reports
+2013-10-21 17:00:38 eniqpc
+2013-10-21 17:00:38 eniq_predefined_tool
+2013-10-21 17:00:38 eniq_stats_rt
+2013-10-21 17:00:38 epc_dc
+2013-10-21 17:00:38 epc_healthcheck
+2013-10-21 17:00:38 epcmpep
+2013-10-21 17:00:38 epc_pcpb
+2013-10-21 17:00:38 epc_sd
+2013-10-21 17:00:38 epcte
+2013-10-21 17:00:38 erbs
+2013-10-21 17:00:38 evo_oss
+2013-10-21 17:00:38 ewa
+2013-10-21 17:00:38 ext_platform_r5_delivery
+2013-10-21 17:00:38 ext_platform_r6_delivery
+2013-10-21 17:00:38 ext_platform_r7_delivery
+2013-10-21 17:00:38 file_handler
+2013-10-21 17:00:38 fw
+2013-10-21 17:00:38 gcfa
+2013-10-21 17:00:38 gpi
+2013-10-21 17:00:38 gprsg
+2013-10-21 17:00:38 HP
+2013-10-21 17:00:38 import
+2013-10-21 17:00:38 imscm_core
+2013-10-21 17:00:38 ims_trace
+2013-10-21 17:00:38 isnm
+2013-10-21 17:00:38 isp
+2013-10-21 17:00:38 ITTE_vobs01
+2013-10-21 17:00:38 ITTE_vobs02
+2013-10-21 17:00:38 ITTE_vobs03
+2013-10-21 17:00:38 ITTE_vobs04
+2013-10-21 17:00:38 ITTE_vobs05
+2013-10-21 17:00:38 ITTE_vobs06
+2013-10-21 17:00:38 ITTE_vobs07
+2013-10-21 17:00:38 ITTE_vobs08
+2013-10-21 17:00:38 ITTE_vobs09
+2013-10-21 17:00:38 ITTE_vobs11
+2013-10-21 17:00:38 ITTE_vobs12
+2013-10-21 17:00:38 japp
+2013-10-21 17:00:38 lte_son_service
+2013-10-21 17:00:38 lte_status_service
+2013-10-21 17:00:38 managerabqos
+2013-10-21 17:00:38 mlct
+2013-10-21 17:00:38 mmcm_core
+2013-10-21 17:00:38 mnoss_r7_delivery
+2013-10-21 17:00:38 mofgen
+2013-10-21 17:00:38 nam
+2013-10-21 17:00:38 ncmmisc
+2013-10-21 17:00:38 ncms
+2013-10-21 17:00:38 nex
+2013-10-21 17:00:38 nfd_eniq
+2013-10-21 17:00:38 NodeSyncApplication
+2013-10-21 17:00:38 nosc_tools
+2013-10-21 17:00:38 nsd_gsm
+2013-10-21 17:00:38 nsd_ims
+2013-10-21 17:00:38 nsd_wcdma
+2013-10-21 17:00:38 ocp
+2013-10-21 17:00:38 ocp2
+2013-10-21 17:00:38 ocs_design
+2013-10-21 17:00:38 oe
+2013-10-21 17:00:38 oex
+2013-10-21 17:00:38 oss
+2013-10-21 17:00:38 oss_abs_test
+2013-10-21 17:00:38 oss_att
+2013-10-21 17:00:38 oss_audit
+2013-10-21 17:00:38 oss_authority
+2013-10-21 17:00:38 oss_automated_test
+2013-10-21 17:00:38 oss_automated_test_delivery
+2013-10-21 17:00:38 oss_bulkdata
+2013-10-21 17:00:38 oss_commontypes
+2013-10-21 17:00:38 oss_connectionservice
+2013-10-21 17:00:38 oss_design
+2013-10-21 17:00:38 oss_eniq_int
+2013-10-21 17:00:38 oss_irathom
+2013-10-21 17:00:38 oss_monitoring
+2013-10-21 17:00:38 oss_mscnead
+2013-10-21 17:00:38 oss_nmamapfiles_core_ps_nma
+2013-10-21 17:00:38 oss_plugins
+2013-10-21 17:00:38 ossrc
+2013-10-21 17:00:38 OSS_RC
+2013-10-21 17:00:38 oss_rc3
+2013-10-21 17:00:38 ossrc_3pp
+2013-10-21 17:00:38 ossrc_3pp_hpovnnm
+2013-10-21 17:00:38 ossrc_build_dependencies
+2013-10-21 17:00:38 ossrc_cs
+2013-10-21 17:00:38 ossrc_deploy_docs
+2013-10-21 17:00:38 ossrc_dev
+2013-10-21 17:00:38 ossrc_fwk
+2013-10-21 17:00:38 ossrc_hacs
+2013-10-21 17:00:38 ossrc_jars
+2013-10-21 17:00:38 ossrc_nm
+2013-10-21 17:00:38 ossrc_sharedsource
+2013-10-21 17:00:38 ossrc_swdi
+2013-10-21 17:00:38 ossrc_swdi_makesystem
+2013-10-21 17:00:38 ossrc_tcm
+2013-10-21 17:00:38 oss_rps
+2013-10-21 17:00:38 oss_sck
+2013-10-21 17:00:38 p2p
+2013-10-21 17:00:38 pasos
+2013-10-21 17:00:38 pciselection
+2013-10-21 17:00:38 pcp
+2013-10-21 17:00:38 pkg
+2013-10-21 17:00:38 platform_cs_handler
+2013-10-21 17:00:38 platform_utilities_log
+2013-10-21 17:00:38 platform_utilities_notifications
+2013-10-21 17:00:38 pmr
+2013-10-21 17:00:38 pmr_r9
+2013-10-21 17:00:38 pms_cfg
+2013-10-21 17:00:38 pms_jni
+2013-10-21 17:00:38 pmtools_wip
+2013-10-21 17:00:38 procus_archive
+2013-10-21 17:00:38 project
+2013-10-21 17:00:38 prop
+2013-10-21 17:00:38 rabqos
+2013-10-21 17:00:38 radio_common_cell_composite
+2013-10-21 17:00:38 radio_common_cell_service
+2013-10-21 17:00:38 radio_common_domain
+2013-10-21 17:00:38 radio_gsm_domain
+2013-10-21 17:00:38 radio_gsm_topology
+2013-10-21 17:00:38 radio_stn_topology
+2013-10-21 17:00:38 rah
+2013-10-21 17:00:38 ranos
+2013-10-21 17:00:38 rbs
+2013-10-21 17:00:38 reco
+2013-10-21 17:00:38 rpm
+2013-10-21 17:00:38 rpm_tasks
+2013-10-21 17:00:38 sab
+2013-10-21 17:00:38 sec
+2013-10-21 17:00:38 serviceFwk
+2013-10-21 17:00:38 sgw
+2013-10-21 17:00:38 sgw_r8.1_wipro
+2013-10-21 17:00:38 sicstus
+2013-10-21 17:00:38 smia
+2013-10-21 17:00:38 snos
+2013-10-21 17:00:38 soapirp
+2013-10-21 17:00:38 SOEM_PROTO
+2013-10-21 17:00:38 swdi
+2013-10-21 17:00:38 tckc_design
+2013-10-21 17:00:38 tckg
+2013-10-21 17:00:38 ue_trace
+2013-10-21 17:00:38 ulab
+2013-10-21 17:00:38 utility_services
+2013-10-21 17:00:38 wcdma_son_service
+2013-10-21 17:00:38 wds
+2013-10-21 17:00:38 wfs
+2013-10-21 17:00:38 wran_cm
+2013-10-21 17:00:38 wran_cm_nsd
+2013-10-21 17:00:38 wran_cm_plugins
+2013-10-21 17:00:38 xmate99
+2013-10-21 17:00:59 assembly.xml
+2013-10-21 17:00:59 AutoDeliver.pl
+2013-10-21 17:00:59 automation
+2013-10-21 17:00:59 centralDatagen
+2013-10-21 17:00:59 checkfordgupdates.sh
+2013-10-21 17:00:59 checkup.pl
+2013-10-21 17:00:59 ee-notification-service-test-automation
+2013-10-21 17:00:59 eniq-events-ltees
+2013-10-21 17:00:59 eniq-events-selenium
+2013-10-21 17:00:59 expect.exp
+2013-10-21 17:00:59 LatestPackage
+2013-10-21 17:00:59 maven.pl
+2013-10-21 17:00:59 ParentPom.xml
+2013-10-21 17:00:59 pom.xml
+2013-10-21 17:00:59 selenium
+2013-10-21 17:02:13 assembly.xml
+2013-10-21 17:02:13 AutoDeliver.pl
+2013-10-21 17:02:13 automation
+2013-10-21 17:02:13 centralDatagen
+2013-10-21 17:02:13 checkfordgupdates.sh
+2013-10-21 17:02:13 checkup.pl
+2013-10-21 17:02:13 ee-notification-service-test-automation
+2013-10-21 17:02:13 eniq-events-ltees
+2013-10-21 17:02:13 eniq-events-selenium
+2013-10-21 17:02:13 expect.exp
+2013-10-21 17:02:13 LatestPackage
+2013-10-21 17:02:13 maven.pl
+2013-10-21 17:02:13 ParentPom.xml
+2013-10-21 17:02:13 pom.xml
+2013-10-21 17:02:13 selenium
+2013-10-21 17:05:54 assembly.xml
+2013-10-21 17:05:54 AutoDeliver.pl
+2013-10-21 17:05:54 automation
+2013-10-21 17:05:54 centralDatagen
+2013-10-21 17:05:54 checkfordgupdates.sh
+2013-10-21 17:05:54 checkup.pl
+2013-10-21 17:05:54 ee-notification-service-test-automation
+2013-10-21 17:05:54 eniq-events-ltees
+2013-10-21 17:05:54 eniq-events-selenium
+2013-10-21 17:05:54 expect.exp
+2013-10-21 17:05:54 LatestPackage
+2013-10-21 17:05:54 maven.pl
+2013-10-21 17:05:54 ParentPom.xml
+2013-10-21 17:05:54 pom.xml
+2013-10-21 17:05:54 selenium
+2013-10-21 17:06:17 ENIQ_EVENTS_AUTO_TESTS_R20A21.zip
+2013-10-21 17:08:04 /home/epagarv
+2013-10-21 17:08:40 /home/epagarv
+2013-10-21 17:11:15 ccbe
+2013-10-21 17:11:15 ccbe-web
+2013-10-21 17:11:15 ccrc_service
+2013-10-21 17:11:15 ccsumcqint_select_view
+2013-10-21 17:11:15 clearaas
+2013-10-21 17:11:15 clearapropos
+2013-10-21 17:11:15 clearapropos.pl
+2013-10-21 17:11:15 clearaudit
+2013-10-21 17:11:15 clearbug
+2013-10-21 17:11:15 cleardescribe
+2013-10-21 17:11:15 cleardescribe1
+2013-10-21 17:11:15 cleardescribe2
+2013-10-21 17:11:15 cleardiff
+2013-10-21 17:11:15 cleardiffbl
+2013-10-21 17:11:15 clearexport_ccase
+2013-10-21 17:11:15 clearexport_cvs
+2013-10-21 17:11:15 clearexport_pvcs
+2013-10-21 17:11:15 clearexport_rcs
+2013-10-21 17:11:15 clearexport_sccs
+2013-10-21 17:11:15 clearfsimport
+2013-10-21 17:11:15 cleargui
+2013-10-21 17:11:15 clearhistory
+2013-10-21 17:11:15 clearimport
+2013-10-21 17:11:15 clearjoinproj
+2013-10-21 17:11:15 clearlicense
+2013-10-21 17:11:15 clearmake
+2013-10-21 17:11:15 clearmrgman
+2013-10-21 17:11:15 clearprojexp
+2013-10-21 17:11:15 clearprompt
+2013-10-21 17:11:15 cleartool
+2013-10-21 17:11:15 clearviewupdate
+2013-10-21 17:11:15 clmutil
+2013-10-21 17:11:15 crmregister
+2013-10-21 17:11:15 htmlnormdiff.pl
+2013-10-21 17:11:15 mecleardiffmerge
+2013-10-21 17:11:15 multiapropos
+2013-10-21 17:11:15 multitool
+2013-10-21 17:11:15 mvfsversion
+2013-10-21 17:11:15 notify
+2013-10-21 17:11:15 Perl
+2013-10-21 17:11:15 squidtool
+2013-10-21 17:11:15 ucleardiffmrg
+2013-10-21 17:11:15 ucleardiffmrgutf16be
+2013-10-21 17:11:15 ucleardiffmrgutf16le
+2013-10-21 17:11:15 ucleardiffmrgutf32be
+2013-10-21 17:11:15 ucleardiffmrgutf32le
+2013-10-21 17:11:15 ucleardiffmrgutf8
+2013-10-21 17:11:15 utf16becleardiffmerge
+2013-10-21 17:11:15 utf16lecleardiffmerge
+2013-10-21 17:11:15 utf32becleardiffmerge
+2013-10-21 17:11:15 utf32lecleardiffmerge
+2013-10-21 17:11:15 utf8cleardiffmerge
+2013-10-21 17:11:15 xclearcase
+2013-10-21 17:11:15 xcleardiff
+2013-10-21 17:11:15 xlsvtree
+2013-10-21 17:11:15 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:14:45 /home/epagarv
+2013-10-21 17:14:45 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:15:34 /home/epagarv
+2013-10-21 17:15:34 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:16:14 /home/epagarv
+2013-10-21 17:17:33 /home/epagarv
+2013-10-21 17:17:33 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:18:33 /home/epagarv
+2013-10-21 17:18:33 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:19:15 /home/epagarv
+2013-10-21 17:20:12 /home/epagarv
+2013-10-21 17:21:31 /home/epagarv
+2013-10-21 17:21:31 /home/epagarv
+2013-10-21 17:22:37 /home/epagarv
+2013-10-21 17:22:37 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:23:13 /home/epagarv
+2013-10-21 17:23:13 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:24:12 /home/epagarv
+2013-10-21 17:24:56 /home/epagarv
+2013-10-21 17:24:56 /C/Users/epagarv/gitRepos/eniq_events_autoTests
+2013-10-21 17:25:28 /home/epagarv
+2013-10-21 17:25:28 /home/epagarv
+2013-10-21 17:26:14 /home/epagarv
+2013-10-21 17:26:14 /home/epagarv
+2013-10-21 17:27:04 appcontext.txt
+2013-10-21 17:27:04 data
+2013-10-21 17:27:04 desktop.ini
+2013-10-21 17:27:04 Downloads
+2013-10-21 17:27:04 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 17:27:04 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-21 17:27:04 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-21 17:27:04 Java Programming For Testers.pdf
+2013-10-21 17:27:04 My Music
+2013-10-21 17:27:04 My Pictures
+2013-10-21 17:27:04 My Videos
+2013-10-21 17:27:04 $RECYCLE.BIN
+2013-10-21 17:27:04 Test
+2013-10-21 17:27:05 WDP
+2013-10-21 17:27:05 WINDOWS
+2013-10-21 17:28:46 /home/epagarv
+2013-10-21 17:28:46 /home/epagarv
+2013-10-21 17:28:56 appcontext.txt
+2013-10-21 17:28:56 data
+2013-10-21 17:28:56 desktop.ini
+2013-10-21 17:28:56 Downloads
+2013-10-21 17:28:57 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-21 17:28:57 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-21 17:28:57 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-21 17:28:57 Java Programming For Testers.pdf
+2013-10-21 17:28:57 My Music
+2013-10-21 17:28:57 My Pictures
+2013-10-21 17:28:57 My Videos
+2013-10-21 17:28:57 $RECYCLE.BIN
+2013-10-21 17:28:57 Test
+2013-10-21 17:28:57 WDP
+2013-10-21 17:28:57 WINDOWS
+2013-10-21 17:29:37 Working directory view: ** NONE **
+2013-10-21 17:29:37 Set view: epagarv_view
+2013-10-21 17:31:01 /home/epagarv
+2013-10-21 17:31:01 /home/epagarv
+2013-10-21 17:32:08 /home/epagarv
+2013-10-21 17:32:08 /home/epagarv
+2013-10-21 17:33:26 /home/epagarv
+2013-10-21 17:33:26 /home/epagarv
+2013-10-21 17:34:31 /home/epagarv
+2013-10-21 17:34:31 /home/epagarv
+2013-10-21 17:34:48 Working directory view: ** NONE **
+2013-10-21 17:34:48 Set view: epagarv_view
+2013-10-21 17:42:34 /home/epagarv
+2013-10-21 17:43:00 /home/epagarv
+2013-10-21 17:43:00 /home/epagarv
+2013-10-21 17:43:01 /home/epagarv
+2013-10-21 17:46:16 /home/epagarv
+2013-10-21 17:46:16 /home/epagarv
+2013-10-21 17:46:16 /home/epagarv
+2013-10-21 17:47:16 /home/epagarv
+2013-10-21 17:47:16 /home/epagarv
+2013-10-21 17:47:16 /home/epagarv
+2013-10-22 16:06:31 appcontext.txt
+2013-10-22 16:06:31 data
+2013-10-22 16:06:31 desktop.ini
+2013-10-22 16:06:31 Downloads
+2013-10-22 16:06:31 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:06:31 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:06:31 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:06:31 Java Programming For Testers.pdf
+2013-10-22 16:06:31 My Music
+2013-10-22 16:06:31 My Pictures
+2013-10-22 16:06:31 My Videos
+2013-10-22 16:06:31 $RECYCLE.BIN
+2013-10-22 16:06:31 Test
+2013-10-22 16:06:31 WDP
+2013-10-22 16:06:31 WINDOWS
+2013-10-22 16:06:37 appcontext.txt
+2013-10-22 16:06:37 data
+2013-10-22 16:06:37 desktop.ini
+2013-10-22 16:06:37 Downloads
+2013-10-22 16:06:37 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:06:37 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:06:37 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:06:37 Java Programming For Testers.pdf
+2013-10-22 16:06:37 My Music
+2013-10-22 16:06:37 My Pictures
+2013-10-22 16:06:37 My Videos
+2013-10-22 16:06:37 $RECYCLE.BIN
+2013-10-22 16:06:37 Test
+2013-10-22 16:06:37 WDP
+2013-10-22 16:06:37 WINDOWS
+2013-10-22 16:06:42 appcontext.txt
+2013-10-22 16:06:42 data
+2013-10-22 16:06:42 desktop.ini
+2013-10-22 16:06:42 Downloads
+2013-10-22 16:06:42 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:06:42 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:06:42 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:06:42 Java Programming For Testers.pdf
+2013-10-22 16:06:42 My Music
+2013-10-22 16:06:42 My Pictures
+2013-10-22 16:06:42 My Videos
+2013-10-22 16:06:42 $RECYCLE.BIN
+2013-10-22 16:06:42 Test
+2013-10-22 16:06:42 WDP
+2013-10-22 16:06:42 WINDOWS
+2013-10-22 16:07:51 appcontext.txt
+2013-10-22 16:07:51 data
+2013-10-22 16:07:51 desktop.ini
+2013-10-22 16:07:51 Downloads
+2013-10-22 16:07:51 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:07:51 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:07:51 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:07:51 Java Programming For Testers.pdf
+2013-10-22 16:07:51 My Music
+2013-10-22 16:07:51 My Pictures
+2013-10-22 16:07:51 My Videos
+2013-10-22 16:07:51 $RECYCLE.BIN
+2013-10-22 16:07:51 Test
+2013-10-22 16:07:51 WDP
+2013-10-22 16:07:51 WINDOWS
+2013-10-22 16:07:51 AutoDeliver.pl
+2013-10-22 16:07:51 EniqEventsAutoTests
+2013-10-22 16:07:51 Net-SSH2-0.53.tar
+2013-10-22 16:07:51 ParentPom.xml
+2013-10-22 16:07:51 assembly.xml
+2013-10-22 16:07:51 audit
+2013-10-22 16:07:51 automation
+2013-10-22 16:07:51 bckup.pom.xml
+2013-10-22 16:07:51 centralDatagen
+2013-10-22 16:07:51 checkfordgupdates.sh
+2013-10-22 16:07:51 checkup.pl
+2013-10-22 16:07:51 deliver.pl
+2013-10-22 16:07:51 ee-notification-service-test-automation
+2013-10-22 16:07:51 eniq-events-ltees
+2013-10-22 16:07:51 eniq-events-selenium
+2013-10-22 16:07:51 eniq_events_parent
+2013-10-22 16:07:51 expect.exp
+2013-10-22 16:07:51 maven.pl
+2013-10-22 16:07:51 pom.xml
+2013-10-22 16:07:51 selenium
+2013-10-22 16:07:51 ssh.exe.stackdump
+2013-10-22 16:07:51 target
+2013-10-22 16:07:51 temp.pl
+2013-10-22 16:12:20 appcontext.txt
+2013-10-22 16:12:20 data
+2013-10-22 16:12:20 desktop.ini
+2013-10-22 16:12:20 Downloads
+2013-10-22 16:12:20 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:12:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:12:20 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:12:20 Java Programming For Testers.pdf
+2013-10-22 16:12:20 My Music
+2013-10-22 16:12:20 My Pictures
+2013-10-22 16:12:20 My Videos
+2013-10-22 16:12:20 $RECYCLE.BIN
+2013-10-22 16:12:20 Test
+2013-10-22 16:12:20 WDP
+2013-10-22 16:12:20 WINDOWS
+2013-10-22 16:12:49 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:12:49 Thus no job control in this shell.
+2013-10-22 16:12:49 /home/epagarv
+2013-10-22 16:12:49 /home/epagarv
+2013-10-22 16:12:49 /home/epagarv
+2013-10-22 16:12:49 appcontext.txt
+2013-10-22 16:12:49 data
+2013-10-22 16:12:49 desktop.ini
+2013-10-22 16:12:49 Downloads
+2013-10-22 16:12:49 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:12:49 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:12:49 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:12:49 Java Programming For Testers.pdf
+2013-10-22 16:12:49 My Music
+2013-10-22 16:12:49 My Pictures
+2013-10-22 16:12:49 My Videos
+2013-10-22 16:12:49 $RECYCLE.BIN
+2013-10-22 16:12:49 Test
+2013-10-22 16:12:49 WDP
+2013-10-22 16:12:49 WINDOWS
+2013-10-22 16:15:04 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:15:04 Thus no job control in this shell.
+2013-10-22 16:15:05 appcontext.txt
+2013-10-22 16:15:05 data
+2013-10-22 16:15:05 desktop.ini
+2013-10-22 16:15:05 Downloads
+2013-10-22 16:15:05 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:15:05 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:15:05 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:15:05 Java Programming For Testers.pdf
+2013-10-22 16:15:05 My Music
+2013-10-22 16:15:05 My Pictures
+2013-10-22 16:15:05 My Videos
+2013-10-22 16:15:05 $RECYCLE.BIN
+2013-10-22 16:15:05 Test
+2013-10-22 16:15:05 WDP
+2013-10-22 16:15:05 WINDOWS
+2013-10-22 16:16:51 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:16:51 Thus no job control in this shell.
+2013-10-22 16:16:52 Working directory view: ** NONE **
+2013-10-22 16:16:52 Set view: ** NONE **
+2013-10-22 16:18:36 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:18:36 Thus no job control in this shell.
+2013-10-22 16:18:37 Working directory view: ** NONE **
+2013-10-22 16:18:37 Set view: ** NONE **
+2013-10-22 16:19:03 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:19:03 Thus no job control in this shell.
+2013-10-22 16:19:03 appcontext.txt
+2013-10-22 16:19:03 data
+2013-10-22 16:19:03 desktop.ini
+2013-10-22 16:19:03 Downloads
+2013-10-22 16:19:03 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:19:03 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:19:03 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:19:03 Java Programming For Testers.pdf
+2013-10-22 16:19:03 My Music
+2013-10-22 16:19:03 My Pictures
+2013-10-22 16:19:03 My Videos
+2013-10-22 16:19:03 $RECYCLE.BIN
+2013-10-22 16:19:03 Test
+2013-10-22 16:19:03 WDP
+2013-10-22 16:19:03 WINDOWS
+2013-10-22 16:19:03 Working directory view: ** NONE **
+2013-10-22 16:19:03 Set view: ** NONE **
+2013-10-22 16:23:09 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:23:09 Thus no job control in this shell.
+2013-10-22 16:23:09 appcontext.txt
+2013-10-22 16:23:09 data
+2013-10-22 16:23:09 desktop.ini
+2013-10-22 16:23:09 Downloads
+2013-10-22 16:23:09 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:23:09 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:23:09 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:23:09 Java Programming For Testers.pdf
+2013-10-22 16:23:09 My Music
+2013-10-22 16:23:09 My Pictures
+2013-10-22 16:23:09 My Videos
+2013-10-22 16:23:09 $RECYCLE.BIN
+2013-10-22 16:23:09 Test
+2013-10-22 16:23:09 WDP
+2013-10-22 16:23:09 WINDOWS
+2013-10-22 16:23:09 Working directory view: ** NONE **
+2013-10-22 16:23:09 Set view: ** NONE **
+2013-10-22 16:23:51 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:23:51 Thus no job control in this shell.
+2013-10-22 16:23:51 /home/epagarv
+2013-10-22 16:23:51 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:23:52 Working directory view: ** NONE **
+2013-10-22 16:23:52 Set view: ** NONE **
+2013-10-22 16:24:28 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:24:28 Thus no job control in this shell.
+2013-10-22 16:24:28 /home/epagarv
+2013-10-22 16:24:28 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:24:29 Working directory view: ** NONE **
+2013-10-22 16:24:29 Set view: ** NONE **
+2013-10-22 16:25:46 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:25:46 Thus no job control in this shell.
+2013-10-22 16:25:46 /home/epagarv
+2013-10-22 16:25:46 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:25:47 Working directory view: ** NONE **
+2013-10-22 16:25:47 Set view: ** NONE **
+2013-10-22 16:30:08 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:30:08 Thus no job control in this shell.
+2013-10-22 16:30:48 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:30:48 Thus no job control in this shell.
+2013-10-22 16:30:48 Working directory view: ** NONE **
+2013-10-22 16:30:48 Set view: ** NONE **
+2013-10-22 16:30:49 Working directory view: ** NONE **
+2013-10-22 16:30:49 Set view: ** NONE **
+2013-10-22 16:31:22 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:31:22 Thus no job control in this shell.
+2013-10-22 16:31:22 Working directory view: ** NONE **
+2013-10-22 16:31:22 Set view: ** NONE **
+2013-10-22 16:31:22 ------------
+2013-10-22 16:31:22 Working directory view: ** NONE **
+2013-10-22 16:31:22 Set view: ** NONE **
+2013-10-22 16:31:59 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:31:59 Thus no job control in this shell.
+2013-10-22 16:32:00 Working directory view: ** NONE **
+2013-10-22 16:32:00 Set view: ** NONE **
+2013-10-22 16:32:00 ------------
+2013-10-22 16:32:00 ------------
+2013-10-22 16:32:00 Working directory view: ** NONE **
+2013-10-22 16:32:00 Set view: ** NONE **
+2013-10-22 16:33:04 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:33:04 Thus no job control in this shell.
+2013-10-22 16:33:05 Working directory view: ** NONE **
+2013-10-22 16:33:05 Set view: ** NONE **
+2013-10-22 16:33:05 ------------
+2013-10-22 16:33:15 ------------
+2013-10-22 16:33:15 Working directory view: ** NONE **
+2013-10-22 16:33:15 Set view: ** NONE **
+2013-10-22 16:35:27 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:35:27 Thus no job control in this shell.
+2013-10-22 16:35:27 Working directory view: ** NONE **
+2013-10-22 16:35:27 Set view: ** NONE **
+2013-10-22 16:35:27 ------------
+2013-10-22 16:35:27 appcontext.txt
+2013-10-22 16:35:27 data
+2013-10-22 16:35:27 desktop.ini
+2013-10-22 16:35:28 Downloads
+2013-10-22 16:35:28 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:35:28 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:35:28 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:35:28 Java Programming For Testers.pdf
+2013-10-22 16:35:28 My Music
+2013-10-22 16:35:28 My Pictures
+2013-10-22 16:35:28 My Videos
+2013-10-22 16:35:28 $RECYCLE.BIN
+2013-10-22 16:35:28 Test
+2013-10-22 16:35:28 WDP
+2013-10-22 16:35:28 WINDOWS
+2013-10-22 16:35:38 ------------
+2013-10-22 16:35:38 Working directory view: ** NONE **
+2013-10-22 16:35:38 Set view: ** NONE **
+2013-10-22 16:38:01 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:38:01 Thus no job control in this shell.
+2013-10-22 16:38:01 Working directory view: ** NONE **
+2013-10-22 16:38:01 Set view: ** NONE **
+2013-10-22 16:38:01 ------------
+2013-10-22 16:38:01 appcontext.txt
+2013-10-22 16:38:01 data
+2013-10-22 16:38:01 desktop.ini
+2013-10-22 16:38:01 Downloads
+2013-10-22 16:38:01 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:38:01 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:38:01 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:38:01 Java Programming For Testers.pdf
+2013-10-22 16:38:01 My Music
+2013-10-22 16:38:01 My Pictures
+2013-10-22 16:38:01 My Videos
+2013-10-22 16:38:01 $RECYCLE.BIN
+2013-10-22 16:38:01 Test
+2013-10-22 16:38:01 WDP
+2013-10-22 16:38:01 WINDOWS
+2013-10-22 16:38:11 ------------
+2013-10-22 16:38:11 Working directory view: ** NONE **
+2013-10-22 16:38:11 Set view: ** NONE **
+2013-10-22 16:38:36 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:38:36 Thus no job control in this shell.
+2013-10-22 16:38:37 Working directory view: ** NONE **
+2013-10-22 16:38:37 Set view: ** NONE **
+2013-10-22 16:38:37 ------------
+2013-10-22 16:38:37 appcontext.txt
+2013-10-22 16:38:37 data
+2013-10-22 16:38:37 desktop.ini
+2013-10-22 16:38:37 Downloads
+2013-10-22 16:38:37 ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-22 16:38:37 hgimnogjllphhhkhlmebbmlgjoejdpjl_11876.crx
+2013-10-22 16:38:37 hgimnogjllphhhkhlmebbmlgjoejdpjl_59614.crx
+2013-10-22 16:38:37 Java Programming For Testers.pdf
+2013-10-22 16:38:37 My Music
+2013-10-22 16:38:37 My Pictures
+2013-10-22 16:38:37 My Videos
+2013-10-22 16:38:37 $RECYCLE.BIN
+2013-10-22 16:38:37 Test
+2013-10-22 16:38:37 WDP
+2013-10-22 16:38:37 WINDOWS
+2013-10-22 16:38:47 ------------
+2013-10-22 16:38:47 Working directory view: ** NONE **
+2013-10-22 16:38:47 Set view: ** NONE **
+2013-10-22 16:41:33 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:41:33 Thus no job control in this shell.
+2013-10-22 16:41:33 Working directory view: ** NONE **
+2013-10-22 16:41:33 Set view: ** NONE **
+2013-10-22 16:41:37 * epagarv_view         /cc/views08/selixview1_views08_ossdes/epagarv/epagarv_view.vws
+2013-10-22 16:41:37   epagarv_view12.2     /cc/views02/selixview4_views02_ossdes/epagarv/epagarv_view12.2.vws
+2013-10-22 16:41:37   esimcoc_SnapView     /cc/views09/selixview2_views09_ossdes/epagarv/esimcoc_SnapView.vws
+2013-10-22 16:41:37 ------------
+2013-10-22 16:41:47 ------------
+2013-10-22 16:41:47 Working directory view: ** NONE **
+2013-10-22 16:41:47 Set view: ** NONE **
+2013-10-22 16:42:12 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:42:12 Thus no job control in this shell.
+2013-10-22 16:42:12 Working directory view: ** NONE **
+2013-10-22 16:42:12 Set view: ** NONE **
+2013-10-22 16:42:15 * epagarv_view         /cc/views08/selixview1_views08_ossdes/epagarv/epagarv_view.vws
+2013-10-22 16:42:15   epagarv_view12.2     /cc/views02/selixview4_views02_ossdes/epagarv/epagarv_view12.2.vws
+2013-10-22 16:42:15   esimcoc_SnapView     /cc/views09/selixview2_views09_ossdes/epagarv/esimcoc_SnapView.vws
+2013-10-22 16:42:15 ------------
+2013-10-22 16:42:25 ------------
+2013-10-22 16:42:25 Working directory view: ** NONE **
+2013-10-22 16:42:25 Set view: ** NONE **
+2013-10-22 16:46:41 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:46:41 Thus no job control in this shell.
+2013-10-22 16:46:41 ------------
+2013-10-22 16:46:47 ------------
+2013-10-22 16:46:47 Working directory view: ** NONE **
+2013-10-22 16:46:47 Set view: ** NONE **
+2013-10-22 16:52:34 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:52:34 Thus no job control in this shell.
+2013-10-22 16:52:35 ------------
+2013-10-22 16:52:40 ------------
+2013-10-22 16:52:40 Working directory view: ** NONE **
+2013-10-22 16:52:40 Set view: ** NONE **
+2013-10-22 16:53:06 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:53:06 Thus no job control in this shell.
+2013-10-22 16:53:06 ------------
+2013-10-22 16:53:06 Working directory view: ** NONE **
+2013-10-22 16:53:06 Set view: ** NONE **
+2013-10-22 16:53:11 ------------
+2013-10-22 16:53:11 Working directory view: ** NONE **
+2013-10-22 16:53:11 Set view: ** NONE **
+2013-10-22 16:53:41 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:53:41 Thus no job control in this shell.
+2013-10-22 16:53:41 ------------
+2013-10-22 16:53:41 Working directory view: ** NONE **
+2013-10-22 16:53:41 Set view: ** NONE **
+2013-10-22 16:53:46 ------------
+2013-10-22 16:53:46 Working directory view: ** NONE **
+2013-10-22 16:53:46 Set view: ** NONE **
+2013-10-22 16:54:03 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:54:03 Thus no job control in this shell.
+2013-10-22 16:54:03 ------------
+2013-10-22 16:54:08 Working directory view: ** NONE **
+2013-10-22 16:54:08 Set view: ** NONE **
+2013-10-22 16:54:08 ------------
+2013-10-22 16:54:08 Working directory view: ** NONE **
+2013-10-22 16:54:08 Set view: ** NONE **
+2013-10-22 16:55:09 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:55:09 Thus no job control in this shell.
+2013-10-22 16:55:09 ------------
+2013-10-22 16:55:14 Working directory view: ** NONE **
+2013-10-22 16:55:14 Set view: ** NONE **
+2013-10-22 16:55:14 ------------
+2013-10-22 16:55:14 Working directory view: ** NONE **
+2013-10-22 16:55:14 Set view: ** NONE **
+2013-10-22 16:57:11 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:57:11 Thus no job control in this shell.
+2013-10-22 16:57:12 ------------
+2013-10-22 16:57:17 Working directory view: ** NONE **
+2013-10-22 16:57:17 Set view: ** NONE **
+2013-10-22 16:57:17 ------------
+2013-10-22 16:57:17 Working directory view: ** NONE **
+2013-10-22 16:57:17 Set view: ** NONE **
+2013-10-22 16:58:07 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:58:07 Thus no job control in this shell.
+2013-10-22 16:58:07 ------------
+2013-10-22 16:58:12 Working directory view: ** NONE **
+2013-10-22 16:58:12 Set view: ** NONE **
+2013-10-22 16:58:12 ------------
+2013-10-22 16:58:12 Working directory view: ** NONE **
+2013-10-22 16:58:12 Set view: ** NONE **
+2013-10-22 16:58:12 /home/epagarv
+2013-10-22 16:59:13 Warning: no access to tty (Bad file descriptor).
+2013-10-22 16:59:13 Thus no job control in this shell.
+2013-10-22 16:59:13 ------------
+2013-10-22 16:59:18 Working directory view: ** NONE **
+2013-10-22 16:59:18 Set view: ** NONE **
+2013-10-22 16:59:18 ------------
+2013-10-22 16:59:18 Working directory view: ** NONE **
+2013-10-22 16:59:18 Set view: ** NONE **
+2013-10-22 16:59:18 /home/epagarv
+2013-10-22 17:01:05 Working directory view: ** NONE **
+2013-10-22 17:01:05 Set view: epagarv_view
+2013-10-22 17:01:19 Warning: no access to tty (Bad file descriptor).
+2013-10-22 17:01:19 Thus no job control in this shell.
+2013-10-22 17:01:20 ------------
+2013-10-22 17:01:25 Working directory view: ** NONE **
+2013-10-22 17:01:25 Set view: ** NONE **
+2013-10-22 17:01:25 ------------
+2013-10-22 17:01:25 Working directory view: ** NONE **
+2013-10-22 17:01:25 Set view: ** NONE **
+2013-10-22 17:01:25 /home/epagarv
+2013-10-22 17:02:28 ------------
+2013-10-22 17:02:34 Working directory view: ** NONE **
+2013-10-22 17:02:34 Set view: epagarv_view
+2013-10-22 17:02:34 ------------
+2013-10-22 17:02:34 Working directory view: ** NONE **
+2013-10-22 17:02:34 Set view: epagarv_view
+2013-10-22 17:02:34 /home/epagarv
+2013-10-22 17:03:05 ------------
+2013-10-22 17:03:10 Working directory view: ** NONE **
+2013-10-22 17:03:10 Set view: epagarv_view
+2013-10-22 17:03:11 ------------
+2013-10-22 17:03:11 Working directory view: ** NONE **
+2013-10-22 17:03:11 Set view: epagarv_view
+2013-10-22 17:03:11 /home/epagarv
+2013-10-22 17:06:15 Working directory view: ** NONE **
+2013-10-22 17:06:15 Set view: epagarv_view
+2013-10-22 17:06:17 Checked out "/vobs/eniq_events/auto_tests/LatestPackage" from version "/main/at_eniq/2".
+2013-10-22 17:06:17 Created element "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" (type "file").
+2013-10-22 17:06:17 Created branch "at_eniq" from "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/0".
+2013-10-22 17:06:17 Checked out "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" from version "/main/at_eniq/0".
+2013-10-23 09:41:33 Copying from DGserver to CCserver. Might take a few minnutes:
+2013-10-23 09:42:28 Copying from DGserver to CCserver. Might take a few minnutes:
+2013-10-23 11:36:30 Gotten
+2013-10-23 11:38:30 Gotten
+2013-10-23 11:41:43 Gotten
+2013-10-23 14:13:59 Working directory view: ** NONE **
+2013-10-23 14:13:59 Set view: epagarv_view
+2013-10-23 14:13:59 Copying from DGserver to CCserver. Might take a few minnutes:
+2013-10-23 14:15:23 
+2013-10-23 14:15:23 Checked out "/vobs/eniq_events/auto_tests/LatestPackage" from version "/main/at_eniq/2".
+2013-10-23 14:15:23 
+2013-10-23 14:15:23 Created element "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" (type "file").
+2013-10-23 14:15:23 Created branch "at_eniq" from "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/0".
+2013-10-23 14:15:23 Checked out "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" from version "/main/at_eniq/0".
+2013-10-23 14:15:23 
+2013-10-23 14:15:26 Checked in "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/at_eniq/1".
+2013-10-23 14:15:26 
+2013-10-23 14:15:26 Checked in "/vobs/eniq_events/auto_tests/LatestPackage" version "/main/at_eniq/3".
+2013-10-23 14:15:26 
+2013-10-23 14:15:26 
+2013-10-23 14:15:26 
+2013-10-23 14:15:26 Attempted to apply labels to 0 versions.
+2013-10-23 14:15:26 	0 newly applied
+2013-10-23 14:15:26 	0 moved
+2013-10-23 14:15:26 	0 already in place
+2013-10-23 14:15:26 	0 failed
+2013-10-23 14:15:26 
+2013-10-23 14:15:26 
+2013-10-23 14:15:26  [1;31mPerforming auto delivery[0m
+2013-10-23 14:15:28 
+2013-10-23 14:15:28 [1;31mIf delivering EU content with pre / post scripts please ensure you run this script with the -eu option[0m
+2013-10-23 14:15:28 WP0000-DEFT-AUTO 
+2013-10-23 14:15:29 
+2013-10-23 14:15:29  The following is being delivered automatically:
+2013-10-23 14:15:29 ------------------------------------------------------------
+2013-10-23 14:15:29 Package:		ENIQ_EVENTS_AUTO_TESTS
+2013-10-23 14:15:29 Download Name:		ENIQ_EVENTS_AUTO_TESTS_R20A60.zip
+2013-10-23 14:15:29 Delivery Vob:		 (/vobs/dm_eniq/AT_delivery/ev_container)
+2013-10-23 14:15:29 Project:		ENIQ_E  (events)
+2013-10-23 14:15:29 Product No.:		CXC1733264
+2013-10-23 14:15:29 Email:			epagarv/patrick.garvey@ericsson.com
+2013-10-23 14:15:29 Unit Tested:		NO
+2013-10-23 14:15:29 Reason for Delivery:	WP0000-DEFT-AUTO
+2013-10-23 14:15:29 ------------------------------------------------------------
+2013-10-23 14:15:29 Checking Package Labels for: ENIQ_EVENTS_AUTO_TESTS
+2013-10-23 14:15:46 Storing ENIQ_EVENTS_AUTO_TESTS.zip to /vobs/dm_eniq/AT_delivery/ev_container			[ OK ]
+2013-10-23 14:15:48 
+2013-10-23 14:15:48 [1;34mStorage Complete[0m
+2013-10-23 14:15:48 Please give the package list web page upto 1 hour to refresh
+2013-10-23 14:15:48 Package(s)/Readme(s) must be displayed on the package list web page
+2013-10-23 14:15:48 before it is officially delivered to ENIQ Delivery Management
+2013-10-23 14:15:48 
+2013-10-23 14:15:48 Any Issues Contact: ENIQ Delivery Mgmt (LMI)
+2013-10-23 14:15:48 
+2013-10-23 14:15:48 Delivered
+2013-10-23 14:31:12 Working directory view: ** NONE **
+2013-10-23 14:31:12 Set view: epagarv_view
+2013-10-23 14:31:12 Copying from DGserver to CCserver. Might take a few minnutes:
+2013-10-23 14:32:14 
+2013-10-23 14:32:14 Checked out "/vobs/eniq_events/auto_tests/LatestPackage" from version "/main/at_eniq/5".
+2013-10-23 14:32:14 
+2013-10-23 14:32:15 Created element "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" (type "file").
+2013-10-23 14:32:15 Created branch "at_eniq" from "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/0".
+2013-10-23 14:32:15 Checked out "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" from version "/main/at_eniq/0".
+2013-10-23 14:32:15 
+2013-10-23 14:32:17 Checked in "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/at_eniq/1".
+2013-10-23 14:32:17 
+2013-10-23 14:32:17 Checked in "/vobs/eniq_events/auto_tests/LatestPackage" version "/main/at_eniq/6".
+2013-10-23 14:32:17 
+2013-10-23 14:32:17 
+2013-10-23 14:32:17 Created label type "CXC1733264-R20A60".
+2013-10-23 14:32:18 
+2013-10-23 14:32:18 Created label "CXC1733264-R20A60" on "ENIQ_EVENTS_AUTO_TESTS_R20A60.zip" version "/main/at_eniq/1".
+2013-10-23 14:32:18 Attempted to apply labels to 1 versions.
+2013-10-23 14:32:18 	1 newly applied
+2013-10-23 14:32:18 	0 moved
+2013-10-23 14:32:18 	0 already in place
+2013-10-23 14:32:18 	0 failed
+2013-10-23 14:32:18 
+2013-10-23 14:32:18 Delivered
+2013-11-11 16:33:26 Working directory view: ** NONE **
+2013-11-11 16:33:26 Set view: epagarv_view
+2013-11-11 16:33:26 Copying from DGserver to CCserver. Might take a few minnutes:
+2013-11-11 16:35:01 
+2013-11-11 16:35:01 Checked out "/vobs/eniq_events/auto_tests/LatestPackage" from version "/main/at_eniq/6".
+2013-11-11 16:35:01 
+2013-11-11 16:35:01 Created element "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A74.zip" (type "file").
+2013-11-11 16:35:01 Created branch "at_eniq" from "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A74.zip" version "/main/0".
+2013-11-11 16:35:02 Checked out "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A74.zip" from version "/main/at_eniq/0".
+2013-11-11 16:35:02 
+2013-11-11 16:35:03 Checked in "/vobs/eniq_events/auto_tests/LatestPackage/ENIQ_EVENTS_AUTO_TESTS_R20A74.zip" version "/main/at_eniq/1".
+2013-11-11 16:35:03 
+2013-11-11 16:35:03 Checked in "/vobs/eniq_events/auto_tests/LatestPackage" version "/main/at_eniq/7".
+2013-11-11 16:35:03 
+2013-11-11 16:35:03 
+2013-11-11 16:35:03 Created label type "CXC1733264-R20A74".
+2013-11-11 16:35:03 
+2013-11-11 16:35:03 Created label "CXC1733264-R20A74" on "ENIQ_EVENTS_AUTO_TESTS_R20A74.zip" version "/main/at_eniq/1".
+2013-11-11 16:35:03 Attempted to apply labels to 1 versions.
+2013-11-11 16:35:03 	1 newly applied
+2013-11-11 16:35:03 	0 moved
+2013-11-11 16:35:03 	0 already in place
+2013-11-11 16:35:03 	0 failed
+2013-11-11 16:35:04 
+2013-11-11 16:35:04 
+2013-11-11 16:35:04  [1;31mPerforming auto delivery[0m
+2013-11-11 16:35:05 
+2013-11-11 16:35:05 [1;31mIf delivering EU content with pre / post scripts please ensure you run this script with the -eu option[0m
+2013-11-11 16:35:05 WP0000-DEFT-AUTO 
+2013-11-11 16:35:05 
+2013-11-11 16:35:05  The following is being delivered automatically:
+2013-11-11 16:35:05 ------------------------------------------------------------
+2013-11-11 16:35:05 Package:		ENIQ_EVENTS_AUTO_TESTS
+2013-11-11 16:35:05 Download Name:		ENIQ_EVENTS_AUTO_TESTS_R20A74.zip
+2013-11-11 16:35:05 Delivery Vob:		 (/vobs/dm_eniq/AT_delivery/ev_container)
+2013-11-11 16:35:05 Project:		ENIQ_E  (events)
+2013-11-11 16:35:05 Product No.:		CXC1733264
+2013-11-11 16:35:05 Email:			epagarv/patrick.garvey@ericsson.com
+2013-11-11 16:35:05 Unit Tested:		NO
+2013-11-11 16:35:05 Reason for Delivery:	WP0000-DEFT-AUTO
+2013-11-11 16:35:05 ------------------------------------------------------------
+2013-11-11 16:35:05 Checking Package Labels for: ENIQ_EVENTS_AUTO_TESTS
+2013-11-11 16:35:21 Storing ENIQ_EVENTS_AUTO_TESTS.zip to /vobs/dm_eniq/AT_delivery/ev_container			[ OK ]
+2013-11-11 16:35:23 
+2013-11-11 16:35:23 [1;34mStorage Complete[0m
+2013-11-11 16:35:23 Please give the package list web page upto 1 hour to refresh
+2013-11-11 16:35:23 Package(s)/Readme(s) must be displayed on the package list web page
+2013-11-11 16:35:23 before it is officially delivered to ENIQ Delivery Management
+2013-11-11 16:35:23 
+2013-11-11 16:35:23 Any Issues Contact: ENIQ Delivery Mgmt (LMI)
+2013-11-11 16:35:23 
+2013-11-11 16:35:23 Delivered
+2013-11-12 16:01:45 Working directory view: ** NONE **
+2013-11-12 16:01:45 Set view: epagarv_view
+2013-11-12 16:01:45 Copying from DGserver to CCserver. Might take a few minnutes:

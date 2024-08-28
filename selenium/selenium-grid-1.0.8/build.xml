@@ -1,0 +1,543 @@
+
+
+<project name="Selenium Grid Distribution" basedir=".">
+  
+  
+<property file="${basedir}/project.properties"/>  
+  
+<property name="version" value="SNAPSHOT"/>
+
+<property name="hubPollerIntervalInSeconds" value="30" />  
+  
+<path id="remote-control.classpath">
+    
+<fileset dir="${basedir}/vendor">
+      
+<include name="selenium-server-*.jar"/>
+    
+</fileset>
+    
+
+<!-- Selenium Server must be first in classpath -->
+    
+<fileset dir="${basedir}/lib">
+      
+<include name="selenium-grid-remote-control-standalone-${version}*.jar"/>
+    
+</fileset>
+    
+<pathelement path="${java.class.path}/"/>
+  
+</path>
+  
+  
+  <path id="hub.classpath">
+    <pathelement path="${basedir}/"/>
+    <fileset dir="${basedir}/lib">
+      <include name="selenium-grid-hub-standalone-${version}*.jar"/>
+    </fileset>
+    <pathelement path="${java.class.path}/"/>
+  </path>  
+
+  <target name="launch-hub" description="Launch Selenium Hub">
+    <java classname="com.thoughtworks.selenium.grid.hub.HubServer"
+          classpathref="hub.classpath"
+          fork="true"
+          failonerror="true" >
+
+      <sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      <sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      <sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      <sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+    </java>
+  </target>
+
+
+
+
+
+<!-- Properties sent in by jar file -->
+
+
+<target name="launch-RC" description="Launch A Remote Control">
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+<target name="stop-RC">
+
+    <get taskname="selenium-shutdown" src="http://localhost:${port}/selenium-server/driver/?cmd=shutDownSeleniumServer" dest="" ignoreerrors="true" />
+
+</target>
+
+  
+
+
+
+
+<!-- IP Address of local Windows Server: atdl785esxvm8.athem.eei.ericsson.se -->
+<property name="host" value="10.42.33.82"/>
+ 
+ 
+<property name="port-FF-1030" value="5555"/>
+<!-- IP Address of HUB: atrcxb1030 -->  
+<property name="hubURL-1030" value="http://10.45.16.33:4444"/>
+
+<property name="environment-FF" value="Firefox on Windows"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-1030" description="Launch A Remote Control">
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-1030}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-1030}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+<property name="port-FF-1926" value="5558"/>
+<!-- IP Address of HUB: atrcxb1926 -->  
+<property name="hubURL-1926" value="http://10.44.79.83:4444"/>
+
+<property name="environment-FF" value="Firefox on Windows"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-1926" description="Launch A Remote Control">
+
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-1926}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-1926}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+
+<property name="port-FF-1352" value="5568"/>
+<!-- IP Address of HUB: atrcxb1352 -->  
+<property name="hubURL-1352" value="http://10.45.16.38:4444"/>
+
+<property name="environment-FF" value="*firefox"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-1352" description="Launch A Remote Control">
+
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-1352}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-1352}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+
+  
+<property name="port-FF-b3" value="5558"/>
+<!-- IP Address of HUB: atc3000bl3 -->  
+<property name="hubURL-b3" value="http://10.42.33.232:4444"/>
+
+<property name="environment-FF" value="Firefox on Windows"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-b3" description="Launch A Remote Control">
+
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-b3}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-b3}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+
+<property name="port-FF-1021" value="5559"/>
+<!-- IP Address of HUB: atrcxb1021 -->  
+<property name="hubURL-1021" value="http://10.42.38.181:4444"/>
+
+<property name="environment-FF" value="Firefox on Windows"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-1021" description="Launch A Remote Control">
+
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-1021}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-1021}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+  
+
+<property name="port-IE" value="5556"/>
+  
+<property name="environment-IE" value="IE on Windows"/>
+  
+<target name="launch-IE" description="Launch A Remote Control">
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-IE}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-IE}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+  
+<property name="port-FF-1020" value="5557"/>
+<!-- IP Address of HUB: atrcxb1020 -->  
+<property name="hubURL-1020" value="http://10.42.38.180:4444"/>
+  
+<property name="environment-FF" value="Firefox on Windows"/>
+  
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-FF-1020" description="Launch A Remote Control">
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-1020}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-1020}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+</target>
+  
+
+
+
+
+<property name="port-FF-b3" value="5558"/>
+<!-- IP Address of HUB: atc3000bl3 -->  
+<property name="hubURL-b3" value="http://10.42.33.232:4444"/>
+
+<property name="environment-FF" value="Firefox on Windows"/>
+<property name="seleniumArgs" value=""/>  
+  
+<target name="launch-1052" description="Launch A Remote Control">
+
+    
+<java classpathref="remote-control.classpath"
+          classname="com.thoughtworks.selenium.grid.remotecontrol.SelfRegisteringRemoteControlLauncher"
+          fork="true"
+          failonerror="true">
+
+      
+<sysproperty key="http.proxyHost" value="${http.proxyHost}"/>
+      
+<sysproperty key="http.proxyPort" value="${http.proxyPort}"/>
+      
+<sysproperty key="https.proxyHost" value="${https.proxyHost}"/>
+      
+<sysproperty key="https.proxyPort" value="${https.proxyPort}"/>
+
+      
+<arg value="-port"/>
+      
+<arg value="${port-FF-b3}"/>
+      
+<arg value="-host"/>
+      
+<arg value="${host}"/>
+      
+<arg value="-hubURL"/>
+      
+<arg value="${hubURL-b3}"/>
+      
+<arg value="-env"/>
+      
+<arg value="${environment-FF}"/>
+      
+<arg value="-hubPollerIntervalInSeconds"/>
+      
+<arg value="${hubPollerIntervalInSeconds}"/>
+      
+<arg line="${seleniumArgs}"/>
+    
+</java>
+  
+</target>
+
+</project>

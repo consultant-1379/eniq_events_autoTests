@@ -1,0 +1,22 @@
+/eniq-events-selenium/.classpath
+/eniq-events-selenium/.project
+/eniq-events-selenium/.settings
+/eniq-events-selenium/.settings/org.eclipse.jdt.core.prefs
+/eniq-events-selenium/.settings/org.eclipse.core.resources.prefs
+/eniq-events-selenium/.settings/org.eclipse.m2e.core.prefs
+/eniq-events-selenium/target
+/eniq-events-selenium/.settings/org.eclipse.m2e.core.prefs
+/eniq-events-selenium/.settings/org.eclipse.core.resources.prefs
+/eniq-events-selenium/.settings/org.eclipse.jdt.core.prefs
+/eniq-events-selenium/bin
+/eniq-events-selenium/.settings/org.eclipse.jdt.core.prefs
+/eniq-events-selenium/.settings/org.eclipse.m2e.core.prefs
+/eniq-events-selenium/.settings/org.eclipse.core.resources.prefs
+/eniq-events-selenium/src/main/resources/selenium.properties
+
+/eniq-events-ltees/target
+/ee-notification-service-test-automation/target
+
+# IntelliJ files to ignore
+*.iml
+.idea/centralDatagen/mz.zip

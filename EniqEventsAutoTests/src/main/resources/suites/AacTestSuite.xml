@@ -1,0 +1,7 @@
+<suite name="AAC Test Suite" preserve-order="true">
+	<test name="UI Test Cases" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.ui.AACTests"/>
+		</classes>
+	</test>
+</suite>

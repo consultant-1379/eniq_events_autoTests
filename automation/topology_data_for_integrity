@@ -1,0 +1,75 @@
+
+#----------------------------------------------------------
+# Set path for Sybase iSQL
+#----------------------------------------------------------
+
+version_file="/eniq/sybase_iq/version/iq_version";
+
+temp_pwd=`grep -w "DCPassword" /eniq/sw/conf/niq.ini | head -1 | cut -d "=" -f2`
+echo "temp pwd ::: $temp_pwd"
+dBPassword="P"$temp_pwd
+echo "DBA pwd ::: $dBPassword"
+password_encrypation=`grep "DCPassword_Encrypted" /eniq/sw/conf/niq.ini | cut -d "=" -f2`
+echo "Is Password Encrypted ::: $password_encrypation"
+
+if [ $password_encrypation == "Y" ]
+then
+        temp_pwd= `echo $dBPassword |/usr/sfw/bin/openssl enc -base64 -d`
+        dBPassword = "P"$temp_pwd
+		echo "temp pwd ::: $temp_pwd && DBA pwd ::: $dBPassword"
+fi
+
+if [ ! -f "$version_file" ]
+then
+   printf "Could not access file '$version_file'. It is required to set 'isql' path.\n Could not able to set path for 'isql'. Check for issue.\n Script will exit at this line.\n"
+   exit
+fi
+
+syb_ver=`grep ^VERSION $version_file |cut -d":" -f3|cut -d"." -f1`
+if [ $syb_ver -ge 16 ]
+then
+   ISQL="/eniq/sybase_iq/OCS-15_0/bin/isql";
+else
+   ISQL="/eniq/sybase_iq/IQ-15_2/bin64/iqisql";
+fi
+
+echo "Data will be inserted to GROUP_TYPE_E_APN, GROUP_TYPE_E_IMSI, GROUP_TYPE_E_TAC,DIM_E_SGEH_APN, DIM_E_IMSI_IMEI, DIM_E_SGEH_GGSN"
+echo "For Data Integrity..."
+now=$(date +"%Y-%m-%d")
+SQL="delete from GROUP_TYPE_E_APN where GROUP_NAME = 'DVTP_APN_GROUP1'
+delete from  GROUP_TYPE_E_IMSI where GROUP_NAME = 'DVTP_IMSI_GROUP1'
+delete from  GROUP_TYPE_E_TAC where GROUP_NAME = 'DVTP_TAC_GROUP1'
+delete from  DIM_E_SGEH_APN where APN = 'apn1.com.mcc.mnc'
+delete from DIM_E_IMSI_IMEI where IMSI = 11122330000002
+delete from DIM_E_IMSI_MSISDN where MSISDN = 460010000000001
+delete from DIM_E_SGEH_GGSN where GGSN_NAME = 'GGSN3'
+delete from DIM_E_SGEH_GGSN where GGSN_NAME = 'unknown'
+delete from DIM_E_SGEH_TAC where TAC = 9628700
+INSERT INTO GROUP_TYPE_E_APN ( GROUP_NAME, START_TIME, STOP_TIME, APN ) VALUES ( 'DVTP_APN_GROUP1', 'null', 'null', 'apn1.com.mnc.mcc.gprs' )
+INSERT INTO  GROUP_TYPE_E_IMSI ( GROUP_NAME, START_TIME, STOP_TIME, IMSI ) VALUES ( 'DVTP_IMSI_GROUP1', 'null', 'null',11122330000002 )
+INSERT INTO  GROUP_TYPE_E_TAC ( GROUP_NAME, START_TIME, STOP_TIME, TAC ) VALUES ( 'DVTP_TAC_GROUP1', 'null', 'null',9628700 )
+INSERT INTO GROUP_TYPE_E_APN ( GROUP_NAME, START_TIME, STOP_TIME, APN ) VALUES ( 'DVTP_APN_GROUP1', 'null', 'null', 'apn1.com.mnc.mcc.gprs' )
+INSERT INTO  GROUP_TYPE_E_IMSI ( GROUP_NAME, START_TIME, STOP_TIME, IMSI ) VALUES ( 'DVTP_IMSI_GROUP1', 'null', 'null',11122330000002 )
+INSERT INTO  GROUP_TYPE_E_TAC ( GROUP_NAME, START_TIME, STOP_TIME, TAC ) VALUES ( 'DVTP_TAC_GROUP1', 'null', 'null',9628700 )
+INSERT INTO DIM_E_SGEH_APN ( APN, LAST_SEEN, VENDOR, STATUS, CREATED, MODIFIED, MODIFIER ) VALUES ( 'apn1.com.mnc.mcc.gprs','$now', 'ERICSSON', 'ACTIVE', 'NULL', 'NULL
+', 'ENIQ_EVENTS')
+INSERT INTO DIM_E_IMSI_IMEI ( IMEISV, IMSI, VENDOR, STATUS, CREATED, MODIFIED, MODIFIER ) VALUES ( 962870006458891, 11122330000002, 'ERICSSON', 'ACTIVE', 'NULL', 'NULL',
+'ENIQ_EVENTS')
+INSERT INTO DIM_E_IMSI_MSISDN ( IMSI, MSISDN, VENDOR, STATUS, CREATED, MODIFIED, MODIFIER ) VALUES ( 11122330000002, 460010000000001, 'ERICSSON', 'ACTIVE', 'NULL', 'NULL
+','ENIQ_EVENTS')
+INSERT INTO DIM_E_SGEH_GGSN ( GGSN_NAME, GGSN_IPADDRESS, VENDOR, STATUS, CREATED, MODIFIED, MODIFIER ) VALUES ( 'GGSN3',0X96842A4C , 'null', 'null', 'null', 'null','null
+')
+INSERT INTO DIM_E_SGEH_GGSN ( GGSN_NAME, GGSN_IPADDRESS, VENDOR, STATUS, CREATED, MODIFIED, MODIFIER ) VALUES ( 'unknown',0X96842A4C , 'null', 'null', 'null', 'null','nu
+ll
+')
+INSERT INTO DIM_E_SGEH_TAC ( TAC, BAND, MARKETING_NAME, MANUFACTURER,ACCESS_CAPABILITY,MODEL,VENDOR_NAME,UE_TYPE,OS,INPUT_MODE,STATE,CREATED_TIME,MODIFIED_TIME,MODIFIER_NAME) VALUES ( 9628700 , 'GSM 1900', 'TCS_ERICSSON', 'ERICSSON', 'GSM 1900', 'TCS_ERICSSON', 'ERICSSON', 'unknown', 'unknown', 'unknown' , 'ACTIVE', '2012-02-20 10:41:39
+', '2012-02-20 10:41:39', 'ENIQ_EVENTS')
+go "
+
+echo "$SQL" > /eniq/home/dcuser/sql.$$
+   TOPOLOGY_DATA_INTEGRITY=`$ISQL -Udc -$dBPassword -Sdwhdb -w200 -i /eniq/home/dcuser/sql.$$ `
+echo $TOPOLOGY_DATA_INTEGRITY
+
+echo "Data Successfully Inserted"
+echo "Please run the datagen.jar file"
+   rm /eniq/home/dcuser/sql.$$

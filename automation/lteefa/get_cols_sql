@@ -1,0 +1,3 @@
+select * from dc.DIM_E_LTE_HIER321 where 1=2;
+go
+

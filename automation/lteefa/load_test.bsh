@@ -1,0 +1,58 @@
+#!/bin/bash 
+
+version_file="/eniq/sybase_iq/version/iq_version";
+
+if [ ! -f "$version_file" ]
+then
+   printf "Could not access file '$version_file'. It is required to set sybase path.\n"
+   exit
+fi
+
+syb_ver=`grep ^VERSION $version_file |cut -d":" -f3|cut -d"." -f1`
+if [ $syb_ver -ge 16 ]
+then
+	if [ ! -f "/eniq/sybase_iq/IQ-16_0/IQ-16_0.sh" ]
+	then 
+		printf "Could not find file '/eniq/sybase_iq/IQ-16_0/IQ-16_0.sh'\n"
+		exit
+	else
+	. /eniq/sybase_iq/IQ-16_0/IQ-16_0.sh
+	fi
+	
+else
+	if [ ! -f "/eniq/sybase_iq/IQ-15_2/IQ-15_2.sh" ]
+	then 
+		printf "Could not find file '/eniq/sybase_iq/IQ-15_2/IQ-15_2.sh'\n"
+		exit
+	else
+	. /eniq/sybase_iq/IQ-15_2/IQ-15_2.sh
+	fi
+fi
+
+
+load_dir=/eniq/home/dcuser/automation/lteefa
+load_filename=DIM_E_LTE_HIER321
+table_load=DIM_E_LTE_HIER321
+owner_table=dc
+
+
+cols_load=$(cat ${load_dir}/${table_load}_cols.txt)
+
+
+
+cat > SqlFile  <<STOP_SQL_CODE_POINT
+set temporary option ESCAPE_CHARACTER='ON';
+set temporary option ON_ERROR='EXIT';
+LOAD TABLE $owner_table.$table_load $cols_load
+from '$load_dir/$load_filename'
+ESCAPES OFF 
+QUOTES OFF 
+DELIMITED BY '|'
+ROW DELIMITED BY '\n' 
+WITH CHECKPOINT OFF ;
+STOP_SQL_CODE_POINT
+
+
+dbisql -c "eng=dwhdb;links=tcpip{host=localhost;port=2640};uid=dba;pwd=sql" -nogui  SqlFile 
+
+rm  SqlFile 

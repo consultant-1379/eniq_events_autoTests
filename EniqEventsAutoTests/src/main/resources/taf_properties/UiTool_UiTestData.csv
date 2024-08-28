@@ -1,0 +1,3 @@
+testid,username,password,port,contextroot,host
+loginWithCorrectCredentialsProceedOkay,admin,admin,8181,/EniqEventsUI/,glassfish
+optionsMenuHasAllEntries,admin,admin,8181,/EniqEventsUI/,glassfish

@@ -1,0 +1,32 @@
+!--- Remove Comments(#) for the dataload you wish to perform.
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 14,20
+
+DGSOURCE remote
+LOADTOPOLOGY 2G,3G,MSS,LTE,4G
+MONITOREC
+STARTDATAGEN_LTE waitifstarting 150
+LTE_CREATE_GROUPS
+!--- 'STOP_SELENIUM' will quit all selenium hub and RC connections. IT IS NOT A TEST. It is essentially a selenium refresh.
+!--- ONLY USE THIS IF SELENIUM TESTS WONT RUN as it can interfere with other running selenium tests. Should usually be commented (#)
+#STOP_SELENIUM
+
+!--- The 'INIT_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute a single Selenium sanity test (UI login) using test group 'DummyTestGroup'
+!--- The HUB and RC will then be stopped.
+INIT_SELENIUM localhost
+
+!--- The 'RUN_SELENIUM' test will start the HUB (on the destination blade) and RC (on atdl785esxvm8)
+!--- It will then execute the specified Selenium test group LteHfaTestGroup and JAR 'selenium_events_tests.jar'
+!--- These values will override the default value in the selenium.properties file.
+!--- The HUB and RC will then be stopped.
+
+!--- LTEHFA UI Testing (Phase 2)
+RUN_SELENIUM LteHfaTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+
+STOPMONITOREC

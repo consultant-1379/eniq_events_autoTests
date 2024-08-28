@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupmgt>
+<group name="GPEH_Auto_Cell1" type="RAT_VEND_HIER321_CELL">
+
+<group-element>
+<key value ="1" name="RAT"/>
+<key value ="Ericsson" name="VENDOR"/>
+<key value ="ONRM_ROOT_MO_R:RNC01:RNC01" name="HIERARCHY_3"/>
+<key value ="1" name="HIERARCHY_1"/>
+<key value ="RNC01-1-1" name="CELL_ID"/>
+</group-element>
+
+<group-element>
+<key value ="1" name="RAT"/>
+<key value ="Ericsson" name="VENDOR"/>
+<key value ="ONRM_ROOT_MO_R:RNC01:RNC01" name="HIERARCHY_3"/>
+<key value ="2" name="HIERARCHY_1"/>
+<key value ="RNC01-1-2" name="CELL_ID"/>
+</group-element>
+
+</group>
+</groupmgt>

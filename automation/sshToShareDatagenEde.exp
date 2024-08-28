@@ -1,0 +1,251 @@
+#!/usr/local/bin/expect
+set timeout -1
+
+spawn su root -c " ssh datagen"
+
+expect {
+	"assword: " {
+	send "shroot\n"
+	expect {
+	"Are you sure you want to continue connecting (yes/no)?" {
+	send "yes\n"
+	expect {
+	"sword: " {
+	send "shroot\n"
+	expect {
+	"# " {
+	send "cd /\n"
+	expect {
+	"# " {
+	send "mkdir -p /mount_ede\n"
+	expect {
+	"# " {
+	send "mkdir -p /ede/eniqe\n"
+	expect {
+	"# " {
+	send "chmod -R 777 /ede/\n"
+	expect {
+	"# " {
+	send "chmod -R 777 /mount_ede/\n"
+	expect {
+	"# " {
+	send "share /ede/\n"
+	expect {
+	"# " {
+	send "mount 10.59.130.118:/ede/EDE_multidest/Streaming/ /mount_ede/\n"
+	expect {
+	"# " {
+	send "ifconfig e1000g0:1 plumb 192.168.0.213 netmask 255.255.0.0 up\n"
+	expect {
+	"# " {
+	send "cp -R /mount_ede/* /ede\n"
+	expect {
+	"# " {
+	send "mv /ede/UserInputXMLV1.0.xml /ede/ctr_ipv4_sourceip.txt /ede/CTR_FDNSourceIPMapping.txt /ede/ede-6.0.7-Release/ede-6.0.7-Release/cfg/user/\n"
+	expect {
+	"# " {
+	send "mv /ede/DataAnalysis.txt /ede/ede-6.0.7-Release/ede-6.0.7-Release/\n"
+	expect {
+	"# " {
+	send "mv /ede/destIpFoldersInfoList.txt /ede/tshellVapp.sh /ede/ede-6.0.7-Release/ede-6.0.7-Release/bin/\n"
+	expect {
+	"# " {
+	send "umount -f /mount_ede\n"
+	expect {
+	"# " {
+	send "cd /.ssh\n"
+	expect {
+	"# " {
+	send "rm authorized_keys id_rsa id_rsa.pub\n"
+	expect {
+	"# " {
+	send "cd /\n"
+	expect {
+	"# " {
+	send "ssh-keygen -t rsa\n"
+	expect {
+	"): " { 
+	send "\n"
+	expect {
+	"): " {
+	send "\n"
+	expect {
+	": " {
+	send "\n"
+	expect {
+	"# " {
+	send "cat /.ssh/id_rsa.pub >> /.ssh/authorized_keys\n"
+	expect {
+	"# " {	
+	send "rm -rf /ede/ede-6.0.11-Release/\n"
+	expect {
+	"# " {
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	"assword: " {
+	send "shroot\n"
+	expect {
+	"# " {
+	send "cd /\n"
+	expect {
+	"# " {
+	send "mkdir -p /mount_ede\n"
+	expect {
+	"# " {
+	send "mkdir -p /ede/eniqe\n"
+	expect {
+	"# " {
+	send "chmod -R 777 /ede/\n"
+	expect {
+	"# " {
+	send "chmod -R 777 /mount_ede/\n"
+	expect {
+	"# " {
+	send "share /ede/\n"
+	expect {
+	"# " {
+	send "mount 10.59.130.118:/ede/EDE_multidest/Streaming/ /mount_ede/\n"
+	expect {
+	"# " {
+	send "ifconfig e1000g0:1 plumb 192.168.0.213 netmask 255.255.0.0 up\n"
+	expect {
+	"# " {
+	send "cp -R /mount_ede/* /ede/\n"
+	expect {
+	"# " {
+	send "mv /ede/UserInputXMLV1.0.xml /ede/ctr_ipv4_sourceip.txt /ede/CTR_FDNSourceIPMapping.txt /ede/ede-6.0.7-Release/ede-6.0.7-Release/cfg/user/\n"
+	expect {
+	"# " {
+	send "mv /ede/DataAnalysis.txt /ede/ede-6.0.7-Release/ede-6.0.7-Release/\n"
+	expect {
+	"# " {
+	send "mv /ede/destIpFoldersInfoList.txt /ede/tshellVapp.sh /ede/ede-6.0.7-Release/ede-6.0.7-Release/bin/\n"
+	expect {
+	"# " {
+	send "umount -f /mount_ede\n"
+	expect {
+	"# " {
+	send "cd /.ssh\n"
+	expect {
+	"# " {
+	send "rm authorized_keys id_rsa id_rsa.pub\n"
+	expect {
+	"# " {
+	send "cd /\n"
+	expect {
+	"# " {
+	send "ssh-keygen -t rsa\n"
+	expect {
+	"): " { 
+	send "\n"
+	expect {
+	"): " {
+	send "\n"
+	expect {
+	": " {
+	send "\n"
+	expect {
+	"# " {
+	send "cat /.ssh/id_rsa.pub >> /.ssh/authorized_keys\n"
+	expect {
+	"# " {
+	send "rm -rf /ede/ede-6.0.11-Release/\n"
+	expect {
+	"# " {
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+	}
+}

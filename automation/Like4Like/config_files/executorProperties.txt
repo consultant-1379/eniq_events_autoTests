@@ -1,0 +1,7 @@
+ServerOnePropertyFile=../setup/database/atrcxb1736.prop
+ServerTwoPropertyFile=../setup/database/reference-server.prop
+StartTime=2015-03-20 03:30
+TestDuration=5m
+NoOfExecutionsToPerform=1
+Frequency=5m
+TableListFile=../setup/comparison/tableLists/like4liketables.txt

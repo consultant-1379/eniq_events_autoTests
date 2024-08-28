@@ -1,0 +1,30 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 1,6
+
+DGSOURCE remote
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+
+STARTDATA 2G3G,4G,newIMEI,KPI,LTE,WCDMA,dowaitif
+
+2G3G_CREATE_GROUPS
+KPI_PHASE1_CREATE_GROUPS
+LTE_CREATE_GROUPS
+KPI_PHASE1_CREATE_GROUPS
+
+INIT_SELENIUM localhost
+
+RUN_SELENIUM 2G3GSgehTestGroup,AacTestGroup,CreateDashboardUser,KPINotificationTestGroup,LteCfaTestGroup,LteHfaTestGroup,MssTestGroup,UIimprovementsTestGroup,WcdmaCfaTestGroup,WcdmaHfaTestGroup,localhost
+
+RUN_SELENIUM 3GSessionBrowserTestSuite,localhost
+#RUN_SELENIUM GsmTestGroup,localhost
+
+KPI_PHASE1

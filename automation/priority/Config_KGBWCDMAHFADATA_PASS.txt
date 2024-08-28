@@ -1,0 +1,15 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!---dataload
+DGSOURCE remote
+
+STOPDATAGEN_3GSESSIONBROWSER
+LOADTOPOLOGY force,WCDMA_NEW
+STARTDATAGEN_WCDMA

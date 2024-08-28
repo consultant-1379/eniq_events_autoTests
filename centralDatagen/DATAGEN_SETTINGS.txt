@@ -1,0 +1,112 @@
+##################################################
+#   CONFIGFILE FOR CENTRAL DATAGEN FILE SYSTEM   #
+##################################################
+# CAN BE CHANGED WHEN RUNNING CAUSE ITS AWESOME  #
+##################################################
+
+#Current server where datagen is being ran. (atclvm559)
+DATAGENSERVER=atclvm559
+
+#Server to scp files with same name
+#If a backup server is needed for SCP transfer put host here. Files to SCP further down
+SCPSERVER=atclvm560
+
+#Where other servers will be able to access the datagen
+#This directory will be publically shared and accessable to all for datagen
+CENTRALDATAGENDIR=/tmp/CentralDatagen
+
+#Where to store Datagen when generated
+#This is where the data will br moved to. Symbolic links will then be pointed at this data. Note: Must also be shared for permissions
+DATAGENSTORE=/tmp/DatagenStore
+
+#Where to store log files
+#To log what is happening you can enable LOGGING(ON or 1) and check the following directory. 
+#Printing can be used if manually running script
+#tail -f /eniq/local_logs/datagen/datagen.log
+LOGDIR=/eniq/local_logs/datagen
+NUMOFLOGS=10
+LOGGING=OFF
+PRINTING=OFF
+
+#Seconds to sleep for before move and make links
+#Sleep delay between loops or idle time.
+SLEEPDELAY=25
+
+#Files greather than this will be deleted. In hours.
+OLDESTFILE=24
+
+#Processes to share load between. The more work to be done, the more processes the better
+#Will NOT update while script is running if changed.
+#NUmber of child processes to split load between. More load, more processes
+PROCESSES=2
+
+#A folder name and the ammount of files to keep in this folder. End with a -
+PROFILES
+50files,50
+-
+
+#List of directories. End with a -
+DIRECTORIES
+/eniq/data/pmdata/eventdata/00/CTRS/ctum/5min
+/eniq/data/pmdata/eventdata/00/CTRS/lte_cfa/5min/dir1
+/eniq/data/pmdata/eventdata/00/CTRS/lte_cfa/5min/dir6
+/eniq/data/pmdata/eventdata/00/CTRS/lte_cfa/5min/dir11
+/eniq/data/eventdata/events_oss_1/sgeh/dir1
+/eniq/data/eventdata/events_oss_1/sgeh/dir2
+/eniq/data/eventdata/events_oss_1/sgeh/dir3
+/eniq/data/eventdata/events_oss_1/sgeh/dir4
+/eniq/data/pmdata/eventdata/00/MSS
+/eniq/data/pmdata/eventdata/01/MSS
+/eniq/data/pmdata/eventdata/02/MSS
+/eniq/data/pmdata/eventdata/03/MSS
+/eniq/data/pmdata/eventdata/00/SGEH
+/eniq/data/pmdata/eventdata/02/SGEH
+/eniq/data/pmdata/eventdata/03/SGEH
+/eniq/data/pushData/03/mss/MSS_4
+/eniq/data/pushData/04/mss/MSS_3
+/eniq/data/eventdata/events_oss_1/GPEHEvents/dir1
+/eniq/data/eventdata/events_oss_1/GPEHEvents/dir2
+/eniq/data/eventdata/events_oss_1/GPEHEvents/dir5
+/eniq/data/eventdata/events_oss_1/GPEHEvents/dir6
+/eniq/data/eventdata/events_oss_1/GPEHEvents/dir7
+#3G Session Browser SmarTone Data
+/ossrc/data/pmMediation/eventData/sgeh/dir1
+/ossrc/data/pmMediation/eventData/SgehEvents_CEP/ManagedElement=SGSN09
+/ossrc/data/pmMediation/eventData/GPEHEvents/dir1
+/ossrc/data/pmMediation/eventData/GPEHEvents/dir6
+/ossrc/data/pmMediation/eventData/GPEHEvents/dir9
+/ossrc/data/pmMediation/eventData/GpehEvents_CEP/SubNetwork=RNC01/MeContext=RNC01
+/ossrc/data/pmMediation/eventData/GpehEvents_CEP/SubNetwork=RNC06/MeContext=RNC06
+/ossrc/data/pmMediation/eventData/GpehEvents_CEP/SubNetwork=RNC09/MeContext=RNC09
+/ossrc/data/pmMediation/eventData/PCPEvents_CEP/PCP1/captool/3G/454_06_8900
+/ossrc/data/pmMediation/eventData/PCPEvents_CEP/PCP1/staple/3G/tcpta_partial/454_06_8900
+#folder_a,folder_b,name,folder_c,pre
+#copy from folder_a, to folder_b whit a prefix of name, and to folder_c whit a prefix of pre
+/tmp/OMS_LOGS/ebs/ready1,/eniq/data/eventdata/events_oss_1/sgeh/dir5,SGSN1_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir1,SGSN1_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir2,SGSN2_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir3,SGSN3_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir4,SGSN4_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir5,SGSN5_,/eniq/data/eventdata/events_oss_1/sgeh2g3g/dir6,SGSN6_
+/tmp/OMS_LOGS/010B_1,/eniq/data/eventdata/events_oss_1/sgeh_1/dir1,SGSN1_,/eniq/data/eventdata/events_oss_1/sgeh_1/dir2,SGSN2_,/eniq/data/eventdata/events_oss_1/sgeh_1/dir3,SGSN3_,/eniq/data/eventdata/events_oss_1/sgeh_1/dir4,SGSN4_,/eniq/data/eventdata/events_oss_1/sgeh_1/dir5,SGSN5_,/eniq/data/eventdata/events_oss_1/sgeh_1/dir6,SGSN6_
+
+-
+
+#Directories that just need to be cleared and not moved and copied. The latest 2 hours of files will be left untouched
+CLEARONLY
+/eniq/data/eventdata/events_oss_1/sgeh/dir5
+/eniq/data/eventdata/events_oss_1/sgeh/dir6
+-
+
+#Directories which need the files to be SCP'd to another server. End with a -
+SCPFILES
+#/tmp/OMS_LOGS/ebs/reserved,/tmp/OMS_LOGS/ebs/ready
+-
+
+#Just deletes every file
+EMPTY
+/tmp/OMS_LOGS/ebs
+/tmp/OMS_LOGS/ebs/reserved
+-
+
+#USEFUL COMMANDS
+#du -kod / |sort -r -n | head -10 				-> Find largest files
+#df -hk											-> See % of disks used
+#/usr/sbin/share -o rw -F nfs <folder>			-> Share a directory over the network to access via /net/<server>/<folder>
+#crontab -e										-> Edit crontab. 'export EDITOR=vi' must first be ran
+#/eniq/home/dcuser/mz/bin/launchmzsh.sh			-> command line mediation zone

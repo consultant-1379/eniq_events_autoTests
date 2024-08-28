@@ -1,0 +1,9 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+FAILURE_THRESHOLDS 0,0
+TOPOLOGYLOADWAIT
+
+DGSOURCE ede
+STARTDATAGEN 2G3G,4G,newIMEI
+
+#SET UP AND IMPORT GROUPS
+2G3G_CREATE_GROUPS

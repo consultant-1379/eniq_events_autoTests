@@ -1,0 +1,24 @@
+!--- Add/Remove Comments(#) for the tests you wish to perform.
+
+!---  Default for posting html results and log files
+!--- RESULTSPATH <server>,<feature_dir>,<user>,<pass>
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+!--- Calls CHECKINGSERVICESTATUS section to check and report status . Optional QUIET option to only show fails
+CHECKINGSERVICESTATUS
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 0,0
+
+!---dataload
+DGSOURCE remote
+
+STOPDATAGEN_3GSESSIONBROWSER
+LOADTOPOLOGY force,WCDMA_NEW
+STARTDATAGEN_WCDMA
+
+INIT_SELENIUM localhost
+RUN_SELENIUM WcdmaCfaHfaTestGroupNewUI,selenium_events_tests.jar,localhost
+#RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/KgbCdbConfigFiles/wcdma_cfa_cdb_tests_config.txt
+#RUNARREST_GEN /eniq/home/dcuser/automation/arrest_it/config/KgbCdbConfigFiles/wcdma_hfa_cdb_tests_config.txt
+RESTORETACS_WCDMA

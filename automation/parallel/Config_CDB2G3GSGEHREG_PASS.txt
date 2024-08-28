@@ -1,0 +1,10 @@
+!--- Remove Comments(#) for the dataload you wish to perform.	
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+FAILURE_THRESHOLDS 0,2
+
+TOPOLOGYLOADWAIT
+
+USE_2G3GRESERVEDDATA
+
+RUN_SELENIUM 2G3GSgehTestGroup,selenium_events_tests.jar,localhost,rc_server_version=39
+USE_ORIGINALRESERVEDDATA

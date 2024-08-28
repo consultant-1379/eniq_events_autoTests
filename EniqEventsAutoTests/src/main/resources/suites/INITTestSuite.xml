@@ -1,0 +1,22 @@
+<suite name="Server Initialization Test Suite" preserve-order="true">
+	<test name="Server Status Test Cases" preserve-order="true">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.serverstatus.CoordinatorServerTests"/>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.serverstatus.GlassfishServerTests"/>
+		</classes>
+	</test>
+	<test name="Topology Loading Test Cases">
+		<classes>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.topology.TopologyLoadingTests"/>
+		</classes>
+	</test>
+	<test name="Data Loading Test Cases" preserve-order="true">
+		<classes>
+		    <class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.TwoG3g4gDataLoadingTests"/>
+		    <class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.MSSDataloadingTests"/>
+		    <class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.KpiDataloadingTests"/>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.LteDataLoadingTests"/>
+			<class name="com.ericsson.star.regressiontest.test.cases.cli.dataloading.ThreeGSessionBrowserDataLoadingTests"/>
+		</classes>
+	</test>
+</suite>

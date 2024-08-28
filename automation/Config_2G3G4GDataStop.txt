@@ -1,0 +1,3 @@
+#Just a simple Config file to stop datagen for 2g,3g and 4g
+
+STOPDATAGEN_2G3G4G

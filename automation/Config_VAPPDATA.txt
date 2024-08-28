@@ -1,0 +1,7 @@
+RESULTSPATH atdl785esxvm8.athtem.eei.ericsson.se,/html/events/results,deftftauto,CentralRegression!!
+
+#two arguments 1.min failure threshold before orange colour, 2.min failure threshold before red colour,
+FAILURE_THRESHOLDS 3,8
+DGSOURCE ede
+LOADTOPOLOGY WCDMA,2G,3G,MSS,LTE,4G
+STARTDATAGEN 2G3G,4G,newIMEI

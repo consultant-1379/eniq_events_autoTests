@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<mdc>
+
+    <mfh>
+
+        <ffv>32.401 V6.2.0</ffv>
+
+        <sn>SubNetwork=ONRM_RootMo_R,MeContext=LTE01ERBS00001</sn>
+
+        <st>OSS</st>
+
+        <vn>Ericsson AB</vn>
+
+        <cbt>20120330165500</cbt>
+
+    </mfh>
+
+    <md>
+
+        <neid>
+
+            <neun>LTE01ERBS00001</neun>
+
+            <nedn>SubNetwork=ONRM_RootMo_R,MeContext=LTE01ERBS00001</nedn>
+
+            <nesw>CXP90112123_R7A06</nesw>
+
+        </neid>
+
+        <mi>
+
+            <mts>20120330171000</mts>
+
+            <gp>900</gp>
+
+            <mt>pmAnrMeasFailEutranCgi</mt>
+
+            <mt>pmAnrMeasFailEutranPci</mt>
+
+            <mt>pmAnrMeasSuccEutranCgi</mt>
+
+            <mt>pmAnrMeasSuccEutranPci</mt>
+
+            <mt>pmAnrNeighbrelAddEUtran</mt>
+
+            <mt>pmAnrNeighbrelAddGeran</mt>
+
+            <mt>pmAnrNeighbrelAddUtran</mt>
+
+            <mt>pmAnrUeCapFailGeran</mt>
+
+            <mt>pmAnrUeCapFailUtran</mt>
+
+            <mt>pmAnrUeCapSuccGeran</mt>
+
+            <mt>pmAnrUeCapSuccUtran</mt>
+
+            <mt>pmErabEstabAttAddedPaLsm</mt>
+
+            <mt>pmErabEstabAttInitPaLsm</mt>
+
+            <mt>pmErabEstabFailAddedGrp7S1Cause13</mt>
+
+            <mt>pmErabEstabFailAddedGrp8S1Cause100</mt>
+
+            <mt>pmErabEstabFailAddedGrp6S1Cause10</mt>
+
+            <mt>pmErabEstabFailAddedGrp5S1Cause6</mt>
+
+            <mt>pmErabEstabFailAddedMiscS1Cause12</mt>
+
+            <mt>pmErabEstabFailAddedMiscS1Cause5</mt>
+
+            <mt>pmErabEstabFailAddedMiscS1Cause9</mt>
+
+            <mt>pmErabEstabFailAddedMiscS1Cause50</mt>
+
+            <mt>pmErabEstabFailAddedNasS1Cause3</mt>
+
+            <mt>pmErabEstabFailAddedNasS1Cause15</mt>
+
+            <mt>pmErabEstabFailAddedNasS1Cause10</mt>
+
+            <mt>pmErabEstabFailAddedProtS1Cause4</mt>
+
+            <mt>pmErabEstabFailAddedProtS1Cause28</mt>
+
+            <mt>pmErabEstabFailAddedProtS1Cause11</mt>
+
+            <mt>pmErabEstabFailAddedProtS1Cause8</mt>
+
+            <mt>pmErabEstabFailAddedRnlS1Cause13</mt>
+
+            <mt>pmErabEstabFailAddedRnlS1Cause8</mt>
+
+            <mt>pmErabEstabFailAddedRnlS1Cause1</mt>
+
+            <mt>pmErabEstabFailAddedTranS1Cause14</mt>
+
+            <mt>pmErabEstabFailAddedTranS1Cause9</mt>
+
+            <mt>pmErabEstabFailAddedTranS1Cause2</mt>
+
+            <mt>pmErabEstabFailInitGrp8S1Cause100</mt>
+
+            <mt>pmErabEstabFailInitGrp5S1Cause6</mt>
+
+            <mt>pmErabEstabFailInitGrp7S1Cause13</mt>
+
+            <mt>pmErabEstabFailInitGrp6S1Cause10</mt>
+
+            <mt>pmErabEstabFailInitMiscS1Cause50</mt>
+
+            <mt>pmErabEstabFailInitMiscS1Cause9</mt>
+
+            <mt>pmErabEstabFailInitMiscS1Cause5</mt>
+
+            <mt>pmErabEstabFailInitMiscS1Cause12</mt>
+
+            <mt>pmErabEstabFailInitNasS1Cause15</mt>
+
+            <mt>pmErabEstabFailInitNasS1Cause3</mt>
+
+            <mt>pmErabEstabFailInitNasS1Cause10</mt>
+
+            <mt>pmErabEstabFailInitProtS1Cause11</mt>
+
+            <mt>pmErabEstabFailInitProtS1Cause4</mt>
+
+            <mt>pmErabEstabFailInitProtS1Cause28</mt>
+
+            <mt>pmErabEstabFailInitProtS1Cause8</mt>
+
+            <mt>pmErabEstabFailInitRnlS1Cause13</mt>
+
+            <mt>pmErabEstabFailInitRnlS1Cause1</mt>
+
+            <mt>pmErabEstabFailInitRnlS1Cause8</mt>
+
+            <mt>pmErabEstabFailInitTranS1Cause14</mt>
+
+            <mt>pmErabEstabFailInitTranS1Cause9</mt>
+
+            <mt>pmErabEstabFailInitTranS1Cause2</mt>
+
+            <mt>pmErabEstabSuccAddedPaLsm</mt>
+
+            <mt>pmErabEstabSuccInitPaLsm</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci5</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci4</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci3</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci93</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci9</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci8</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci6</mt>
+
+            <mt>pmErabEstabTimeAddedDistrQci1</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci93</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci1</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci5</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci4</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci3</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci9</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci8</mt>
+
+            <mt>pmErabEstabTimeAddedMaxQci6</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci8</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci9</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci3</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci4</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci5</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci6</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci93</mt>
+
+            <mt>pmErabEstabTimeAddedSumQci1</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci9</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci8</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci5</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci4</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci6</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci1</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci93</mt>
+
+            <mt>pmErabEstabTimeInitDistrQci3</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci6</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci4</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci5</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci8</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci9</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci93</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci3</mt>
+
+            <mt>pmErabEstabTimeInitMaxQci1</mt>
+
+            <mt>pmErabEstabTimeInitSumQci9</mt>
+
+            <mt>pmErabEstabTimeInitSumQci6</mt>
+
+            <mt>pmErabEstabTimeInitSumQci5</mt>
+
+            <mt>pmErabEstabTimeInitSumQci8</mt>
+
+            <mt>pmErabEstabTimeInitSumQci1</mt>
+
+            <mt>pmErabEstabTimeInitSumQci93</mt>
+
+            <mt>pmErabEstabTimeInitSumQci3</mt>
+
+            <mt>pmErabEstabTimeInitSumQci4</mt>
+
+            <mt>pmErabModFailCause7</mt>
+
+            <mt>pmErabModFailCause6</mt>
+
+            <mt>pmErabModFailCause5</mt>
+
+            <mt>pmErabModFailCause4</mt>
+
+            <mt>pmErabModFailCause13</mt>
+
+            <mt>pmErabModFailCause1</mt>
+
+            <mt>pmErabModFailCause2</mt>
+
+            <mt>pmErabModFailCause3</mt>
+
+            <mt>pmErabRelAttQci4</mt>
+
+            <mt>pmErabRelAttQci5</mt>
+
+            <mt>pmErabRelAttQci6</mt>
+
+            <mt>pmErabRelAttQci7</mt>
+
+            <mt>pmErabRelAttQci8</mt>
+
+            <mt>pmErabRelAttQci9</mt>
+
+            <mt>pmErabRelAttQci13</mt>
+
+            <mt>pmErabRelAttQci14</mt>
+
+            <mt>pmErabRelAttQci11</mt>
+
+            <mt>pmErabRelAttQci12</mt>
+
+            <mt>pmErabRelAttQci1</mt>
+
+            <mt>pmErabRelAttQci10</mt>
+
+            <mt>pmErabRelAttQci3</mt>
+
+            <mt>pmErabRelAttQci2</mt>
+
+            <mt>pmErabRelAttQci15</mt>
+
+            <mt>pmErabRelAttQci16</mt>
+
+            <mt>pmErabRelEnbGrp5S1Cause6</mt>
+
+            <mt>pmErabRelEnbGrp7S1Cause13</mt>
+
+            <mt>pmErabRelEnbGrp8S1Cause100</mt>
+
+            <mt>pmErabRelEnbGrp6S1Cause10</mt>
+
+            <mt>pmErabRelEnbMiscS1Cause9</mt>
+
+            <mt>pmErabRelEnbMiscS1Cause50</mt>
+
+            <mt>pmErabRelEnbMiscS1Cause5</mt>
+
+            <mt>pmErabRelEnbMiscS1Cause12</mt>
+
+            <mt>pmErabRelEnbNasS1Cause10</mt>
+
+            <mt>pmErabRelEnbNasS1Cause15</mt>
+
+            <mt>pmErabRelEnbNasS1Cause3</mt>
+
+            <mt>pmErabRelEnbProtS1Cause11</mt>
+
+            <mt>pmErabRelEnbProtS1Cause4</mt>
+
+            <mt>pmErabRelEnbProtS1Cause28</mt>
+
+            <mt>pmErabRelEnbProtS1Cause8</mt>
+
+            <mt>pmErabRelEnbRnlS1Cause13</mt>
+
+            <mt>pmErabRelEnbRnlS1Cause0</mt>
+
+            <mt>pmErabRelEnbRnlS1Cause1</mt>
+
+            <mt>pmErabRelEnbRnlS1Cause8</mt>
+
+            <mt>pmErabRelEnbTranS1Cause14</mt>
+
+            <mt>pmErabRelEnbTranS1Cause2</mt>
+
+            <mt>pmErabRelEnbTranS1Cause9</mt>
+
+            <mt>pmErabRelMmeRnlS1Cause0</mt>
+
+            <mt>pmErabRelSuccQci8</mt>
+
+            <mt>pmErabRelSuccQci7</mt>
+
+            <mt>pmErabRelSuccQci9</mt>
+
+            <mt>pmErabRelSuccQci10</mt>
+
+            <mt>pmErabRelSuccQci11</mt>
+
+            <mt>pmErabRelSuccQci12</mt>
+
+            <mt>pmErabRelSuccQci13</mt>
+
+            <mt>pmErabRelSuccQci1</mt>
+
+            <mt>pmErabRelSuccQci14</mt>
+
+            <mt>pmErabRelSuccQci15</mt>
+
+            <mt>pmErabRelSuccQci2</mt>
+
+            <mt>pmErabRelSuccQci3</mt>
+
+            <mt>pmErabRelSuccQci16</mt>
+
+            <mt>pmErabRelSuccQci4</mt>
+
+            <mt>pmErabRelSuccQci5</mt>
+
+            <mt>pmErabRelSuccQci6</mt>
+
+            <mt>pmHoExeAttBlindInterFreq</mt>
+
+            <mt>pmHoExeAttBlindIntraFreq</mt>
+
+            <mt>pmHoExeAttBlindWcdma</mt>
+
+            <mt>pmHoExeAttMeasBasedInterFreq</mt>
+
+            <mt>pmHoExeAttMeasBasedIntraFreq</mt>
+
+            <mt>pmHoExeAttMeasBasedWcdma</mt>
+
+            <mt>pmHoExecAttDrxConfig0</mt>
+
+            <mt>pmHoExecAttDrxConfig1</mt>
+
+            <mt>pmHoExecAttDrxConfig2</mt>
+
+            <mt>pmHoExecOutFailCause1</mt>
+
+            <mt>pmHoExecOutS1AttInterEnb</mt>
+
+            <mt>pmHoExecOutS1SuccInterEnb</mt>
+
+            <mt>pmHoExecOutX2AttInterEnb</mt>
+
+            <mt>pmHoExecOutX2SuccInterEnb</mt>
+
+            <mt>pmHoExecSuccDrxConfig2</mt>
+
+            <mt>pmHoExecSuccDrxConfig0</mt>
+
+            <mt>pmHoExeInAttQci</mt>
+
+            <mt>pmHoExeInSuccQci</mt>
+
+            <mt>pmHoExeInSuccTdScdma</mt>
+
+            <mt>pmHoExeSuccBlindInterFreq</mt>
+
+            <mt>pmHoExeSuccBlindIntraFreq</mt>
+
+            <mt>pmHoExeSuccBlindWcdma</mt>
+
+            <mt>pmHoExeSuccMeasBasedInterFreq</mt>
+
+            <mt>pmHoExeSuccMeasBasedIntraFreq</mt>
+
+            <mt>pmHoExeSuccMeasBasedWcdma</mt>
+
+            <mt>pmHoPrepAttLteInterFQci</mt>
+
+            <mt>pmHoPrepAttLteIntraFQci</mt>
+
+            <mt>pmHoPrepInAttTdScdma</mt>
+
+            <mt>pmHoPrepInRejTdScdmaGrp5S1Cause10</mt>
+
+            <mt>pmHoPrepInRejTdScdmaGrp5S1Cause1</mt>
+
+            <mt>pmHoPrepInRejTdScdmaGrp5S1Cause3</mt>
+
+            <mt>pmHoPrepInRejTdScdmaGrp5S1Cause2</mt>
+
+            <mt>pmHoPrepInS1RejGrp5S1Cause10</mt>
+
+            <mt>pmHoPrepInS1RejGrp5S1Cause1</mt>
+
+            <mt>pmHoPrepInS1RejGrp5S1Cause2</mt>
+
+            <mt>pmHoPrepInS1RejGrp5S1Cause3</mt>
+
+            <mt>pmHoPrepInSuccTdScdma</mt>
+
+            <mt>pmHoPrepInX2RejNasX2Cause0</mt>
+
+            <mt>pmHoPrepOutAttQci</mt>
+
+            <mt>pmHoPrepOutFailTo</mt>
+
+            <mt>pmHoPrepOutRejIntraEnbInterFreqProtX2Cause6</mt>
+
+            <mt>pmHoPrepOutRejIntraEnbInterFreqProtX2Cause0</mt>
+
+            <mt>pmHoPrepOutRejIntraEnbIntraFreqProtX2Cause6</mt>
+
+            <mt>pmHoPrepOutRejIntraEnbIntraFreqProtX2Cause0</mt>
+
+            <mt>pmHoPrepOutRejTdScdmaMiscS1Cause9</mt>
+
+            <mt>pmHoPrepOutRejTdScdmaMiscS1Cause14</mt>
+
+            <mt>pmHoPrepOutRejTdScdmaMiscS1Cause4</mt>
+
+            <mt>pmHoPrepOutRejTdScdmaMiscS1Cause19</mt>
+
+            <mt>pmHoPrepOutRejTdScdmaRnlS1Cause0</mt>
+
+            <mt>pmHoPrepOutS1AttInterEnb</mt>
+
+            <mt>pmHoPrepOutS1SuccInterEnb</mt>
+
+            <mt>pmHoPrepOutSuccQci</mt>
+
+            <mt>pmHoPrepOutX2AttInterEnb</mt>
+
+            <mt>pmHoPrepOutX2SuccInterEnb</mt>
+
+            <mt>pmHoPrepRejInLicMobInterFreq</mt>
+
+            <mt>pmHoPrepRejInLicMobIntraFreq</mt>
+
+            <mt>pmHoPrepRejInLicMobWcdma</mt>
+
+            <mt>pmHoPrepSuccLteInterFQci</mt>
+
+            <mt>pmHoPrepSuccLteIntraFQci</mt>
+
+            <mt>pmNoOfCmasRepReqCell1</mt>
+			
+			<mt>pmNoOfCmasRepReqCell2</mt>
+			
+			<mt>pmNoOfCmasRepReqCell3</mt>
+			
+			<mt>pmNoOfCmasRepReqCell4</mt>
+
+            <mt>pmNoOfCmasRepSuccCell1</mt>
+			
+			<mt>pmNoOfCmasRepSuccCell2</mt>
+			
+			<mt>pmNoOfCmasRepSuccCell3</mt>
+			
+			<mt>pmNoOfCmasRepSuccCell4</mt>
+			
+			<mt>pmNoOfCmasReqCell1</mt>
+			
+			<mt>pmNoOfCmasReqCell2</mt>
+			
+			<mt>pmNoOfCmasReqCell3</mt>
+			
+			<mt>pmNoOfCmasReqCell4</mt>
+
+            <mt>pmNoOfCmasSuccCell1</mt>
+			
+			<mt>pmNoOfCmasSuccCell2</mt>
+			
+			<mt>pmNoOfCmasSuccCell3</mt>
+			
+			<mt>pmNoOfCmasSuccCell4</mt>
+
+            <mt>pmNoOfEtwsPrimReq</mt>
+
+            <mt>pmNoOfEtwsPrimSucc</mt>
+
+            <mt>pmNoOfEtwsSecReq</mt>
+
+            <mt>pmNoOfEtwsSecSucc</mt>
+
+            <mt>pmRrcConnEstabFailActiveUserLicenseExceeded</mt>
+
+            <mt>pmRrcConnEstabFailCause3</mt>
+
+            <mt>pmRrcConnEstabFailCause4</mt>
+
+            <mt>pmRrcConnEstabFailFailureInRadioProcedure</mt>
+
+            <mt>pmRrcConnEstabFailLackOfResources</mt>
+
+            <mt>pmRrcConnEstabFailUnspecified</mt>
+
+            <mt>pmRrcConnEstabTimeDistrEm</mt>
+
+            <mt>pmRrcConnEstabTimeDistrHpa</mt>
+
+            <mt>pmRrcConnEstabTimeDistrMod</mt>
+
+            <mt>pmRrcConnEstabTimeDistrMos</mt>
+
+            <mt>pmRrcConnEstabTimeDistrMta</mt>
+
+            <mt>pmRrcConnEstabTimeMaxEm</mt>
+
+            <mt>pmRrcConnEstabTimeMaxHpa</mt>
+
+            <mt>pmRrcConnEstabTimeMaxMod</mt>
+
+            <mt>pmRrcConnEstabTimeMaxMos</mt>
+
+            <mt>pmRrcConnEstabTimeMaxMta</mt>
+
+            <mt>pmRrcConnEstabTimeSumEm</mt>
+
+            <mt>pmRrcConnEstabTimeSumHpa</mt>
+
+            <mt>pmRrcConnEstabTimeSumMod</mt>
+
+            <mt>pmRrcConnEstabTimeSumMos</mt>
+
+            <mt>pmRrcConnEstabTimeSumMta</mt>
+
+            <mt>pmRrcConnReconfDrxFail</mt>
+
+            <mt>pmRrcConnReconfDrxSucc</mt>
+
+            <mt>pmRrcConnReestAttHof</mt>
+
+            <mt>pmRrcConnReestAttOthf</mt>
+
+            <mt>pmRrcConnReestAttRecf</mt>
+
+            <mt>pmRrcConnReestRejUeu</mt>
+
+            <mt>pmRrcConnReestSuccHof</mt>
+
+            <mt>pmRrcConnReestSuccOthf</mt>
+
+            <mt>pmRrcConnReestSuccRecf</mt>
+
+            <mt>pmS1DlNasTransportRcvd</mt>
+
+            <mt>pmS1NasNonDelivIndGrp8S1Cause100</mt>
+
+            <mt>pmS1NasNonDelivIndGrp7S1Cause13</mt>
+
+            <mt>pmS1NasNonDelivIndGrp5S1Cause6</mt>
+
+            <mt>pmS1NasNonDelivIndGrp6S1Cause10</mt>
+
+            <mt>pmS1NasNonDelivIndMiscS1Cause50</mt>
+
+            <mt>pmS1NasNonDelivIndMiscS1Cause9</mt>
+
+            <mt>pmS1NasNonDelivIndMiscS1Cause12</mt>
+
+            <mt>pmS1NasNonDelivIndMiscS1Cause5</mt>
+
+            <mt>pmS1NasNonDelivIndNasS1Cause3</mt>
+
+            <mt>pmS1NasNonDelivIndNasS1Cause10</mt>
+
+            <mt>pmS1NasNonDelivIndNasS1Cause15</mt>
+
+            <mt>pmS1NasNonDelivIndProtS1Cause28</mt>
+
+            <mt>pmS1NasNonDelivIndProtS1Cause4</mt>
+
+            <mt>pmS1NasNonDelivIndProtS1Cause8</mt>
+
+            <mt>pmS1NasNonDelivIndProtS1Cause11</mt>
+
+            <mt>pmS1NasNonDelivIndRnlS1Cause13</mt>
+
+            <mt>pmS1NasNonDelivIndRnlS1Cause1</mt>
+
+            <mt>pmS1NasNonDelivIndRnlS1Cause8</mt>
+
+            <mt>pmS1NasNonDelivIndTranS1Cause14</mt>
+
+            <mt>pmS1NasNonDelivIndTranS1Cause9</mt>
+
+            <mt>pmS1NasNonDelivIndTranS1Cause2</mt>
+
+            <mt>pmS1UlNasTransportSent</mt>
+
+            <mt>pmUeCtxtModAtt</mt>
+
+            <mt>pmUeCtxtModSucc</mt>
+
+            <mt>pmUeCtxtRelEnbRnlS1Cause0</mt>
+
+            <mt>pmUeCtxtRelMmeRnlS1Cause0</mt>
+
+            <mt>pmUeCtxtRelS1Reset</mt>
+
+            <mt>pmUeCtxtRelTimeDistr</mt>
+
+            <mt>pmUeCtxtRelTimeS1HoSamp</mt>
+
+            <mt>pmUeCtxtRelTimeS1HoSum</mt>
+
+            <mt>pmUeCtxtRelTimeSamp</mt>
+
+            <mt>pmUeCtxtRelTimeSum</mt>
+
+            <mt>pmUeCtxtRelTimeX2HoSamp</mt>
+
+            <mt>pmUeCtxtRelTimeX2HoSum</mt>
+
+            <mt>pmHoSigExeOutTimeS1Samp</mt>
+
+            <mt>pmHoSigExeOutTimeS1Sum</mt>
+
+            <mt>pmHoSigExeOutTimeX2Samp</mt>
+
+            <mt>pmHoSigExeOutTimeX2Sum</mt>
+
+            <mt>pmS1ConnEstabFailMiscS1Cause2</mt>
+
+            <mt>pmS1ConnEstabFailMiscS1Cause4</mt>
+
+            <mt>pmS1ConnEstabFailNasS1Cause4</mt>
+
+            <mt>pmS1ConnEstabFailNasS1Cause2</mt>
+
+            <mt>pmS1ConnEstabFailProtS1Cause4</mt>
+
+            <mt>pmS1ConnEstabFailProtS1Cause2</mt>
+
+            <mt>pmS1ConnEstabFailRnlS1Cause0</mt>
+
+            <mt>pmS1ConnEstabFailRnlS1Cause2</mt>
+
+            <mt>pmS1ConnEstabFailRnlS1Cause4</mt>
+
+            <mt>pmS1ConnEstabFailTranS1Cause0</mt>
+
+            <mt>pmS1ConnEstabFailTranS1Cause1</mt>
+
+            <mt>pmS1ConnEstabSucc</mt>
+
+            <mt>pmS1ConnEstabTimeDistr</mt>
+
+            <mt>pmS1ConnEstabTimeSum</mt>
+
+            <mt>pmX2ConnEstabFailInMiscX2Cause2</mt>
+
+            <mt>pmX2ConnEstabFailInMiscX2Cause4</mt>
+
+            <mt>pmX2ConnEstabFailInNasX2Cause4</mt>
+
+            <mt>pmX2ConnEstabFailInProtX2Cause4</mt>
+
+            <mt>pmX2ConnEstabFailInProtX2Cause2</mt>
+
+            <mt>pmX2ConnEstabSucc</mt>
+
+            <mt>pmS1ConnShutdownTimeDistr</mt>
+
+            <mt>pmS1ConnShutdownTimeSamp</mt>
+
+            <mt>pmS1ConnShutdownTimeSum</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause0</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause9</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause7</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause8</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause5</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause6</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause3</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause4</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause1</mt>
+
+            <mt>pmS1ErrorIndEnbGrp8S1Cause2</mt>
+
+            <mt>pmS1ErrorIndEnbNasS1Cause1</mt>
+
+            <mt>pmS1ErrorIndEnbProtS1Cause1</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause0</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause1</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause7</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause6</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause9</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause8</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause3</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause2</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause5</mt>
+
+            <mt>pmS1ErrorIndEnbRnlS1Cause4</mt>
+
+            <mt>pmS1ErrorIndEnbTranS1Cause1</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause19</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause18</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause17</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause16</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause15</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause14</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause13</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause12</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause11</mt>
+
+            <mt>pmS1ErrorIndMmeGrp8S1Cause10</mt>
+
+            <mt>pmS1ErrorIndMmeNasS1Cause1</mt>
+
+            <mt>pmS1ErrorIndMmeProtS1Cause1</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause11</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause12</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause10</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause19</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause18</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause17</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause16</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause15</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause14</mt>
+
+            <mt>pmS1ErrorIndMmeRnlS1Cause13</mt>
+
+            <mt>pmS1ErrorIndMmeTranS1Cause1</mt>
+
+            <mt>pmX2ConnResetInNasX2Cause1</mt>
+
+            <mt>pmX2ConnResetInProtX2Cause1</mt>
+
+            <mt>pmX2ConnResetInRnlX2Cause20</mt>
+
+            <mt>pmX2ConnResetInRnlX2Cause21</mt>
+
+            <mt>pmX2ConnResetInTranX2Cause1</mt>
+
+            <mt>pmX2ConnResetOutMiscX2Cause4</mt>
+
+            <mt>pmX2ConnResetOutNasX2Cause1</mt>
+
+            <mt>pmX2ConnResetOutProtX2Cause1</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause9</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause2</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause1</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause4</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause3</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause6</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause5</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause8</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause7</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause18</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause19</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause0</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause12</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause13</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause10</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause11</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause16</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause17</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause14</mt>
+
+            <mt>pmX2ConnResetOutRnlX2Cause15</mt>
+
+            <mt>pmX2ConnResetOutTranX2Cause1</mt>
+
+            <mt>pmX2ErrorIndInGrp5X2Cause6</mt>
+
+            <mt>pmX2ErrorIndInMiscX2Cause5</mt>
+
+            <mt>pmX2ErrorIndInNasX2Cause3</mt>
+
+            <mt>pmX2ErrorIndInProtX2Cause4</mt>
+
+            <mt>pmX2ErrorIndInRnlX2Cause1</mt>
+
+            <mt>pmX2ErrorIndInTranX2Cause2</mt>
+
+            <mt>pmX2ErrorIndOutMiscX2Cause5</mt>
+
+            <mt>pmX2ErrorIndOutNasX2Cause3</mt>
+
+            <mt>pmX2ErrorIndOutProtX2Cause4</mt>
+
+            <mt>pmX2ErrorIndOutRnlX2Cause1</mt>
+
+            <mt>pmX2ErrorIndOutTranX2Cause2</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellAttCell1</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellAttCell2</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellAttCell3</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellAttCell4</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeAttCell1</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeAttCell2</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeAttCell3</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeAttCell4</mt>
+			
+			<mt>pmAdvCellSupDetectionCell1</mt>
+			
+			<mt>pmAdvCellSupDetectionCell2</mt>
+			
+			<mt>pmAdvCellSupDetectionCell3</mt>
+			
+			<mt>pmAdvCellSupDetectionCell4</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellSuccCell1</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellSuccCell2</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellSuccCell3</mt>
+			
+			<mt>pmAdvCellSupRecoveryCellSuccCell4</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeSuccCell1</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeSuccCell2</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeSuccCell3</mt>
+			
+			<mt>pmAdvCellSupRecoveryNodeSuccCell4</mt>
+			
+			<mt>pmRrcConnReestSuccUeUnknownCell1</mt>
+			
+			<mt>pmRrcConnReestSuccUeUnknownCell2</mt>
+			
+			<mt>pmRrcConnReestSuccUeUnknownCell3</mt>
+
+			<mt>pmRrcConnReestSuccUeUnknownCell4</mt>
+			
+			<mt>pmHoExeInSuccTdScdmaQciCell1</mt>
+			
+			<mt>pmHoExeInSuccTdScdmaQciCell2</mt>
+			
+			<mt>pmHoExeInSuccTdScdmaQciCell3</mt>
+			
+			<mt>pmHoExeInSuccTdScdmaQciCell4</mt>
+			
+			<mt>pmAnrNeighbrelDelGeranCell1</mt>
+			
+			<mt>pmAnrNeighbrelDelGeranCell2</mt>
+			
+			<mt>pmAnrNeighbrelDelGeranCell3</mt>
+			
+			<mt>pmAnrNeighbrelDelGeranCell4</mt>
+			
+			<mt>pmAnrNeighbrelDelUtranCell1</mt>
+			
+			<mt>pmAnrNeighbrelDelUtranCell2</mt>
+			
+			<mt>pmAnrNeighbrelDelUtranCell3</mt>
+			
+			<mt>pmAnrNeighbrelDelUtranCell4</mt>
+			
+			<mt>pmRrcConnReestAttUeUnknownCell1</mt>
+			
+			<mt>pmRrcConnReestAttUeUnknownCell2</mt>
+			
+			<mt>pmRrcConnReestAttUeUnknownCell3</mt>
+			
+			<mt>pmRrcConnReestAttUeUnknownCell4</mt>
+			
+			<mt>pmHoExeInSuccUtranCell1</mt>			
+
+			<mt>pmHoExeInSuccUtranCell2</mt>
+
+			<mt>pmHoExeInSuccUtranCell3</mt>
+
+			<mt>pmHoExeInSuccUtranCell4</mt>
+			
+			<mt>pmHoPrepInAttUtranCell1</mt>
+
+			<mt>pmHoPrepInAttUtranCell2</mt>
+
+			<mt>pmHoPrepInAttUtranCell3</mt>
+
+			<mt>pmHoPrepInAttUtranCell4</mt>
+			
+			<mt>pmHoPrepInSuccUtranCell1</mt>		
+
+			<mt>pmHoPrepInSuccUtranCell2</mt>
+
+			<mt>pmHoPrepInSuccUtranCell3</mt>
+
+			<mt>pmHoPrepInSuccUtranCell4</mt>
+
+			<mt>pmHoPrepRejInLicMobUtranCell1</mt>
+
+			<mt>pmHoPrepRejInLicMobUtranCell2</mt>
+
+			<mt>pmHoPrepRejInLicMobUtranCell3</mt>
+
+			<mt>pmHoPrepRejInLicMobUtranCell4</mt>
+
+			<mt>pmHoPrepRejInLicMobInterModeCell1</mt>
+
+			<mt>pmHoPrepRejInLicMobInterModeCell2</mt>
+
+			<mt>pmHoPrepRejInLicMobInterModeCell3</mt>
+
+			<mt>pmHoPrepRejInLicMobInterModeCell4</mt>
+
+			<mt>pmTimingAdvanceCell1</mt>
+
+			<mt>pmTimingAdvanceCell2</mt>
+
+			<mt>pmTimingAdvanceCell3</mt>
+
+			<mt>pmTimingAdvanceCell4</mt>
+
+
+
+			
+
+        </mi>
+
+    </md>
+
+    <mff>
+
+        <ts>20130408171000</ts>
+
+    </mff>
+
+</mdc>
+

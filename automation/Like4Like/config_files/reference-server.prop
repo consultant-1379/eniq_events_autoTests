@@ -1,0 +1,4 @@
+dburl=jdbc:sybase:Tds:atclvm680.athtem.eei.ericsson.se:2640/dwhdb
+user=dc
+password=dc
+driver=com.sybase.jdbc4.jdbc.SybDriver

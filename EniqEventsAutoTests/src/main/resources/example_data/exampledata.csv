@@ -1,0 +1,4 @@
+user,pass,valid
+wrongUser,wrongPass,FALSE
+exampleuser,exampleuser,TRUE
+exampleuser,anotherPass,FALSE

@@ -1,0 +1,121 @@
+begin
+declare @@start_time_var timestamp;
+declare @@end_time_var timestamp;
+declare @@threshold_var float;
+// change your criteria here depending on the time test was run and currently configured threshold
+// the larger the time frame the longer the SQL will take
+set @@start_time_var = '$START_TIME'; // START_TIME Replaces with the start time
+set @@end_time_var = '$END_TIME';		// END_TIME Replaces with the end time
+set @@threshold_var = 0.2;
+SELECT
+isnull(suc.groupName, errView.groupName) AS mssGroup, 
+isnull(suc.date_id, errView.date_id) AS date_id,
+isnull(suc.hour_id, errView.hour_id) AS hour_id,
+isnull(suc.min_id, errView.min_id) AS min_id,
+isnull(sucCount, 0) AS successCount,
+isnull(errCount, 0) AS errorCount,
+isnull(droppedCount, 0) AS droppedCount,
+isnull(sucCount, 0) + isnull(errCount, 0) + isnull(droppedCount, 0) AS totalCount,
+(cast(isnull(droppedCount, 0) AS float) / ( cast(isnull(sucCount, 0) AS float) + cast(isnull(errCount, 0) AS float) + cast(isnull(droppedCount, 0) AS float)) * 100) AS dropRatio,
+'>0'|| @@threshold_var AS definedThreshold,
+(
+case
+when ((cast(isnull(droppedCount, 0) AS float) / ( cast(isnull(sucCount, 0) AS float) + cast(isnull(droppedCount, 0) AS float) + cast(isnull(errCount, 0) AS float)))*100) > @@threshold_var
+then 'breached'
+else 'not breached'
+end 
+) AS isBreached 
+FROM 
+( // count the number of success events in success tables
+SELECT
+grp.group_name AS groupName,
+date_id, 
+hour_id,
+min_id,
+count(*) AS sucCount
+FROM 
+$SUC_TABLE_RAW AS r, //SUC_TABLE_RAW will be replaced with the success raw table name
+dc.GROUP_TYPE_E_EVNTSRC_CS AS grp
+WHERE
+r.datetime_id BETWEEN @@start_time_var AND @@end_time_var
+AND r.EVNTSRC_ID = grp.EVNTSRC_ID
+AND r.event_id = $EVENT_ID // EVENT_ID will be replaced with the event id
+$SUB_TYPE // SUB_TYPE will be replaced with the subtype
+GROUP BY
+grp.group_name,
+date_id, 
+hour_id,
+min_id
+) AS suc
+FULL OUTER JOIN
+(
+Select
+isnull(err.groupName,dropped.groupName) as groupName,
+isnull(err.date_id,dropped.date_id) as date_id,
+isnull(err.hour_id,dropped.hour_id) as hour_id,
+isnull(err.min_id,dropped.min_id) as min_id,
+err.errCount as errCount,
+dropped.droppedCount as droppedCount
+from
+( // count the number of error events in error tables
+SELECT
+grp.group_name AS groupName,
+date_id, 
+hour_id,
+min_id,
+count(*) AS errCount
+FROM 
+$ERR_TABLE_RAW AS r, // ERR_TABLE_RAW will be replaced with the error table name
+dc.GROUP_TYPE_E_EVNTSRC_CS AS grp
+WHERE
+r.datetime_id BETWEEN @@start_time_var AND @@end_time_var
+AND r.EVNTSRC_ID = grp.EVNTSRC_ID
+AND r.event_id = $EVENT_ID // EVENT_ID will be replaced with the event id
+$SUB_TYPE // SUB_TYPE will be replaced with the subtype
+GROUP BY
+grp.group_name,
+date_id, 
+hour_id,
+min_id
+) AS err
+FULL OUTER JOIN
+( // count the number of dropped events in drop tables
+SELECT
+grp.group_name AS groupName,
+date_id, 
+hour_id,
+min_id,
+count(*) AS droppedCount
+FROM 
+$DROP_TABLE_RAW AS r, // DROP_TABLE_RAW will be replaced with drop table name
+dc.GROUP_TYPE_E_EVNTSRC_CS AS grp
+WHERE
+r.datetime_id BETWEEN @@start_time_var AND @@end_time_var
+AND r.EVNTSRC_ID = grp.EVNTSRC_ID
+AND r.event_id = $EVENT_ID // EVENT_ID will be replaced with the event id
+$SUB_TYPE // SUB_TYPE will be replaced with the subtype
+GROUP BY
+grp.group_name,
+date_id, 
+hour_id,
+min_id
+) AS dropped
+ON ( 
+err.groupName = dropped.groupName 
+and err.date_id = dropped.date_id 
+and err.hour_id = dropped.hour_id 
+and err.min_id = dropped.min_id
+) 
+) as errView
+ON ( 
+errView.groupName = suc.groupName 
+and errView.date_id = suc.date_id 
+and errView.hour_id = suc.hour_id 
+and errView.min_id = suc.min_id
+)
+ORDER BY
+mssGroup,
+date_id,
+hour_id,
+min_id
+end
